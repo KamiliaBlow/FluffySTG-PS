@@ -1,11 +1,11 @@
 @You can <i>italicize</i>, <b>embolden</b> or <u>underline</u> portions of your messages by enclosing them with |, + or _ respectively. You can also avoid this by adding backslashes (they won't show in the message) before these characters.
-♪ Hey, have you ever tried appending the % character before your messages when speaking in-game? ♫
-A Scientist will pay top dollar for your frogs!
-A thrown glass of water can make a slippery tile, allowing you to slow down your pursuers in a pinch.
-Anything you can light a cigarette with, you can use to cauterize a bleeding wound. Technically, that includes the Supermatter.
-As a Blobbernaut, you can communicate with overminds and other Blobbernauts via :b.
-As a Blobbernaut, your HUD shows your health and the core health of the overmind that created you.
-As a Botanist, you can combine production trait chemicals just like a Chemist. Hydrogen(grass) + water(peas) + sugar(grapes) equal mannitol!
+♪ Эй, вы когда-нибудь пробовали добавлять символ % перед сообщениями, когда говорите в игре? ♫
+Ученый заплатит за ваших лягушек по высшему разряду!
+Брошенный стакан воды может стать скользкой лужей, что позволит вам в случае необходимости замедлить преследователей.
+Все, чем можно прикурить сигарету, можно использовать для прижигания кровоточащей раны. Технически, к ним относится и суперматерия.
+Будучи Блоббернаутом, вы можете общаться с сверхразумом и другими Блоббернаутами с помощью :b.
+В качестве Блоббернаута ваш HUD показывает ваше здоровье и здоровье создавшего вас сверхразума.
+Будучи ботаником, вы можете комбинировать химические вещества, как и химик. Водород (трава) + вода (горох) + сахар (виноград) равны манниту!
 As a Botanist, you can combine production trait chemicals just like a Chemist. Potassium(bananas) + water(watermelons) equal... FUN!
 As a Botanist, you can hack the MegaSeed Vendor to get access to more exotic seeds. These seeds can alternatively be ordered from cargo.
 As a Botanist, you can mutate the plants growing in your hydroponics trays with Left 4 Zed from your NutriMax vendor.  Once you've ground up a few plants in the biogenerator, it can also produce Left 4 Zed.  Isn't science amazing?
@@ -288,4 +288,4 @@ Modular computers are compatible with integrated circuits, but most of the progr
 You don't need to destroy a Spacecoin machine to make your funds stop draining. Swiping your ID on it will stop the withdrawal.
 As a Bitrunner, upgrading your quantum server will increase rewards and reduce downtime.
 As a Bitrunner, your avatar has a domain info ability which will give you clues to help complete virtual domains.
-Bitrunning is a crime.
+Битраннинг - это преступление.

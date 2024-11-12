@@ -2,12 +2,12 @@
 import { Feature, FeatureShortTextInput } from '../../base';
 
 export const headshot: Feature<string> = {
-  name: 'Headshot',
+  name: 'Фотография',
   description:
-    'Requires a link ending with .png, .jpeg, or .jpg, starting with \
-    https://, and hosted on Gyazo or Discord. Renders the image underneath \
-    your character preview in the examine more window. \
-    Image larger than 250x250 will be resized to 250x250. \
-    Aim for 250x250 whenever possible',
+    'Требуется ссылка, заканчивающаяся на .png, .jpeg или .jpg, начинающаяся с \
+    https://, и размещена на Gyazo или Discord. Изображение отображается под \
+    превью вашего персонажа в окне «Изучить больше». \
+    Изображение размером более 250x250 будет уменьшено до 250x250. \
+    Стремитесь к 250x250, когда это возможно',
   component: FeatureShortTextInput,
 };

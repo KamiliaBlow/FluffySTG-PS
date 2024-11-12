@@ -4,18 +4,18 @@
 	savefile_key = "footstep_sound"
 
 /datum/preference/choiced/footstep_sound/init_possible_values()
-	return list("Default", "Shoes", "Claws")
+	return list("По умолчанию", "Обувь", "Когти")
 
 /datum/preference/choiced/footstep_sound/create_default_value()
-	return "Default"
+	return "По умолчанию"
 
 /datum/preference/choiced/footstep_sound/apply_to_human(mob/living/carbon/human/target, value)
-	if(value == "Default")
+	if(value == "По умолчанию")
 		return
 
 	var/static/list/value_to_define = list(
-		"Shoes" = FOOTSTEP_MOB_SHOE,
-		"Claws" = FOOTSTEP_MOB_CLAW,
+		"Обувь" = FOOTSTEP_MOB_SHOE,
+		"Когти" = FOOTSTEP_MOB_CLAW,
 	)
 	var/footstep_type = value_to_define[value]
 

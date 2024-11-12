@@ -93,7 +93,7 @@
 
 /datum/sprite_accessory/genital/penis/human
 	icon_state = "human"
-	name = "Human"
+	name = "Человеческий"
 	color_src = USE_ONE_COLOR
 	default_color = DEFAULT_SKIN_OR_PRIMARY
 	has_skintone_shading = TRUE
@@ -101,15 +101,15 @@
 
 /datum/sprite_accessory/genital/penis/nondescript
 	icon_state = "nondescript"
-	name = "Nondescript"
+	name = "Неизвестный"
 
 /datum/sprite_accessory/genital/penis/knotted
 	icon_state = "knotted"
-	name = "Knotted"
+	name = "Узел"
 
 /datum/sprite_accessory/genital/penis/flared
 	icon_state = "flared"
-	name = "Flared"
+	name = "Развернутый"
 
 /datum/sprite_accessory/genital/penis/barbknot
 	icon_state = "barbknot"
@@ -117,19 +117,19 @@
 
 /datum/sprite_accessory/genital/penis/tapered
 	icon_state = "tapered"
-	name = "Tapered"
+	name = "Конический"
 
 /datum/sprite_accessory/genital/penis/tentacle
 	icon_state = "tentacle"
-	name = "Tentacled"
+	name = "Тентакль"
 
 /datum/sprite_accessory/genital/penis/hemi
 	icon_state = "hemi"
-	name = "Hemi"
+	name = "Двойной"
 
 /datum/sprite_accessory/genital/penis/hemiknot
 	icon_state = "hemiknot"
-	name = "Knotted Hemi"
+	name = "Двойной узел"
 
 /datum/sprite_accessory/genital/testicles
 	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/genitals/testicles_onmob.dmi'
@@ -166,12 +166,12 @@
 	color_src = null
 
 /datum/sprite_accessory/genital/testicles/pair
-	name = "Pair"
+	name = "Пара"
 	icon_state = "pair"
 	has_skintone_shading = TRUE
 
 /datum/sprite_accessory/genital/testicles/internal
-	name = "Internal"
+	name = "Внутри"
 	icon_state = "none"
 	color_src = null
 	has_size = FALSE
@@ -195,11 +195,11 @@
 
 /datum/sprite_accessory/genital/vagina/human
 	icon_state = "human"
-	name = "Human"
+	name = "Человеческая"
 
 /datum/sprite_accessory/genital/vagina/tentacles
 	icon_state = "tentacle"
-	name = "Tentacle"
+	name = "Тентаклевая"
 
 /datum/sprite_accessory/genital/vagina/dentata
 	icon_state = "dentata"
@@ -207,7 +207,7 @@
 
 /datum/sprite_accessory/genital/vagina/hairy
 	icon_state = "hairy"
-	name = "Hairy"
+	name = "Заросшая"
 	alt_aroused = FALSE
 
 /datum/sprite_accessory/genital/vagina/spade
@@ -217,7 +217,7 @@
 
 /datum/sprite_accessory/genital/vagina/furred
 	icon_state = "furred"
-	name = "Furred"
+	name = "Меховая"
 	alt_aroused = FALSE
 
 /datum/sprite_accessory/genital/vagina/gaping
@@ -226,7 +226,7 @@
 
 /datum/sprite_accessory/genital/vagina/cloaca
 	icon_state = "cloaca"
-	name = "Cloaca"
+	name = "Клоака"
 
 /datum/sprite_accessory/genital/womb
 	organ_type = /obj/item/organ/external/genital/womb
@@ -242,7 +242,7 @@
 
 /datum/sprite_accessory/genital/womb/normal
 	icon_state = "none"
-	name = "Normal"
+	name = "Обычная"
 	color_src = null
 
 /datum/sprite_accessory/genital/anus
@@ -259,7 +259,7 @@
 
 /datum/sprite_accessory/genital/anus/normal
 	icon_state = "anus"
-	name = "Anus"
+	name = "Анус"
 	color_src = null
 
 /datum/sprite_accessory/genital/breasts
@@ -282,14 +282,14 @@
 
 /datum/sprite_accessory/genital/breasts/pair
 	icon_state = "pair"
-	name = "Pair"
+	name = "Пара"
 
 /datum/sprite_accessory/genital/breasts/quad
 	icon_state = "quad"
-	name = "Quad"
+	name = "Четверка"
 
 /datum/sprite_accessory/genital/breasts/sextuple
 	icon_state = "sextuple"
-	name = "Sextuple"
+	name = "Шестерка"
 
 #undef TAUR_DIMENSION_X

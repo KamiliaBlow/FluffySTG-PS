@@ -1,6 +1,6 @@
 /// Head Slot Items (Deletes overrided items)
 /datum/loadout_category/head
-	category_name = "Head"
+	category_name = "Голова"
 	category_ui_icon = FA_ICON_HAT_COWBOY
 	type_to_generate = /datum/loadout_item/head
 	tab_order = 1
@@ -151,7 +151,7 @@
 /datum/loadout_item/head/geranium
 	name = "Geranium"
 	item_path = /obj/item/food/grown/poppy/geranium
-	
+
 /datum/loadout_item/head/harebell
 	name = "Harebell"
 	item_path = /obj/item/food/grown/harebell

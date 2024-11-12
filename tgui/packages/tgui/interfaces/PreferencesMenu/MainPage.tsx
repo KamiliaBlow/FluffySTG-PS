@@ -56,7 +56,7 @@ const CharacterControls = (props: {
           onClick={props.handleRotate}
           fontSize="22px"
           icon="undo"
-          tooltip="Rotate"
+          tooltip="Поворот"
           tooltipPosition="top"
         />
       </Stack.Item>
@@ -66,7 +66,7 @@ const CharacterControls = (props: {
           onClick={props.handleOpenSpecies}
           fontSize="22px"
           icon="paw"
-          tooltip="Species"
+          tooltip="Вид"
           tooltipPosition="top"
         />
       </Stack.Item>
@@ -85,7 +85,7 @@ const CharacterControls = (props: {
           onClick={props.handleFood}
           fontSize="22px"
           icon="drumstick-bite"
-          tooltip="Edit Food Preferences"
+          tooltip="Предпочтения в еде"
           tooltipPosition="top"
         />
         {/* NOVA EDIT ADDITION END */}
@@ -163,7 +163,7 @@ const ChoicedSelection = (props: {
         <Stack.Item overflowX="hidden" overflowY="scroll">
           <Autofocus>
             <Input
-              placeholder="Search..."
+              placeholder="Поиск..."
               style={{
                 margin: '0px 5px',
                 width: '95%',

@@ -70,12 +70,12 @@
 	examine_list += "The dogtag reads: I breathe [breath_type]."
 
 /datum/quirk/equipping/lungs/nitrogen
-	name = "Nitrogen Breather"
-	desc = "You breathe nitrogen, even if you might not normally breathe it. Oxygen is poisonous."
+	name = "Азотное дыхание"
+	desc = "Вы дышите азотом, даже если обычно вы им не дышите. Кислород ядовит."
 	icon = FA_ICON_LUNGS_VIRUS
-	medical_record_text = "Patient can only breathe nitrogen."
-	gain_text = "<span class='danger'>You suddenly have a hard time breathing anything but nitrogen."
-	lose_text = "<span class='notice'>You suddenly feel like you aren't bound to nitrogen anymore."
+	medical_record_text = "Пациент может дышать только азотом."
+	gain_text = "<span class='danger'>Вам вдруг стало трудно дышать чем-либо, кроме азота."
+	lose_text = "<span class='notice'>Вы вдруг почувствовали, что больше не привязаны к азоту."
 	value = 0
 	forced_items = list(
 		/obj/item/clothing/mask/breath = list(ITEM_SLOT_MASK),

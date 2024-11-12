@@ -143,7 +143,7 @@
 #define PLAYTIME_VETERAN 300000 // 5,000 hours
 
 /// The key used for sprite accessories that should never actually be applied to the player.
-#define SPRITE_ACCESSORY_NONE "None"
+#define SPRITE_ACCESSORY_NONE "Нет"
 
 // Loadout
 /// Used to make something not recolorable even if it's capable

@@ -49,7 +49,7 @@ const CharacterProfiles = (props: {
           displayText={profiles[activeSlot]}
           options={profiles.map((profile, slot) => ({
             value: slot,
-            displayText: profile ?? 'New Character',
+            displayText: profile ?? 'Новый',
           }))}
           onSelected={(slot) => {
             onClick(slot);
@@ -107,7 +107,7 @@ export const CharacterPreferenceWindow = (props) => {
   }
 
   return (
-    <Window title="Character Preferences" width={920} height={770}>
+    <Window title="Настройки персонажа" width={920} height={770}>
       <Window.Content scrollable>
         <Stack vertical fill>
           <Stack.Item>
@@ -123,7 +123,7 @@ export const CharacterPreferenceWindow = (props) => {
           </Stack.Item>
           {!data.content_unlocked && (
             <Stack.Item align="center">
-              Buy BYOND premium for more slots!
+              Купите BYOND premium чтобы получить больше слотов!
             </Stack.Item>
           )}
 
@@ -138,7 +138,7 @@ export const CharacterPreferenceWindow = (props) => {
                   setPage={setCurrentPage}
                   otherActivePages={[Page.Species]}
                 >
-                  Character
+                  Персонаж
                 </PageButton>
               </Stack.Item>
 
@@ -148,7 +148,7 @@ export const CharacterPreferenceWindow = (props) => {
                   page={Page.Loadout}
                   setPage={setCurrentPage}
                 >
-                  Loadout
+                  Снаряжение
                 </PageButton>
               </Stack.Item>
 
@@ -162,7 +162,7 @@ export const CharacterPreferenceWindow = (props) => {
                     Fun fact: This isn't "Jobs" so that it intentionally
                     catches your eyes, because it's really important!
                   */}
-                  Occupations
+                  Должность
                 </PageButton>
               </Stack.Item>
               {
@@ -174,7 +174,7 @@ export const CharacterPreferenceWindow = (props) => {
                   page={Page.Limbs}
                   setPage={setCurrentPage}
                 >
-                  Augments+
+                  Аугменты+
                 </PageButton>
               </Stack.Item>
 
@@ -184,7 +184,7 @@ export const CharacterPreferenceWindow = (props) => {
                   page={Page.Languages}
                   setPage={setCurrentPage}
                 >
-                  Languages
+                  Языки
                 </PageButton>
               </Stack.Item>
               {
@@ -196,7 +196,7 @@ export const CharacterPreferenceWindow = (props) => {
                   page={Page.Antags}
                   setPage={setCurrentPage}
                 >
-                  Antagonists
+                  Антагонизм
                 </PageButton>
               </Stack.Item>
 
@@ -206,7 +206,7 @@ export const CharacterPreferenceWindow = (props) => {
                   page={Page.Quirks}
                   setPage={setCurrentPage}
                 >
-                  Quirks
+                  Причуды
                 </PageButton>
               </Stack.Item>
             </Stack>

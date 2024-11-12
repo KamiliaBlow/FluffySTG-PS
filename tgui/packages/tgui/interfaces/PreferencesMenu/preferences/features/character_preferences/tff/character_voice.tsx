@@ -33,22 +33,22 @@ const FeatureBlooperDropdownInput = (
 };
 
 export const blooper_speech: FeatureChoiced = {
-  name: 'Character Voice',
+  name: 'Персонаж - голос',
   component: FeatureBlooperDropdownInput,
 };
 
 export const blooper_speech_speed: FeatureNumeric = {
-  name: 'Character Voice Speed',
+  name: 'Персонаж - голос скор.',
   component: FeatureNumberInput,
 };
 
 export const blooper_speech_pitch: FeatureNumeric = {
-  name: 'Character Voice Pitch',
+  name: 'Персонаж - голос выс.',
   component: FeatureNumberInput,
 };
 
 export const blooper_pitch_range: FeatureNumeric = {
-  name: 'Character Voice Range',
+  name: 'Персонаж - голос диап.',
   component: FeatureNumberInput,
 };
 

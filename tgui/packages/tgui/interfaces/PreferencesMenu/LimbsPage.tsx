@@ -37,7 +37,7 @@ export const Markings = (props) => {
   const { act } = useBackend<PreferencesMenuData>();
   return (
     <Stack fill vertical>
-      <Stack.Item>Markings:</Stack.Item>
+      <Stack.Item>Варианты:</Stack.Item>
       {props.limb.markings.markings_list.map((marking, index) => (
         <Stack.Item key={marking.marking_id}>
           <Stack fill>
@@ -227,7 +227,7 @@ export const LimbsPage = (props) => {
   return (
     <Stack minHeight="100%">
       <Stack.Item minWidth="33%" minHeight="100%">
-        <Section fill scrollable title="Markings" height="197%">
+        <Section fill scrollable title="Таттуировки" height="197%">
           <div>
             <Dropdown
               width="100%"
@@ -245,7 +245,7 @@ export const LimbsPage = (props) => {
         </Section>
       </Stack.Item>
       <Stack.Item minWidth="33%">
-        <Section title="Character Preview" fill align="center" height="197%">
+        <Section title="Предосмотр" fill align="center" height="197%">
           <CharacterPreview
             id={data.character_preview_view}
             height="25%"
@@ -256,7 +256,7 @@ export const LimbsPage = (props) => {
             <Section
               fill
               align="center"
-              title="Quirk Points Balance"
+              title="Очки причуд"
               style={{ marginTop: '3em' }}
             >
               <Stack justify="center">
@@ -281,14 +281,14 @@ export const LimbsPage = (props) => {
         </Section>
       </Stack.Item>
       <Stack.Item minWidth="33%">
-        <Section fill title="Organs" height="87%">
+        <Section fill title="Органы" height="87%">
           <Stack fill vertical>
             {data.organs_data.map((val) => (
               <OrganPage key={val.slot} organ={val} data={data} />
             ))}
           </Stack>
         </Section>
-        <Section fill scrollable title="Augmentations" height="107%">
+        <Section fill scrollable title="Аугментации" height="107%">
           {data.limbs_data.map((val) => (
             <AugmentationPage key={val.slot} limb={val} data={data} />
           ))}

@@ -2,8 +2,8 @@
 // Some eye colors will produce very slightly stronger mechanical night vision effects just by virtue of their RGB values being scaled higher (typically lighter colours).
 
 /datum/quirk/night_vision
-	desc = "You can see a little better in darkness than most ordinary humanoids. If your eyes are naturally more sensitive to light through other means (such as being photophobic or a mothperson), this effect is significantly stronger."
-	medical_record_text = "Patient's visual sensory organs demonstrate non-standard performance in low-light conditions."
+	desc = "Вы видите в темноте немного лучше, чем большинство обычных гуманоидов. Если ваши глаза от природы более чувствительны к свету по другим причинам (например, у вас фотофобия или вы мотылек), этот эффект будет значительно сильнее."
+	medical_record_text = "Зрительные органы чувств пациента демонстрируют нестандартную работу в условиях недостаточной освещенности."
 	var/nv_color = null /// Holds the player's selected night vision colour
 	var/list/nv_color_cutoffs = null /// Contains the color_cutoffs applied to the user's eyes w/ our custom hue (once built)
 
@@ -48,7 +48,7 @@
 	if (!..(preferences))
 		return FALSE
 
-	return "Night Vision" in preferences.all_quirks
+	return "Ночное зрение" in preferences.all_quirks
 
 /datum/preference/color/nv_color/apply_to_human(mob/living/carbon/human/target, value)
 	return

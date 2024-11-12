@@ -1,5 +1,5 @@
 /datum/quirk/photophobia
-	desc = "Bright lights are uncomfortable and upsetting to you for whatever reason. Your eyes are also more sensitive to light in general. This shares a unique interaction with Night Vision."
+	desc = "Яркий свет по каким-то причинам доставляет вам дискомфорт и раздражает. Ваши глаза также более чувствительны к свету в целом. Это уникальное взаимодействие с ночным зрением."
 	/// how much of a flash_protect deficit the quirk inflicts
 	var/severity = 1
 

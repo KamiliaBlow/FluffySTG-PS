@@ -68,7 +68,7 @@ const LoadoutPageInner = (props: { loadout_tabs: LoadoutCategory[] }) => {
             <Input
               width="200px"
               onInput={(_, value) => setSearchLoadout(value)}
-              placeholder="Search for an item..."
+              placeholder="Поиск среди предметов..."
               value={searchLoadout}
             />
           }
@@ -153,7 +153,7 @@ const LoadoutTabs = (props: {
       <Stack.Item grow>
         {searching || activeCategory?.contents ? (
           <Section
-            title={searching ? 'Searching...' : 'Catalog'}
+            title={searching ? 'Поиск...' : 'Каталог'}
             fill
             scrollable
             buttons={
@@ -270,10 +270,10 @@ const LoadoutSelectedSection = (props: {
           color="red"
           align="center"
           disabled={!loadout_list || Object.keys(loadout_list).length === 0}
-          tooltip="Clears ALL selected items from all categories."
+          tooltip="Удалить все предметы из всех категорий."
           onClick={() => act('clear_all_items')}
         >
-          Clear All
+          Удалить все
         </Button.Confirm>
       }
     >

@@ -1,10 +1,10 @@
 /datum/quirk/narcolepsy
-	name = "Narcolepsy"
-	desc = "You may fall asleep at any moment and feel tired often."
+	name = "Нарколепсия"
+	desc = "Вы можете заснуть в любой момент и часто чувствуете усталость."
 	icon = FA_ICON_CLOUD_MOON_RAIN
 	value = -8
 	hardcore_value = 8
-	medical_record_text = "Patient may involuntarily fall asleep during normal activities."
+	medical_record_text = "Пациент может непроизвольно засыпать во время обычной деятельности."
 	mail_goodies = list(
 		/obj/item/reagent_containers/cup/glass/coffee,
 		/obj/item/reagent_containers/cup/soda_cans/space_mountain_wind,
@@ -18,7 +18,7 @@
 
 	var/obj/item/storage/medkit/civil_defense/comfort/stocked/stimmies = new()
 	if(quirk_holder.equip_to_slot_if_possible(stimmies, ITEM_SLOT_BACKPACK, qdel_on_fail = TRUE, initial = TRUE, indirect_action = TRUE))
-		to_chat(quirk_holder, span_info("You have been given a company-issued symptom support kit containing mild stimulants to assist in staying awake this shift. Dose responsibly. Consult your allocated care provider if you experience any side-effects."))
+		to_chat(quirk_holder, span_info("Вам выдали фирменный набор для снятия симптомов, содержащий легкие стимуляторы, которые помогут не заснуть в эту смену. Отнеситесь к дозировке ответственно. При возникновении побочных эффектов обратитесь к своему лечащему врачу."))
 
 /datum/quirk/narcolepsy/remove()
 	. = ..()
@@ -46,9 +46,9 @@
 		sleep_chance = sleep_chance / 2
 
 	if(!drowsy && SPT_PROB(sleep_chance, seconds_per_tick))
-		to_chat(owner, span_warning("You feel tired..."))
+		to_chat(owner, span_warning("Вы чувствуете усталость..."))
 		owner.adjust_drowsiness(rand(30 SECONDS, 60 SECONDS))
 
 	else if(drowsy && SPT_PROB(sleep_chance, seconds_per_tick))
-		to_chat(owner, span_warning("You fall asleep."))
+		to_chat(owner, span_warning("Вы засыпаете."))
 		owner.Sleeping(rand(20 SECONDS, 30 SECONDS))

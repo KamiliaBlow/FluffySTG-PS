@@ -361,7 +361,7 @@ const ProductColorSelect = (props) => {
   return (
     <Button
       icon="palette"
-      tooltip="Change color"
+      tooltip="Изм цвет"
       width="24px"
       disabled={disabled}
       onClick={() => act('select_colors', { ref: product.ref })}

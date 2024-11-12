@@ -91,11 +91,11 @@ const AntagSelection = (props: { antagonists: Antagonist[]; name: string }) => {
       buttons={
         <>
           <Button color="good" onClick={() => enableAntags(antagonistKeys)}>
-            Enable All
+            Выбрать все
           </Button>
 
           <Button color="bad" onClick={() => disableAntags(antagonistKeys)}>
-            Disable All
+            Убрать все
           </Button>
         </>
       }
@@ -198,17 +198,17 @@ export const AntagsPage = () => {
   return (
     <Box className="PreferencesMenu__Antags">
       <AntagSelection
-        name="Roundstart"
+        name="В начале"
         antagonists={antagsByCategory.get(Category.Roundstart)!}
       />
 
       <AntagSelection
-        name="Midround"
+        name="В середине"
         antagonists={antagsByCategory.get(Category.Midround)!}
       />
 
       <AntagSelection
-        name="Latejoin"
+        name="В конце"
         antagonists={antagsByCategory.get(Category.Latejoin)!}
       />
     </Box>

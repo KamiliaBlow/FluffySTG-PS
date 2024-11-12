@@ -14,7 +14,7 @@ import {
 import { FeatureDropdownInput } from '../../dropdowns';
 
 export const feature_penis: Feature<string> = {
-  name: 'Penis Choice',
+  name: 'Пенис',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -23,22 +23,22 @@ export const feature_penis: Feature<string> = {
 };
 
 export const penis_skin_tone: FeatureToggle = {
-  name: 'Penis uses Skin Tone',
+  name: 'Пенис под тон кожи',
   component: CheckboxInput,
 };
 
 export const penis_skin_color: FeatureToggle = {
-  name: 'Penis uses Skin Color',
+  name: 'Пенис под цвет кожи',
   component: CheckboxInput,
 };
 
 export const penis_color: Feature<string[]> = {
-  name: 'Penis Color',
+  name: 'Пенис - цвет',
   component: FeatureTriColorInput,
 };
 
 export const penis_emissive: Feature<boolean[]> = {
-  name: 'Penis Emissives',
+  name: 'Пенис - свечение',
   description: 'Emissive parts glow in the dark.',
   component: FeatureTriBoolInput,
 };
@@ -81,7 +81,7 @@ export const penis_taur_mode_toggle: FeatureToggle = {
 };
 
 export const feature_testicles: Feature<string> = {
-  name: 'Testicles Choice',
+  name: 'Тестикулы',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -90,33 +90,33 @@ export const feature_testicles: Feature<string> = {
 };
 
 export const testicles_skin_tone: FeatureToggle = {
-  name: 'Testicles uses Skin Tone',
+  name: 'Тестикулы под тон кожи',
   component: CheckboxInput,
 };
 
 export const testicles_skin_color: FeatureToggle = {
-  name: 'Testicles uses Skin Color',
+  name: 'Тестикулы под цвет кожи',
   component: CheckboxInput,
 };
 
 export const testicles_color: Feature<string[]> = {
-  name: 'Testicles Color',
+  name: 'Тестикулы - цвет',
   component: FeatureTriColorInput,
 };
 
 export const testicles_emissive: Feature<boolean[]> = {
-  name: 'Testicles Emissives',
+  name: 'Тестикулы - свечение',
   description: 'Emissive parts glow in the dark.',
   component: FeatureTriBoolInput,
 };
 
 export const balls_size: FeatureNumeric = {
-  name: 'Testicles Size',
+  name: 'Тестикулы - размер',
   component: FeatureNumberInput,
 };
 
 export const feature_vagina: Feature<string> = {
-  name: 'Vagina Choice',
+  name: 'Вагина',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -125,28 +125,28 @@ export const feature_vagina: Feature<string> = {
 };
 
 export const vagina_skin_tone: FeatureToggle = {
-  name: 'Vagina uses Skin Tone',
+  name: 'Вагина под тон кожи',
   component: CheckboxInput,
 };
 
 export const vagina_skin_color: FeatureToggle = {
-  name: 'Vagina uses Skin Color',
+  name: 'Вагина под цвет кожи',
   component: CheckboxInput,
 };
 
 export const vagina_color: Feature<string[]> = {
-  name: 'Vagina Color',
+  name: 'Вагина - цвет',
   component: FeatureTriColorInput,
 };
 
 export const vagina_emissive: Feature<boolean[]> = {
-  name: 'Vagina Emissives',
+  name: 'Вагина - свечение',
   description: 'Emissive parts glow in the dark.',
   component: FeatureTriBoolInput,
 };
 
 export const feature_womb: Feature<string> = {
-  name: 'Womb Choice',
+  name: 'Матка',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -155,7 +155,7 @@ export const feature_womb: Feature<string> = {
 };
 
 export const feature_breasts: Feature<string> = {
-  name: 'Breast Choice',
+  name: 'Грудь',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -164,33 +164,33 @@ export const feature_breasts: Feature<string> = {
 };
 
 export const breasts_skin_tone: FeatureToggle = {
-  name: 'Breasts use Skin Tone',
+  name: 'Грудь под тон кожи',
   component: CheckboxInput,
 };
 
 export const breasts_skin_color: FeatureToggle = {
-  name: 'Breasts use Skin Color',
+  name: 'Грудь под цвет кожи',
   component: CheckboxInput,
 };
 
 export const breasts_color: Feature<string[]> = {
-  name: 'Breast Color',
+  name: 'Грудь - цвет',
   component: FeatureTriColorInput,
 };
 
 export const breasts_emissive: Feature<boolean[]> = {
-  name: 'Breast Emissives',
+  name: 'Грудь - свечение',
   description: 'Emissive parts glow in the dark.',
   component: FeatureTriBoolInput,
 };
 
 export const breasts_lactation_toggle: FeatureToggle = {
-  name: 'Breast Lactation',
+  name: 'Грудь - лактация',
   component: CheckboxInput,
 };
 
 export const breasts_size: Feature<string> = {
-  name: 'Breast Size',
+  name: 'Грудь - размер',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -199,40 +199,40 @@ export const breasts_size: Feature<string> = {
 };
 
 export const feature_anus: Feature<string> = {
-  name: 'Anus Choice',
+  name: 'Анус',
   component: FeatureDropdownInput,
 };
 
 export const body_size: FeatureNumeric = {
-  name: 'Body Size',
+  name: 'Тело - размер',
   component: FeatureNumberInput,
 };
 
 export const erp_status_pref: FeatureChoiced = {
-  name: 'ERP Status',
+  name: 'ЭРИ - Статус',
   description:
-    'All ERP status preferences are merely markers to other players of \
-  your preference towards various broad categories of ERP. Selecting no will virtually isolate you from \
-  all directed ERP.',
+    'Все предпочтения по статусу ЭРИ являются лишь маркерами для других игроков \
+  что вы предпочитаете различные широкие категории ЭРИ. Выбор «нет» практически изолирует вас от \
+  всех видов ЭРИ.',
   component: FeatureDropdownInput,
 };
 
 export const erp_status_pref_nc: FeatureChoiced = {
-  name: 'ERP Non-Con Status',
+  name: 'ЭРИ - Нон-кон (статус)',
   component: FeatureDropdownInput,
 };
 
 export const erp_status_pref_v: FeatureChoiced = {
-  name: 'ERP Vore Status',
+  name: 'ЭРИ - Воре (статус)',
   component: FeatureDropdownInput,
 };
 
 export const erp_status_pref_hypnosis: FeatureChoiced = {
-  name: 'ERP Hypnosis Status',
+  name: 'ЭРИ - Гипноз (статус)',
   component: FeatureDropdownInput,
 };
 
 export const erp_status_pref_mechanics: FeatureChoiced = {
-  name: 'ERP Mechanical Status',
+  name: 'ЭРИ - Механ (статус)',
   component: FeatureDropdownInput,
 };

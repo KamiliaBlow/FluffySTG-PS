@@ -1,13 +1,13 @@
 // re-adds heavy sleeper
 /datum/quirk/heavy_sleeper
-	name = "Heavy Sleeper"
-	desc = "You sleep like a rock! Whenever you're put to sleep or knocked unconscious, you take a little bit longer to wake up."
+	name = "Глубокий сон"
+	desc = "Вы спите как камень! Когда вас усыпляют или лишают сознания, вам требуется немного больше времени, чтобы проснуться."
 	icon = FA_ICON_BED
 	value = -2
 	mob_trait = TRAIT_HEAVY_SLEEPER
-	gain_text = span_danger("You feel sleepy.")
-	lose_text = span_notice("You feel awake again.")
-	medical_record_text = "Patient has abnormal sleep study results and is difficult to wake up."
+	gain_text = span_danger("Вам хочется спать.")
+	lose_text = span_notice("Вы снова чувствуете себя бодрячком.")
+	medical_record_text = "У пациента аномальные результаты исследования сна, и его трудно разбудить."
 	hardcore_value = 2
 	mail_goodies = list(
 		/obj/item/clothing/glasses/blindfold,

@@ -69,7 +69,7 @@ export const BorgPanel = (props) => {
               />
               <Button
                 icon="eject"
-                content="Change"
+                content="Изм"
                 onClick={() => act('change_cell')}
               />
               <Button

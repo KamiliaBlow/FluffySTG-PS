@@ -45,79 +45,79 @@
  */
 
 //No department
-#define JOB_ASSISTANT "Assistant"
-#define JOB_PRISONER "Prisoner"
+#define JOB_ASSISTANT "Асистент"
+#define JOB_PRISONER "Заключенный"
 //Command
-#define JOB_CAPTAIN "Captain"
-#define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
-#define JOB_HEAD_OF_SECURITY "Head of Security"
-#define JOB_RESEARCH_DIRECTOR "Research Director"
-#define JOB_CHIEF_ENGINEER "Chief Engineer"
-#define JOB_CHIEF_MEDICAL_OFFICER "Chief Medical Officer"
-#define JOB_BRIDGE_ASSISTANT "Bridge Assistant"
-#define JOB_VETERAN_ADVISOR "Veteran Security Advisor"
+#define JOB_CAPTAIN "Капитан"
+#define JOB_HEAD_OF_PERSONNEL "Глава персонала"
+#define JOB_HEAD_OF_SECURITY "Глава СБ"
+#define JOB_RESEARCH_DIRECTOR "Глава Н.И.О"
+#define JOB_CHIEF_ENGINEER "Главный инженер"
+#define JOB_CHIEF_MEDICAL_OFFICER "Главврач"
+#define JOB_BRIDGE_ASSISTANT "Помощник на мостике"
+#define JOB_VETERAN_ADVISOR "Ветеран СБ - советник"
 //Silicon
-#define JOB_AI "AI"
-#define JOB_CYBORG "Cyborg"
-#define JOB_PERSONAL_AI "Personal AI"
-#define JOB_HUMAN_AI "Big Brother"
+#define JOB_AI "ИИ"
+#define JOB_CYBORG "Киборг"
+#define JOB_PERSONAL_AI "Персональный ИИ"
+#define JOB_HUMAN_AI "Большой брат"
 //Security
-#define JOB_WARDEN "Warden"
-#define JOB_DETECTIVE "Detective"
-#define JOB_SECURITY_OFFICER "Security Officer"
-#define JOB_SECURITY_OFFICER_MEDICAL "Security Officer (Medical)"
-#define JOB_SECURITY_OFFICER_ENGINEERING "Security Officer (Engineering)"
-#define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
-#define JOB_SECURITY_OFFICER_SUPPLY "Security Officer (Cargo)"
+#define JOB_WARDEN "Смотритель"
+#define JOB_DETECTIVE "Детектив"
+#define JOB_SECURITY_OFFICER "Офицер СБ"
+#define JOB_SECURITY_OFFICER_MEDICAL "Офицер СБ (Мед)"
+#define JOB_SECURITY_OFFICER_ENGINEERING "Офицер СБ (Инж)"
+#define JOB_SECURITY_OFFICER_SCIENCE "Офицер СБ (Н.И.О)"
+#define JOB_SECURITY_OFFICER_SUPPLY "Офицер СБ (Погруз.)"
 #define JOB_CORRECTIONS_OFFICER "Corrections Officer" // NOVA EDIT ADDITION
 //Engineering
-#define JOB_STATION_ENGINEER "Station Engineer"
-#define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
+#define JOB_STATION_ENGINEER "Инженер"
+#define JOB_ATMOSPHERIC_TECHNICIAN "Атмосферный техник"
 #define JOB_TELECOMMS_SPECIALIST "Telecomms Specialist" // NOVA EDIT ADDITION
-#define JOB_ENGINEERING_GUARD "Engineering Guard" // NOVA EDIT ADDITION
+#define JOB_ENGINEERING_GUARD "Инженерная охрана" // NOVA EDIT ADDITION
 //Medical
-#define JOB_CORONER "Coroner"
-#define JOB_MEDICAL_DOCTOR "Medical Doctor"
-#define JOB_PARAMEDIC "Paramedic"
-#define JOB_CHEMIST "Chemist"
-#define JOB_VIROLOGIST "Virologist" // NOVA EDIT ADDITION
+#define JOB_CORONER "Патологоанатом"
+#define JOB_MEDICAL_DOCTOR "Врач"
+#define JOB_PARAMEDIC "Парамедик"
+#define JOB_CHEMIST "Химик"
+#define JOB_VIROLOGIST "Вирусолог" // NOVA EDIT ADDITION
 #define JOB_ORDERLY "Orderly" // NOVA EDIT ADDITION
 //Science
-#define JOB_SCIENTIST "Scientist"
-#define JOB_ROBOTICIST "Roboticist"
-#define JOB_GENETICIST "Geneticist"
-#define JOB_SCIENCE_GUARD "Science Guard" // NOVA EDIT ADDITION
+#define JOB_SCIENTIST "Ученый"
+#define JOB_ROBOTICIST "Роботехник"
+#define JOB_GENETICIST "Генетик"
+#define JOB_SCIENCE_GUARD "Научная охрана" // NOVA EDIT ADDITION
 //Supply
-#define JOB_QUARTERMASTER "Quartermaster"
-#define JOB_CARGO_TECHNICIAN "Cargo Technician"
+#define JOB_QUARTERMASTER "Квартермейстер"
+#define JOB_CARGO_TECHNICIAN "Грузовой техник"
 #define JOB_CARGO_GORILLA "Cargo Gorilla"
-#define JOB_SHAFT_MINER "Shaft Miner"
+#define JOB_SHAFT_MINER "Шахтер"
 #define JOB_BITRUNNER "Bitrunner"
-#define JOB_CUSTOMS_AGENT "Customs Agent" // NOVA EDIT ADDITION
+#define JOB_CUSTOMS_AGENT "Таможенный агент" // NOVA EDIT ADDITION
 //Service
-#define JOB_BARTENDER "Bartender"
-#define JOB_BOTANIST "Botanist"
-#define JOB_COOK "Cook"
-#define JOB_CHEF "Chef" // Alternate cook title.
-#define JOB_JANITOR "Janitor"
-#define JOB_CLOWN "Clown"
-#define JOB_MIME "Mime"
-#define JOB_CURATOR "Curator"
-#define JOB_LAWYER "Lawyer"
-#define JOB_CHAPLAIN "Chaplain"
-#define JOB_PSYCHOLOGIST "Psychologist"
-#define JOB_PUN_PUN "Pun Pun"
-#define JOB_BARBER "Barber" // NOVA EDIT ADDITION
-#define JOB_BOUNCER "Service Guard" // NOVA EDIT ADDITION
+#define JOB_BARTENDER "Бармен"
+#define JOB_BOTANIST "Ботаник"
+#define JOB_COOK "Повар"
+#define JOB_CHEF "Шеф" // Alternate cook title.
+#define JOB_JANITOR "Уборщик"
+#define JOB_CLOWN "Клоун"
+#define JOB_MIME "Мим"
+#define JOB_CURATOR "Куратор"
+#define JOB_LAWYER "Адвокат"
+#define JOB_CHAPLAIN "Священник"
+#define JOB_PSYCHOLOGIST "Психолог"
+#define JOB_PUN_PUN "Пун пун"
+#define JOB_BARBER "Парикмахер" // NOVA EDIT ADDITION
+#define JOB_BOUNCER "Гражданская охрана" // NOVA EDIT ADDITION
 //ERTs
-#define JOB_ERT_DEATHSQUAD "Death Commando"
-#define JOB_ERT_COMMANDER "Emergency Response Team Commander"
-#define JOB_ERT_OFFICER "Security Response Officer"
-#define JOB_ERT_ENGINEER "Engineering Response Officer"
-#define JOB_ERT_MEDICAL_DOCTOR "Medical Response Officer"
-#define JOB_ERT_CHAPLAIN "Religious Response Officer"
-#define JOB_ERT_JANITOR "Janitorial Response Officer"
-#define JOB_ERT_CLOWN "Entertainment Response Officer"
+#define JOB_ERT_DEATHSQUAD "Отряд смерти"
+#define JOB_ERT_COMMANDER "Командир Г.Б.Р"
+#define JOB_ERT_OFFICER "Офицер по вопросам безопасности"
+#define JOB_ERT_ENGINEER "Офицер по инженерным вопросам"
+#define JOB_ERT_MEDICAL_DOCTOR "Офицер по вопросам медицинской помощи"
+#define JOB_ERT_CHAPLAIN "Офицер по религиозным вопросам"
+#define JOB_ERT_JANITOR "Офицер по вопросам очистки/уборки"
+#define JOB_ERT_CLOWN "Офицер по вопросам развлечения"
 //CentCom
 #define JOB_CENTCOM "Central Command"
 #define JOB_CENTCOM_OFFICIAL "CentCom Official"
@@ -132,14 +132,14 @@
 #define JOB_CENTCOM_SPECIAL_OFFICER "Special Ops Officer"
 #define JOB_CENTCOM_PRIVATE_SECURITY "Private Security Force"
 // NOVA EDIT ADDITION START
-#define JOB_BLUESHIELD "Blueshield"
-#define JOB_NT_REP "Nanotrasen Consultant"
+#define JOB_BLUESHIELD "Синий щит"
+#define JOB_NT_REP "Консультант Nanotrasen"
 // Nanotrasen Naval Command jobs
-#define JOB_NAVAL_ENSIGN "Ensign"
-#define JOB_NAVAL_LIEUTENANT "Lieutenant"
-#define JOB_NAVAL_LTCR "Lieutenant Commander"
-#define JOB_NAVAL_COMMANDER "Commander"
-#define JOB_NAVAL_CAPTAIN "Captain"
+#define JOB_NAVAL_ENSIGN "Мичман ."
+#define JOB_NAVAL_LIEUTENANT "Лейтенант"
+#define JOB_NAVAL_LTCR "Лейтенант-командир"
+#define JOB_NAVAL_COMMANDER "Командир"
+#define JOB_NAVAL_CAPTAIN "Капитан"
 #define JOB_NAVAL_REAR_ADMIRAL "Rear Admiral"
 #define JOB_NAVAL_ADMIRAL "Admiral"
 #define JOB_NAVAL_FLEET_ADMIRAL "Fleet Admiral"
