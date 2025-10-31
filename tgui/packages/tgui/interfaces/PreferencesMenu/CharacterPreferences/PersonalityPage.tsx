@@ -239,7 +239,7 @@ function getAllSelectedPersonalitiesString(
     }
   }
   if (personalityNames.length === 0) {
-    return 'You have no personality.';
+    return 'У вас нет персоналий.';
   }
   personalityNames.sort((a, b) => (a < b ? -1 : 1));
   let finalString = '';
@@ -254,7 +254,7 @@ function getAllSelectedPersonalitiesString(
       if (finalString[finalString.length - 1] !== ' ') {
         finalString += ' ';
       }
-      finalString += 'and ';
+      finalString += 'и ';
     }
   }
   return `You are ${finalString}.`;
@@ -346,7 +346,7 @@ export function PersonalityPage() {
         <Stack.Item mb={1}>
           <Input
             fluid
-            placeholder="Search..."
+            placeholder="Поиск..."
             value={searchQuery}
             onChange={(v) => setSearchQuery(v)}
           />

@@ -50,7 +50,7 @@ function CharacterProfiles(props: ProfileProps) {
           displayText={profiles[activeSlot]}
           options={profiles.map((profile, slot) => ({
             value: slot,
-            displayText: profile ?? 'New Character',
+            displayText: profile ?? 'Новый персонаж',
           }))}
           onSelected={(slot) => {
             onClick(slot);
@@ -122,7 +122,7 @@ export function CharacterPreferenceWindow(props) {
       </Stack.Item>
       {!data.content_unlocked && (
         <Stack.Item align="center">
-          Buy BYOND premium for more slots!
+          Купите BYOND premium для больших слотов!
         </Stack.Item>
       )}
       <Stack.Divider />
@@ -135,7 +135,7 @@ export function CharacterPreferenceWindow(props) {
               setPage={setCurrentPage}
               otherActivePages={[Page.Species]}
             >
-              Character
+              Персонаж
             </PageButton>
           </Stack.Item>
 
@@ -145,7 +145,7 @@ export function CharacterPreferenceWindow(props) {
               page={Page.Loadout}
               setPage={setCurrentPage}
             >
-              Loadout
+              Разгрузка
             </PageButton>
           </Stack.Item>
 
@@ -159,7 +159,7 @@ export function CharacterPreferenceWindow(props) {
                     Fun fact: This isn't "Jobs" so that it intentionally
                     catches your eyes, because it's really important!
                   */}
-              Occupations
+              Должность
             </PageButton>
           </Stack.Item>
           {/* NOVA EDIT ADDITION START */}
@@ -169,7 +169,7 @@ export function CharacterPreferenceWindow(props) {
               page={Page.Limbs}
               setPage={setCurrentPage}
             >
-              Augments+
+              Аугменты+
             </PageButton>
           </Stack.Item>
 
@@ -179,7 +179,7 @@ export function CharacterPreferenceWindow(props) {
               page={Page.Languages}
               setPage={setCurrentPage}
             >
-              Languages
+              Языки
             </PageButton>
           </Stack.Item>
           {/* NOVA EDIT ADDITION end */}
@@ -189,7 +189,7 @@ export function CharacterPreferenceWindow(props) {
               page={Page.Antags}
               setPage={setCurrentPage}
             >
-              Antagonists
+              Антагонизм
             </PageButton>
           </Stack.Item>
 
@@ -199,7 +199,7 @@ export function CharacterPreferenceWindow(props) {
               page={Page.Quirks}
               setPage={setCurrentPage}
             >
-              Quirks and Personality
+              Причуды и Персоналии
             </PageButton>
           </Stack.Item>
         </Stack>

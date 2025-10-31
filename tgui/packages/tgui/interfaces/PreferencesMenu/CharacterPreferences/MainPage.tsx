@@ -60,7 +60,7 @@ function CharacterControls(props: CharacterControlsProps) {
           onClick={props.handleRotate}
           fontSize="22px"
           icon="undo"
-          tooltip="Rotate"
+          tooltip="Поворот"
           tooltipPosition="top"
         />
       </Stack.Item>
@@ -70,7 +70,7 @@ function CharacterControls(props: CharacterControlsProps) {
           onClick={props.handleOpenSpecies}
           fontSize="22px"
           icon="paw"
-          tooltip="Species"
+          tooltip="Виды"
           tooltipPosition="top"
         />
       </Stack.Item>
@@ -89,7 +89,7 @@ function CharacterControls(props: CharacterControlsProps) {
           onClick={props.handleFood}
           fontSize="22px"
           icon="drumstick-bite"
-          tooltip="Edit Food Preferences"
+          tooltip="Изменить предпочтение к еде"
           tooltipPosition="top"
         />
         {/* NOVA EDIT ADDITION END */}
@@ -100,7 +100,7 @@ function CharacterControls(props: CharacterControlsProps) {
           fontSize="22px"
           icon="trash"
           color="red"
-          tooltip="Delete Character"
+          tooltip="Удалить персонажа"
           tooltipPosition="top"
           disabled={!props.canDeleteCharacter}
         />
@@ -155,7 +155,7 @@ function ChoicedSelection(props: ChoicedSelectionProps) {
             <Input
               autoFocus
               fluid
-              placeholder="Search..."
+              placeholder="Поиск..."
               onChange={setSearchText}
             />
           </Section>
@@ -249,7 +249,7 @@ function GenderButton(props: GenderButtonProps) {
         <Button
           fontSize="22px"
           icon={GENDERS[props.gender].icon}
-          tooltip="Gender"
+          tooltip="Гендер"
           tooltipPosition="top"
         />
       </div>

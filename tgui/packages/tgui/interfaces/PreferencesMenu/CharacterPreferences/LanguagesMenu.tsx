@@ -129,7 +129,7 @@ export function LanguagesPage() {
           <Section
             title={
               <Box fontSize="150%">
-                {data.unselected_languages.length} available languages
+                {data.unselected_languages.length} языков доступно
               </Box>
             }
           >
@@ -145,7 +145,7 @@ export function LanguagesPage() {
             title={
               <Box fontSize="150%">
                 {data.selected_languages.length}/{data.total_language_points}{' '}
-                known languages
+                известных языков
               </Box>
             }
           >
