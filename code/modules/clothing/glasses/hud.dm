@@ -2,6 +2,9 @@
 	name = "HUD"
 	desc = "A heads-up display that provides important info in (almost) real time."
 	flags_1 = null //doesn't protect eyes because it's a monocle, duh
+	actions_types = list(/datum/action/item_action/toggle_wearable_hud)
+	/// Whether the HUD info is on or off
+	var/display_active = TRUE
 
 /obj/item/clothing/glasses/hud/emp_act(severity)
 	. = ..()
@@ -32,12 +35,30 @@
 			user.say("WHY IS THERE A BAR ON MY HEAD?!!")
 	return OXYLOSS
 
+/obj/item/clothing/glasses/hud/equipped(mob/living/user, slot)
+	. = ..()
+	display_active = TRUE
+
+/obj/item/clothing/glasses/hud/proc/toggle_hud_display(mob/living/carbon/eye_owner)
+	if(display_active)
+		display_active = FALSE
+		for(var/hud_trait in clothing_traits)
+			REMOVE_CLOTHING_TRAIT(eye_owner, hud_trait)
+		balloon_alert(eye_owner, "hud disabled")
+		return
+
+	display_active = TRUE
+	for(var/hud_trait in clothing_traits)
+		ADD_CLOTHING_TRAIT(eye_owner, hud_trait)
+	balloon_alert(eye_owner, "hud enabled")
+
 /obj/item/clothing/glasses/hud/health
 	name = "health scanner HUD"
 	desc = "A heads-up display that scans the humanoids in view and provides accurate data about their health status."
 	icon_state = "healthhud"
 	clothing_traits = list(TRAIT_MEDICAL_HUD)
 	glass_colour_type = /datum/client_colour/glass_colour/lightblue
+	species_exception = list(/datum/species/nabber) // FF ADDITION
 
 /obj/item/clothing/glasses/hud/medsechud
 	name = "health scanner security HUD"
@@ -56,7 +77,7 @@
 	color_cutoffs = list(20, 20, 45)
 	glass_colour_type = /datum/client_colour/glass_colour/lightgreen
 	actions_types = list(/datum/action/item_action/toggle_nv)
-	forced_glass_color = TRUE
+	species_exception = list() // FF ADDITION
 
 /obj/item/clothing/glasses/hud/health/night/update_icon_state()
 	. = ..()
@@ -69,10 +90,9 @@
 
 /obj/item/clothing/glasses/hud/health/night/science
 	name = "night vision medical science scanner HUD"
-	desc = "An clandestine medical science heads-up display that allows operatives to find \
-		dying captains and the perfect poison to finish them off in complete darkness."
+	desc = "A clandestine medical science heads-up display that allows operatives to find \
+		both dying captains and the perfect poison to finish them off, all in complete darkness."
 	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_MEDICAL_HUD)
-	forced_glass_color = FALSE
 
 /obj/item/clothing/glasses/hud/health/sunglasses
 	name = "medical HUDSunglasses"
@@ -82,6 +102,7 @@
 	flags_cover = GLASSESCOVERSEYES
 	tint = 1
 	glass_colour_type = /datum/client_colour/glass_colour/blue
+	species_exception = list() // FF ADDITION
 
 /obj/item/clothing/glasses/hud/health/sunglasses/Initialize(mapload)
 	. = ..()
@@ -98,6 +119,7 @@
 	icon_state = "diagnostichud"
 	clothing_traits = list(TRAIT_DIAGNOSTIC_HUD)
 	glass_colour_type = /datum/client_colour/glass_colour/lightorange
+	species_exception = list(/datum/species/nabber) // FF ADDITION
 
 /obj/item/clothing/glasses/hud/diagnostic/night
 	name = "night vision diagnostic HUD"
@@ -110,7 +132,7 @@
 	color_cutoffs = list(25, 15, 5)
 	glass_colour_type = /datum/client_colour/glass_colour/lightyellow
 	actions_types = list(/datum/action/item_action/toggle_nv)
-	forced_glass_color = TRUE
+	species_exception = list() // FF ADDITION
 
 /obj/item/clothing/glasses/hud/diagnostic/night/update_icon_state()
 	. = ..()
@@ -124,6 +146,7 @@
 	flash_protect = FLASH_PROTECTION_FLASH
 	flags_cover = GLASSESCOVERSEYES
 	tint = 1
+	species_exception = list() // FF ADDITION
 
 /obj/item/clothing/glasses/hud/diagnostic/sunglasses/Initialize(mapload)
 	. = ..()
@@ -140,12 +163,14 @@
 	icon_state = "securityhud"
 	clothing_traits = list(TRAIT_SECURITY_HUD)
 	glass_colour_type = /datum/client_colour/glass_colour/red
+	species_exception = list(/datum/species/nabber) // FF ADDITION
 
 /obj/item/clothing/glasses/hud/security/chameleon
 	name = "chameleon security HUD"
 	desc = "A stolen security HUD integrated with Syndicate chameleon technology. Provides flash protection."
 	flash_protect = FLASH_PROTECTION_FLASH
 	actions_types = list(/datum/action/item_action/chameleon/change/glasses/no_preset)
+	species_exception = list() // FF ADDITION
 
 /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch
 	name = "eyepatch HUD"
@@ -153,6 +178,7 @@
 	icon_state = "hudpatch"
 	base_icon_state = "hudpatch"
 	actions_types = list(/datum/action/item_action/flip)
+	species_exception = list() // FF ADDITION
 
 /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch/attack_self(mob/user, modifiers)
 	. = ..()
@@ -167,6 +193,7 @@
 	flags_cover = GLASSESCOVERSEYES
 	tint = 1
 	glass_colour_type = /datum/client_colour/glass_colour/darkred
+	species_exception = list() // FF ADDITION
 
 /obj/item/clothing/glasses/hud/security/sunglasses/Initialize(mapload)
 	. = ..()
@@ -187,7 +214,7 @@
 	color_cutoffs = list(40, 15, 10)
 	glass_colour_type = /datum/client_colour/glass_colour/lightred
 	actions_types = list(/datum/action/item_action/toggle_nv)
-	forced_glass_color = TRUE
+	species_exception = list() // FF ADDITION
 
 /obj/item/clothing/glasses/hud/security/night/update_icon_state()
 	. = ..()
@@ -206,6 +233,7 @@
 	attack_verb_simple = list("slice")
 	hitsound = 'sound/items/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
+	species_exception = list() // FF ADDITION
 
 /obj/item/clothing/glasses/hud/security/sunglasses/gars/giga
 	name = "giga HUD gar glasses"
@@ -213,6 +241,7 @@
 	icon_state = "gigagar_sec"
 	force = 12
 	throwforce = 12
+	species_exception = list() // FF ADDITION
 
 /obj/item/clothing/glasses/hud/toggle
 	name = "Toggle HUD"
@@ -227,18 +256,14 @@
 	if (wearer.glasses != src)
 		return
 
-	for(var/trait in clothing_traits)
-		REMOVE_CLOTHING_TRAIT(user, trait)
-
 	if (TRAIT_MEDICAL_HUD in clothing_traits)
-		clothing_traits = null
+		detach_clothing_traits(TRAIT_MEDICAL_HUD)
 	else if (TRAIT_SECURITY_HUD in clothing_traits)
-		clothing_traits = list(TRAIT_MEDICAL_HUD)
+		detach_clothing_traits(TRAIT_MEDICAL_HUD)
+		attach_clothing_traits(TRAIT_SECURITY_HUD)
 	else
-		clothing_traits = list(TRAIT_SECURITY_HUD)
-
-	for(var/trait in clothing_traits)
-		ADD_CLOTHING_TRAIT(user, trait)
+		detach_clothing_traits(TRAIT_MEDICAL_HUD)
+		attach_clothing_traits(TRAIT_SECURITY_HUD)
 
 /datum/action/item_action/switch_hud
 	name = "Switch HUD"
@@ -251,6 +276,7 @@
 	color_cutoffs = list(25, 8, 5)
 	glass_colour_type = /datum/client_colour/glass_colour/red
 	clothing_traits = list(TRAIT_SECURITY_HUD)
+	species_exception = list() // FF ADDITION
 
 /obj/item/clothing/glasses/hud/toggle/thermal/attack_self(mob/user)
 	..()

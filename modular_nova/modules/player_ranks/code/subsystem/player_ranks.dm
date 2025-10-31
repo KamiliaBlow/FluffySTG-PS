@@ -10,7 +10,10 @@
 SUBSYSTEM_DEF(player_ranks)
 	name = "Player Ranks"
 	flags = SS_NO_FIRE
-	init_order = INIT_ORDER_PLAYER_RANKS
+	init_stage = INITSTAGE_EARLY
+	dependencies = list(
+		/datum/controller/subsystem/server_maint,
+	)
 	// The following controllers handle most of the legacy system's functions,
 	// and provide a layer of abstraction for this subsystem to have cleaner
 	// logic.
@@ -34,11 +37,10 @@ SUBSYSTEM_DEF(player_ranks)
 
 
 /datum/controller/subsystem/player_ranks/Destroy()
-	. = ..()
-
 	QDEL_NULL(donator_controller)
 	QDEL_NULL(mentor_controller)
 	QDEL_NULL(veteran_controller)
+	return ..()
 
 
 /**
@@ -132,7 +134,7 @@ SUBSYSTEM_DEF(player_ranks)
  * `donator_status` and `max_save_slots` once donators are loaded.
  */
 /datum/controller/subsystem/player_ranks/proc/update_all_prefs_donator_status()
-	for(var/ckey as anything in GLOB.preferences_datums)
+	for(var/ckey in GLOB.preferences_datums)
 		update_prefs_donator_status(GLOB.preferences_datums[ckey])
 
 
@@ -202,7 +204,6 @@ SUBSYSTEM_DEF(player_ranks)
 		return
 
 	load_player_rank_sql(veteran_controller)
-
 
 /**
  * Handles populating the player rank from the database.
@@ -330,7 +331,7 @@ SUBSYSTEM_DEF(player_ranks)
 
 	var/datum/db_query/query_add_player_rank = SSdbcore.NewQuery(
 		"INSERT INTO [format_table_name(PLAYER_RANK_TABLE_NAME)] (ckey, rank, admin_ckey) VALUES(:ckey, :rank, :admin_ckey) \
-		 ON DUPLICATE KEY UPDATE deleted = 0, admin_ckey = :admin_ckey",
+		ON DUPLICATE KEY UPDATE deleted = 0, admin_ckey = :admin_ckey",
 		list("ckey" = ckey, "rank" = controller.rank_title, "admin_ckey" = admin_ckey),
 	)
 

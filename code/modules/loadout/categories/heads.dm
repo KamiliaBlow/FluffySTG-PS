@@ -68,7 +68,7 @@
 
 /datum/loadout_item/head/white_cap
 	name = "Cap (White)"
-	item_path = /obj/item/clothing/head/soft
+	item_path = /obj/item/clothing/head/soft/mime
 
 /datum/loadout_item/head/yellow_cap
 	name = "Cap (Yellow)"
@@ -130,11 +130,11 @@
 /datum/loadout_item/head/plague_doctor
 	name = "Cap (Plague Doctor)"
 	item_path = /obj/item/clothing/head/bio_hood/plague
+*/ // NOVA REMOVAL END
 
 /datum/loadout_item/head/rose
 	name = "Rose"
 	item_path = /obj/item/food/grown/rose
-*/ // NOVA REMOVAL END
 
 /datum/loadout_item/head/sunflower
 	name = "Sunflower"
@@ -157,6 +157,5 @@
 	item_path = /obj/item/food/grown/harebell
 
 /datum/loadout_item/head/wig
-	name = "Wig"
+	name = "Natural Wig"
 	item_path = /obj/item/clothing/head/wig/natural
-	additional_displayed_text = list("Hair Color")

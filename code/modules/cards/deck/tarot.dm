@@ -7,10 +7,8 @@
 	cardgame_desc = "tarot card reading"
 	icon_state = "deck_tarot_full"
 	deckstyle = "tarot"
-	is_standard_deck = FALSE
 
-/obj/item/toy/cards/deck/tarot/Initialize(mapload)
-	. = ..()
+/obj/item/toy/cards/deck/tarot/initialize_cards()
 	for(var/suit in list("Hearts", "Pikes", "Clovers", "Tiles"))
 		for(var/i in 1 to 10)
 			initial_cards += "[i] of [suit]"
@@ -54,7 +52,7 @@
 
 	COOLDOWN_START(src, ghost_alert_cooldown, TAROT_GHOST_TIMER)
 	notify_ghosts(
-		"Someone has begun playing with a [src.name] in [get_area(src)]!",
+		"Someone has begun playing with a [name] in [get_area(src)]!",
 		source = src,
 		header = "Haunted Tarot Deck",
 		ghost_sound = 'sound/effects/ghost2.ogg',

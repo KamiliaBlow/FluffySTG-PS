@@ -13,15 +13,18 @@
 	/// Are we limited to a certain species type? LISTED TYPE
 	var/restricted_species
 
-/obj/effect/mob_spawn/ghost_role/create(mob/mob_possessor, newname)
+/obj/effect/mob_spawn/ghost_role/create(mob/mob_possessor, newname, use_loadout = FALSE)
 	var/load_prefs = FALSE
 	//if we can load our own appearance and it's not restricted, try
 	if(!random_appearance && mob_possessor?.client)
 		//if we have gotten to this point, they have already waived their species pref.-- they were told they need to use the specific species already
 		if((restricted_species && (mob_possessor?.client?.prefs?.read_preference(/datum/preference/choiced/species) in restricted_species)) || !restricted_species)
-			var/appearance_choice = tgui_alert(mob_possessor, "Use currently loaded character preferences?", "Appearance Type", list("Yes", "No"))
-			if(appearance_choice == "Yes")
+			if(use_loadout)
 				load_prefs = TRUE
+			else
+				var/appearance_choice = tgui_alert(mob_possessor, "Use currently loaded character preferences?", "Appearance Type", list("Yes", "No"))
+				if(appearance_choice == "Yes")
+					load_prefs = TRUE
 
 	var/mob/living/spawned_mob = ..(mob_possessor, newname, load_prefs)
 
@@ -32,7 +35,7 @@
 		if(!load_prefs)
 			var/datum/language_holder/holder = spawned_human.get_language_holder()
 			holder.get_selected_language() //we need this here so a language starts off selected
-
+			post_transfer_prefs(spawned_human)
 			return spawned_human
 
 		spawned_human?.client?.prefs?.safe_transfer_prefs_to(spawned_human)
@@ -57,12 +60,14 @@
 
 /// This edit would cause somewhat ugly diffs, so I'm just replacing it.
 /// Original proc in code/modules/mob_spawn/mob_spawn.dm ~line 39.
-/obj/effect/mob_spawn/create(mob/mob_possessor, newname, is_pref_loaded)
+/obj/effect/mob_spawn/create(mob/mob_possessor, newname, use_loadout = FALSE)
 	var/mob/living/spawned_mob = new mob_type(get_turf(src)) //living mobs only
 	name_mob(spawned_mob, newname)
 	special(spawned_mob, mob_possessor)
-	if(!is_pref_loaded)
+	// Only run equip logic if this is NOT a ghost_role spawner, as we already solve equip with loadout there.
+	if (!use_loadout)
 		equip(spawned_mob)
+	spawned_mob_ref = WEAKREF(spawned_mob)
 	return spawned_mob
 
 // Anything that can potentially be overwritten by transferring prefs must go in this proc
@@ -70,13 +75,32 @@
 // In those cases, please override this proc as well as special()
 // TODO: refactor create() and special() so that this is no longer necessary
 /obj/effect/mob_spawn/ghost_role/proc/post_transfer_prefs(mob/living/new_spawn)
+	apply_job_traits(new_spawn) // for things in after_spawn e.g. liver traits
 	return
-
 
 /obj/effect/mob_spawn/ghost_role/human/special(mob/living/spawned_mob, mob/mob_possessor)
 	. = ..()
 	var/mob/living/carbon/human/spawned_human = spawned_mob
 	var/datum/job/spawned_job = SSjob.get_job_type(spawner_job_path)
-
 	spawned_human.job = spawned_job.title
 
+/**
+ * Apply [/datum/job/var/mind_traits] and [/datum/job/var/liver_traits] to newly spawned mob along with [TRAIT_CLIENT_STARTING_ORGAN] to every organ
+ */
+/obj/effect/mob_spawn/ghost_role/proc/apply_job_traits(mob/living/carbon/human/spawned_human)
+	if(!istype(spawned_human) && !spawned_human.mind)
+		return
+
+	var/datum/job/job_role = spawned_human.mind.assigned_role
+	if(!job_role)
+		return
+
+	if(length(job_role.mind_traits))
+		spawned_human.mind.add_traits(job_role.mind_traits, JOB_TRAIT)
+
+	var/obj/item/organ/liver/liver = spawned_human.get_organ_slot(ORGAN_SLOT_LIVER)
+	if(liver && length(job_role.liver_traits))
+		liver.add_traits(job_role.liver_traits, JOB_TRAIT)
+
+	for(var/obj/item/organ/our_organ in spawned_human.organs)
+		ADD_TRAIT(our_organ, TRAIT_CLIENT_STARTING_ORGAN, ROUNDSTART_TRAIT)

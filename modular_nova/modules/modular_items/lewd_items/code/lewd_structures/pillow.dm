@@ -21,6 +21,7 @@
 	var/static/list/pillow_colors
 	var/static/list/pillow_forms
 	w_class = WEIGHT_CLASS_SMALL
+	obj_flags_nova = ERP_ITEM // who the hell is getting freaky for pillows bruh
 
 // Create radial menu
 /obj/item/fancy_pillow/proc/populate_pillow_colors()
@@ -212,9 +213,9 @@
 	affected_mob.pixel_y -= 6
 
 //"Upgrading" pillow
-/obj/structure/bed/pillow_tiny/attackby(obj/item/used_item, mob/living/user, params)
-	if(istype(used_item, /obj/item/fancy_pillow))
-		var/obj/item/fancy_pillow/used_pillow = used_item
+/obj/structure/bed/pillow_tiny/attackby(obj/item/attacking_item, mob/user, list/modifiers, list/attack_modifiers)
+	if(istype(attacking_item, /obj/item/fancy_pillow))
+		var/obj/item/fancy_pillow/used_pillow = attacking_item
 		var/obj/structure/chair/pillow_small/pillow_pile
 		if(used_pillow.current_color == current_color)
 			to_chat(user, span_notice("You add [src] to a pile."))
@@ -250,8 +251,8 @@
 	icon = 'modular_nova/modules/modular_items/lewd_items/icons/obj/lewd_structures/pillows.dmi'
 	icon_state = "pillowpile_small_pink"
 	base_icon_state = "pillowpile_small"
+	has_armrest = TRUE
 	var/current_color = "pink"
-	var/mutable_appearance/armrest
 
 	//Containing pillows that we have here.
 	var/pillow1_color = "pink"
@@ -273,15 +274,11 @@
 	. = ..()
 	AddElement(/datum/element/elevation, pixel_shift = 4)
 
-/obj/structure/chair/pillow_small/proc/GetArmrest()
+/obj/structure/chair/pillow_small/GetArmrest()
 	if(current_color == "pink")
 		return mutable_appearance('modular_nova/modules/modular_items/lewd_items/icons/obj/lewd_structures/pillows.dmi', "pillowpile_small_pink_overlay")
 	if(current_color == "teal")
 		return mutable_appearance('modular_nova/modules/modular_items/lewd_items/icons/obj/lewd_structures/pillows.dmi', "pillowpile_small_teal_overlay")
-
-/obj/structure/chair/pillow_small/Destroy()
-	QDEL_NULL(armrest)
-	return ..()
 
 /obj/structure/chair/pillow_small/post_buckle_mob(mob/living/affected_mob)
 	. = ..()
@@ -331,9 +328,9 @@
 	return CLICK_ACTION_SUCCESS
 
 //Upgrading pillow pile to a PILLOW PILE!
-/obj/structure/chair/pillow_small/attackby(obj/item/used_item, mob/living/user, params)
-	if(istype(used_item, /obj/item/fancy_pillow))
-		var/obj/item/fancy_pillow/used_pillow = used_item
+/obj/structure/chair/pillow_small/attackby(obj/item/attacking_item, mob/user, list/modifiers, list/attack_modifiers)
+	if(istype(attacking_item, /obj/item/fancy_pillow))
+		var/obj/item/fancy_pillow/used_pillow = attacking_item
 		var/obj/structure/bed/pillow_large/pillow_pile
 		if(used_pillow.current_color == current_color)
 			to_chat(user, span_notice("You add [src] to the pile."))

@@ -4,7 +4,7 @@
 		/obj/machinery/vending/imported/yangyu,
 		/obj/machinery/vending/imported/mothic,
 		/obj/machinery/vending/imported/tiziran,
-		/obj/machinery/vending/deforest_medvend,
+		// /obj/machinery/vending/deforest_medvend,	//FLUFFY FRONTIER REMOVAL: nova vending rebalance #5219
 	)
 
 /obj/effect/spawner/random/vending/colavend //These can serve both snacks AND drinks so it's kinda both of them?
@@ -13,7 +13,7 @@
 		/obj/machinery/vending/imported/yangyu,
 		/obj/machinery/vending/imported/mothic,
 		/obj/machinery/vending/imported/tiziran,
-		/obj/machinery/vending/deforest_medvend,
+		// /obj/machinery/vending/deforest_medvend,	//FLUFFY FRONTIER REMOVAL: nova vending rebalance #5219
 	)
 
 /datum/supply_pack/vending/imported/fill(obj/structure/closet/crate/target_crate)
@@ -67,6 +67,7 @@
 	)
 
 	refill_canister = /obj/item/vending_refill/snack/imported/nt
+	allow_custom = TRUE
 
 /obj/item/vending_refill/snack/imported/nt
 	machine_name = "NT Sustenance Supplier"
@@ -110,6 +111,7 @@
 
 	refill_canister = /obj/item/vending_refill/snack/imported/yangyu
 	initial_language_holder = /datum/language_holder/yangyu_vendor
+	allow_custom = TRUE
 
 /datum/language_holder/yangyu_vendor
 	understood_languages = list(
@@ -166,6 +168,7 @@
 
 	refill_canister = /obj/item/vending_refill/snack/imported/mothic
 	initial_language_holder = /datum/language_holder/moffic_vendor
+	allow_custom = TRUE
 
 /datum/language_holder/moffic_vendor
 	understood_languages = list(
@@ -216,6 +219,7 @@
 
 	refill_canister = /obj/item/vending_refill/snack/imported/tiziran
 	initial_language_holder = /datum/language_holder/draconic_vendor
+	allow_custom = TRUE
 
 /datum/language_holder/draconic_vendor
 	understood_languages = list(

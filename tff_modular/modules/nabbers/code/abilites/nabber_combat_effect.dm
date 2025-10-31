@@ -31,10 +31,7 @@
 	owner.remove_movespeed_modifier(/datum/movespeed_modifier/nabber_combat)
 	QDEL_NULL(nabber_image)
 
-	UnregisterSignal(owner, list(
-		COMSIG_ATOM_DIR_CHANGE,
-		COMSIG_LIVING_SET_BODY_POSITION
-	))
+	UnregisterSignal(owner, list(COMSIG_ATOM_DIR_CHANGE, COMSIG_LIVING_SET_BODY_POSITION))
 
 /datum/status_effect/nabber_combat/proc/on_dir_change(datum/source, old_dir, new_dir)
 	SIGNAL_HANDLER
@@ -51,7 +48,7 @@
 
 /datum/movespeed_modifier/nabber_combat
 	blacklisted_movetypes = FLYING
-	multiplicative_slowdown = -0.25
+	multiplicative_slowdown = -0.40
 
 #undef NABBER_THREAT_ICON
 #undef NABBER_THREAT_ICON_STATE

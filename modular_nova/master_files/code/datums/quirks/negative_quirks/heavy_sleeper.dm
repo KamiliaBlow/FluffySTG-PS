@@ -2,7 +2,7 @@
 /datum/quirk/heavy_sleeper
 	name = "Глубокий сон"
 	desc = "Вы спите как камень! Когда вас усыпляют или лишают сознания, вам требуется немного больше времени, чтобы проснуться."
-	icon = FA_ICON_BED
+	icon = FA_ICON_CLOUD_MOON_RAIN
 	value = -2
 	mob_trait = TRAIT_HEAVY_SLEEPER
 	gain_text = span_danger("Вам хочется спать.")

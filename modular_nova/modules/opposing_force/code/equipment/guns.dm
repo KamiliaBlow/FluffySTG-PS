@@ -31,6 +31,25 @@
 	new /obj/item/ammo_box/magazine/miecz(src)
 	new /obj/item/ammo_box/magazine/miecz(src)
 
+/datum/opposing_force_equipment/ranged/pulse_rifle
+	name = "'Žaibas' Plasma Pulse Projector"
+	description = "A high-capacity, hybrid assault rifle running on fifteen shot 'plugs' instead of conventional bullets; with three available per magazine."
+	item_type = /obj/item/storage/toolbox/guncase/nova/opfor/pulse_rifle
+
+/obj/item/storage/toolbox/guncase/nova/opfor/pulse_rifle/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/pulse_rifle(src)
+	new /obj/item/ammo_box/magazine/pulse(src)
+	new /obj/item/ammo_box/magazine/pulse(src)
+
+/datum/opposing_force_equipment/ranged/pulse_sniper
+	name = "'Žaibas-A' Sniper Rifle"
+	description = "A high-power, hybrid sniper rifle running on fifteen shot 'plugs' instead of conventional bullets; pulling three shots per use."
+	item_type = /obj/item/storage/toolbox/guncase/nova/opfor/pulse_sniper
+
+/obj/item/storage/toolbox/guncase/nova/opfor/pulse_sniper/PopulateContents()
+	new /obj/item/gun/ballistic/rifle/pulse_sniper(src)
+	new /obj/item/ammo_box/pulse_cargo_box(src)
+
 /datum/opposing_force_equipment/ranged/kiboko
 	name = "Kiboko Grenade Launcher"
 	description = "A unique grenade launcher firing .980 grenades. A laser sight system allows its user to specify a range for the grenades it fires to detonate at"
@@ -60,6 +79,11 @@
 	new /obj/item/gun/ballistic/automatic/l6_saw/unrestricted(src)
 	new /obj/item/ammo_box/magazine/m7mm(src)
 	new /obj/item/ammo_box/magazine/m7mm(src)
+
+/datum/opposing_force_equipment/ranged/shitzu
+	name = "Shitzu Shotgun"
+	description = "A modified magfed shotgun gun, designated 'Shitzu'."
+	item_type = /obj/item/storage/toolbox/guncase/nova/syndicate/shitzu
 
 /datum/opposing_force_equipment/ranged/hook_shotgun
 	name = "Hook Modified Sawn-off Shotgun"
@@ -169,7 +193,7 @@
 
 /datum/opposing_force_equipment/ranged_stealth/makarov
 	name = "Makarov Pistol"
-	description = "A small, easily concealable 9x25mm Mk.12 handgun. This one is packed with a suppressor."
+	description = "A small, easily concealable 9mm handgun. This one is packed with a suppressor."
 	item_type = /obj/item/storage/toolbox/guncase/nova/pistol/opfor/makarov
 
 /obj/item/storage/toolbox/guncase/nova/pistol/opfor/makarov/PopulateContents()
@@ -215,8 +239,8 @@
 
 /obj/item/storage/toolbox/guncase/nova/pistol/opfor/syndie_revolver/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/badass(src)
-	new /obj/item/ammo_box/a357(src)
-	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/speedloader/c357(src)
+	new /obj/item/ammo_box/speedloader/c357(src)
 
 /datum/opposing_force_equipment/ranged_stealth/ocelot
 	name = "Colt Peacemaker revolver"
@@ -226,8 +250,8 @@
 
 /obj/item/storage/toolbox/guncase/nova/pistol/opfor/ocelot/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/ocelot(src)
-	new /obj/item/ammo_box/a357/peacemaker(src)
-	new /obj/item/ammo_box/a357/peacemaker(src)
+	new /obj/item/ammo_box/speedloader/c357/peacemaker(src)
+	new /obj/item/ammo_box/speedloader/c357/peacemaker(src)
 
 //foamforce
 /datum/opposing_force_equipment/ranged_stealth/foamforce_smg

@@ -128,26 +128,26 @@
 	var/dat = "The control panel displays an incomprehensible selection of controls, many with unusual markings or text around them.<br>"
 	dat += "<br>"
 	for(var/index=1, index<=construction.len, index++)
-		dat += "<A href='?src=[REF(src)];activate=[index]'>\[[construction[index]]\]</a><br>"
+		dat += "<A href='byond://?src=[REF(src)];activate=[index]'>\[[construction[index]]\]</a><br>"
 
 	var/datum/browser/popup = new(user, "alien_replicator")
 	popup.set_content(dat)
 	popup.open()
 
-/obj/machinery/replicator/attackby(obj/item/to_insert, mob/living/user)
-	if(to_insert.item_flags & (ABSTRACT | DROPDEL))
+/obj/machinery/replicator/attackby(obj/item/attacking_item, mob/living/user, list/modifiers, list/attack_modifiers)
+	if(attacking_item.item_flags & (ABSTRACT | DROPDEL))
 		user.visible_message(
-			span_notice("[user] tries to insert [to_insert] into [src], but the opening is too small."),
-			span_notice("[to_insert] doesn't fit into [src]."),
+			span_notice("[user] tries to insert [attacking_item] into [src], but the opening is too small."),
+			span_notice("[attacking_item] doesn't fit into [src]."),
 		)
 		return
-	if(!user.transferItemToLoc(to_insert, src))
-		to_chat(user, span_warning("\The [to_insert] is stuck to your hand, you cannot put it in the machine!"))
+	if(!user.transferItemToLoc(attacking_item, src))
+		to_chat(user, span_warning("\The [attacking_item] is stuck to your hand, you cannot put it in the machine!"))
 		return TRUE
-	stored_materials.Add(to_insert)
+	stored_materials.Add(attacking_item)
 	visible_message(
-		span_notice("[user] inserts [to_insert] into [src]."),
-		span_notice("You insert [to_insert] into [src]."),
+		span_notice("[user] inserts [attacking_item] into [src]."),
+		span_notice("You insert [attacking_item] into [src]."),
 	)
 
 /obj/machinery/replicator/Topic(href, href_list)

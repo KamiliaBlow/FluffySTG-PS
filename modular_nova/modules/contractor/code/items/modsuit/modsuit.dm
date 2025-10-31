@@ -9,13 +9,13 @@
 	applied_modules = list(
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/emp_shield,
+		/obj/item/mod/module/shock_absorber,
+		/obj/item/mod/module/quick_cuff,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/magnetic_harness,
 		/obj/item/mod/module/storage/syndicate,
 		/obj/item/mod/module/tether,
 	)
 	default_pins = list(
-		/obj/item/mod/module/armor_booster/contractor,
 		/obj/item/mod/module/tether,
 	)
 
@@ -25,27 +25,30 @@
 		/obj/item/mod/module/baton_holster/preloaded,
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/emp_shield,
+		/obj/item/mod/module/shock_absorber,
+		/obj/item/mod/module/quick_cuff,
 		/obj/item/mod/module/jetpack,
-		/obj/item/mod/module/magnetic_harness,
 		/obj/item/mod/module/storage/syndicate,
+		/obj/item/mod/module/flamethrower,
 	)
 	default_pins = list(
-		/obj/item/mod/module/armor_booster/contractor,
 		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/baton_holster/preloaded,
+		/obj/item/mod/module/flamethrower,
 	)
 
 /obj/item/mod/control/pre_equipped/contractor/upgraded/adminbus
 	applied_modules = list(
 		/obj/item/mod/module/baton_holster/preloaded,
 		/obj/item/mod/module/emp_shield,
+		/obj/item/mod/module/shock_absorber,
+		/obj/item/mod/module/quick_cuff,
 		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/scorpion_hook,
 		/obj/item/mod/module/springlock/contractor/no_complexity,
 		/obj/item/mod/module/storage/syndicate,
 	)
 	default_pins = list(
-		/obj/item/mod/module/armor_booster/contractor,
 		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/baton_holster/preloaded,
 		/obj/item/mod/module/scorpion_hook,

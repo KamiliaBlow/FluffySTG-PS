@@ -36,18 +36,40 @@ export const feature_mcolor3: Feature<string> = {
 export const flavor_text: Feature<string> = {
   name: 'Общее описание',
   description:
-    "Появляется при осмотре персонажа (но только если его можно опознать - например если он без противогаза).",
+    "Появляется при осмотре персонажа (но только если его можно опознать - например если он без противогаза). Не размещайте здесь материалы сексуального характера - переместите их в раздел «Описание (NSFW)».",
+  component: FeatureTextInput,
+};
+
+export const flavor_text_nsfw: Feature<string> = {
+  name: 'Описание (NSFW)',
+  description: 'То же самое, что и «Описание», но для просмотра необходимо щелкнуть вкладку.',
   component: FeatureTextInput,
 };
 
 export const silicon_flavor_text: Feature<string> = {
   name: 'Общее описание (Синтетик)',
-  description: "Появляется, только если вы играете за борга/ИИ.",
+  description:
+    "Появляется, только если вы играете за борга/ИИ. Не размещайте здесь материалы сексуального характера - переместите их в раздел «Описание (Синтетик, NSFW)».",
+  component: FeatureTextInput,
+};
+
+export const silicon_flavor_text_nsfw: Feature<string> = {
+  name: 'Описание (Синтетик, NSFW)',
+  description:
+    'Same as Silicon Flavor Text but requires you to click a tab to view.',
   component: FeatureTextInput,
 };
 
 export const ooc_notes: Feature<string> = {
   name: 'Заметки OOC',
+  description:
+    'Anything you want other players to know about you goes here, such as antag information, OOC triggers, etc. Do not put sexual things in here—move those to OOC Notes (NSFW).',
+  component: FeatureTextInput,
+};
+
+export const ooc_notes_nsfw: Feature<string> = {
+  name: 'OOC Notes (NSFW)',
+  description: 'Same as OOC Notes but requires you to click a tab to view.',
   component: FeatureTextInput,
 };
 

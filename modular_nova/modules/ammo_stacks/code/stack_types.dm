@@ -2,9 +2,6 @@
 
 // .980 grenades
 
-/obj/item/ammo_casing/c980grenade
-	ammo_stack_type = /obj/item/ammo_box/magazine/ammo_stack/c980
-
 /obj/item/ammo_box/magazine/ammo_stack/c980
 	name = ".980 Tydhouer grenades"
 	desc = "A stack of .980 Tydhouer grenades."
@@ -22,6 +19,7 @@
 	casing_y_padding = 9
 
 /obj/item/ammo_box/magazine/ammo_stack/c980/prefilled
+	name = ".980 Tydhouer practice grenades"
 	start_empty = FALSE
 
 /obj/item/ammo_box/magazine/ammo_stack/c980/prefilled/smoke
@@ -68,7 +66,7 @@
 	start_empty = FALSE
 
 /obj/item/ammo_box/magazine/ammo_stack/s12gauge/prefilled/antitide
-	name = "12 gauge stardust shells"
+	name = "12 gauge lighting shot shells"
 	ammo_type = /obj/item/ammo_casing/shotgun/antitide
 	icon_state = "stack_spec"
 
@@ -100,8 +98,8 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/express
 
 /obj/item/ammo_box/magazine/ammo_stack/s12gauge/prefilled/flechette
-	name = "12 gauge flechette shells"
-	ammo_type = /obj/item/ammo_casing/shotgun/flechette
+	name = "12 gauge ripper flechette shells"
+	ammo_type = /obj/item/ammo_casing/shotgun/flechette_nova
 	icon_state = "stack_spec"
 
 /obj/item/ammo_box/magazine/ammo_stack/s12gauge/prefilled/frag12
@@ -113,10 +111,6 @@
 	name = "12 gauge hunter shells"
 	ammo_type = /obj/item/ammo_casing/shotgun/hunter
 	icon_state = "stack_spec"
-
-/obj/item/ammo_box/magazine/ammo_stack/s12gauge/prefilled/improvised
-	name = "12 gauge improvised shells"
-	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 
 /obj/item/ammo_box/magazine/ammo_stack/s12gauge/prefilled/incendiary
 	name = "12 gauge incendiary shells"
@@ -131,12 +125,17 @@
 	name = "12 gauge rubbershot shells"
 	ammo_type = /obj/item/ammo_casing/shotgun/rubbershot
 
+/obj/item/ammo_box/magazine/ammo_stack/s12gauge/prefilled/milspec
+	name = "12 gauge milspec slug shells"
+	ammo_type = /obj/item/ammo_casing/shotgun/milspec
+
+/obj/item/ammo_box/magazine/ammo_stack/s12gauge/prefilled/buckshot/milspec
+	name = "12 gauge milspec buckshot shells"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/milspec
+
 // Pistol ammo
 
 // .35 sol short
-
-/obj/item/ammo_casing/c35sol
-	ammo_stack_type = /obj/item/ammo_box/magazine/ammo_stack/c35_sol
 
 /obj/item/ammo_box/magazine/ammo_stack/c35_sol
 	name = ".35 Sol Short casings"
@@ -170,9 +169,6 @@
 
 // .27-54 Cesarzowa
 
-/obj/item/ammo_casing/c27_54cesarzowa
-	ammo_stack_type = /obj/item/ammo_box/magazine/ammo_stack/c27_54cesarzowa
-
 /obj/item/ammo_box/magazine/ammo_stack/c27_54cesarzowa
 	name = ".27-54 Cesarzowa casings"
 	desc = "A stack of .27-54 Cesarzowa cartridges."
@@ -200,9 +196,6 @@
 
 // .585 trappiste
 
-/obj/item/ammo_casing/c585trappiste
-	ammo_stack_type = /obj/item/ammo_box/magazine/ammo_stack/c585_trappiste
-
 /obj/item/ammo_box/magazine/ammo_stack/c585_trappiste
 	name = ".585 Trappiste casings"
 	desc = "A stack of .585 Trappiste casings."
@@ -226,17 +219,14 @@
 	ammo_type = /obj/item/ammo_casing/c585trappiste/incapacitator
 	icon_state = "stack_spec"
 
-/obj/item/ammo_box/magazine/ammo_stack/c585_trappiste/prefilled/hollowpoint
-	name = ".585 Trappiste hollowhead casings"
-	ammo_type = /obj/item/ammo_casing/c585trappiste/hollowpoint
+/obj/item/ammo_box/magazine/ammo_stack/c585_trappiste/prefilled/incendiary
+	name = ".585 Trappiste incendiary casings"
+	ammo_type = /obj/item/ammo_casing/c585trappiste/incendiary
 	icon_state = "stack_spec"
 
 // Rifle ammo
 
 // .40 sol long
-
-/obj/item/ammo_casing/c40sol
-	ammo_stack_type = /obj/item/ammo_box/magazine/ammo_stack/c40_sol
 
 /obj/item/ammo_box/magazine/ammo_stack/c40_sol
 	name = ".40 Sol Long casings"
@@ -311,9 +301,6 @@
 	icon_state = "stack_spec"
 
 // .60 strela
-
-/obj/item/ammo_casing/p60strela
-	ammo_stack_type = /obj/item/ammo_box/magazine/ammo_stack/c60_strela
 
 /obj/item/ammo_box/magazine/ammo_stack/c60_strela
 	name = ".60 Strela casings"
