@@ -7,7 +7,7 @@ GLOBAL_LIST_EMPTY(all_huds)
 GLOBAL_LIST_EMPTY(huds_by_category)
 
 //GLOBAL HUD LIST
-GLOBAL_LIST_INIT(huds, list(
+GLOBAL_LIST_INIT(huds, alist(
 	DATA_HUD_SECURITY_BASIC = new /datum/atom_hud/data/human/security/basic(),
 	DATA_HUD_SECURITY_ADVANCED = new /datum/atom_hud/data/human/security/advanced(),
 	DATA_HUD_MEDICAL_BASIC = new /datum/atom_hud/data/human/medical/basic(),
@@ -22,7 +22,7 @@ GLOBAL_LIST_INIT(huds, list(
 ))
 
 /// Assoc list of traits to the huds they give.
-GLOBAL_LIST_INIT(trait_to_hud, list(
+GLOBAL_LIST_INIT(trait_to_hud, alist(
 	TRAIT_ABDUCTOR_HUD = DATA_HUD_ABDUCTOR,
 	TRAIT_BOT_PATH_HUD = DATA_HUD_BOT_PATH,
 	TRAIT_CLOWN_ENJOYER = DATA_HUD_FAN,
@@ -36,7 +36,7 @@ GLOBAL_LIST_INIT(trait_to_hud, list(
 ))
 
 /// Assoc list of traits that block other traits' huds to list of hud (traits) that they block
-GLOBAL_LIST_INIT(trait_blockers_to_hud, list(
+GLOBAL_LIST_INIT(trait_blockers_to_hud, alist(
 	TRAIT_BLOCK_SECHUD = list(TRAIT_SECURITY_HUD, TRAIT_SECURITY_HUD_ID_ONLY),
 ))
 
