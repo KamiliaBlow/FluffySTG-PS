@@ -1,6 +1,6 @@
 /datum/language/kobold
-	name = "Kobold"
-	desc = "Yip yip."
+	name = "Кобольтовый"
+	desc = "Ип ип."
 	key = "k"
 	space_chance = 100
 	sentence_chance = 100

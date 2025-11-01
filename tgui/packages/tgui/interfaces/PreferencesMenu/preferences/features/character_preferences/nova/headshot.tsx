@@ -9,13 +9,13 @@ const description =
   Стремитесь к 250x250, когда это возможно';
 
 export const headshot: Feature<string> = {
-  name: 'Headshot',
+  name: 'Портрет',
   description: description,
   component: FeatureShortTextInput,
 };
 
 export const silicon_headshot: Feature<string> = {
-  name: 'Headshot (Silicon)',
+  name: 'Портрет (Синтетик)',
   description: description,
   component: FeatureShortTextInput,
 };

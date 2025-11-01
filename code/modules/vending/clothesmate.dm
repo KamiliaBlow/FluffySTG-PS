@@ -8,7 +8,7 @@
 	vend_reply = "Thank you for using the ClothesMate!"
 	product_categories = list(
 		list(
-			"name" = "Head",
+			"name" = "Голова",
 			"icon" = "hat-cowboy",
 			"products" = list(
 				/obj/item/clothing/head/wig/natural = 4,
@@ -137,7 +137,7 @@
 		),
 
 		list(
-			"name" = "Shoes",
+			"name" = "Обувь",
 			"icon" = "socks",
 			"products" = list(
 				/obj/item/clothing/shoes/sneakers/black = 4,

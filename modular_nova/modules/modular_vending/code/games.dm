@@ -1,7 +1,7 @@
 /obj/machinery/vending/games
 	product_categories_nova = list(
 		list(
-			"name" = "Toys",
+			"name" = "Игрушки",
 			"icon" = "hat-wizard",
 			"products" = list(
 				/obj/item/storage/briefcase/secure/white/wargame_kit = 3,

@@ -1,9 +1,9 @@
 /datum/language/moffic
-	name = "Mothic"
-	desc = "Spoken colloquially by the Mothfolk of Va Lumla, the early iteration of Mothic emerged when Fueljacks relied on their receptors for simple, one-worded pheromones to communicate, and navigate the often fatal maintenance tunnels sprawled throughout the fleet. \
-		The moths developed gesticulation through antennas and wings to convey deeper intent, with mandibles providing emotional context through clicks and trills. \
-		After First Contact, human speakers managed to achieve a similar effect from clicking their tongue to roof, and steer the tone with the width of their mouth while using their hands in place of antennas. \
-		It is informally spoken, deploying many slangs and shorthands from Common. Has phonetic resemblance to Italian."
+	name = "Мотик"
+	desc = "В разговорной речи мотыльков Ва Лумлы ранние варианты мотыльского языка появились, когда Fueljack полагались на свои рецепторы для передачи простых односложных феромонов, чтобы общаться и ориентироваться в часто смертельно опасных туннелях технического обслуживания, раскинувшихся по всему флоту. \
+		Мотыльки развивали жестикуляцию с помощью антенн и крыльев, чтобы передать более глубокий смысл, а челюсти обеспечивали эмоциональный контекст с помощью щелчков и трелей. \
+		После первого контакта людям удалось добиться аналогичного эффекта, щелкая языком по нёбу, и регулировать тон с помощью ширины рта, используя руки вместо антенн. \
+		Это неформальный язык, в котором используется много сленговых выражений и сокращений из общего языка. Имеет фонетическое сходство с итальянским языком."
 	space_chance = 40
 	// Syllables derived from Italian.
 	syllables = list(

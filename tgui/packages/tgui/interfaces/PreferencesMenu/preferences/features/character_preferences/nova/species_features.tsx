@@ -42,7 +42,7 @@ export const flavor_text: Feature<string> = {
 
 export const flavor_text_nsfw: Feature<string> = {
   name: 'Описание (NSFW)',
-  description: 'То же самое, что и «Описание», но для просмотра необходимо щелкнуть вкладку.',
+  description: 'То же самое, что и «Общее описание», но для просмотра необходимо щелкнуть вкладку.',
   component: FeatureTextInput,
 };
 
@@ -56,20 +56,20 @@ export const silicon_flavor_text: Feature<string> = {
 export const silicon_flavor_text_nsfw: Feature<string> = {
   name: 'Описание (Синтетик, NSFW)',
   description:
-    'Same as Silicon Flavor Text but requires you to click a tab to view.',
+    'То же самое, что и «Общее описание для синтетика», но для просмотра необходимо щелкнуть вкладку.',
   component: FeatureTextInput,
 };
 
 export const ooc_notes: Feature<string> = {
   name: 'Заметки OOC',
   description:
-    'Anything you want other players to know about you goes here, such as antag information, OOC triggers, etc. Do not put sexual things in here—move those to OOC Notes (NSFW).',
+    'Здесь можно указать все, что вы хотите, чтобы другие игроки знали о вас, например, информацию об антагонистах, триггеры OOC и т. д. Не размещайте здесь материалы сексуального характера - переместите их в раздел «Заметки OOC (NSFW)».',
   component: FeatureTextInput,
 };
 
 export const ooc_notes_nsfw: Feature<string> = {
-  name: 'OOC Notes (NSFW)',
-  description: 'Same as OOC Notes but requires you to click a tab to view.',
+  name: 'Заметки OOC (NSFW)',
+  description: 'То же самое, что и «Заметки OOC», но для просмотра необходимо щелкнуть вкладку.',
   component: FeatureTextInput,
 };
 
@@ -147,9 +147,9 @@ export const background_info: Feature<string> = {
 };
 
 export const pda_ringer: Feature<string> = {
-  name: 'PDA Ringer Message',
+  name: 'Звук сообщения на КПК',
   description:
-    'Want your PDA to say something other than "beep"? Accepts the first 20 characters.',
+    'Хотите, чтобы ваш КПК издавал звуки, отличные от «бип»? Принимается первые 20 символов.',
   component: FeatureShortTextInput,
 };
 
@@ -234,7 +234,7 @@ export const tail_color: Feature<string[]> = {
 
 export const tail_emissive: Feature<boolean[]> = {
   name: 'Хвост - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -259,7 +259,7 @@ export const snout_color: Feature<string[]> = {
 
 export const snout_emissive: Feature<boolean[]> = {
   name: 'Морда - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -284,7 +284,7 @@ export const horns_color: Feature<string[]> = {
 
 export const horns_emissive: Feature<boolean[]> = {
   name: 'Рога - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -309,7 +309,7 @@ export const ears_color: Feature<string[]> = {
 
 export const ears_emissive: Feature<boolean[]> = {
   name: 'Уши - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -334,7 +334,7 @@ export const wings_color: Feature<string[]> = {
 
 export const wings_emissive: Feature<boolean[]> = {
   name: 'Крылья - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -359,7 +359,7 @@ export const frills_color: Feature<string[]> = {
 
 export const frills_emissive: Feature<boolean[]> = {
   name: 'Капюшон - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -384,7 +384,7 @@ export const spines_color: Feature<string[]> = {
 
 export const spines_emissive: Feature<boolean[]> = {
   name: 'Шипы - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -418,7 +418,7 @@ export const caps_color: Feature<string[]> = {
 
 export const caps_emissive: Feature<boolean[]> = {
   name: 'Шляпка - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -443,12 +443,12 @@ export const moth_antennae_color: Feature<string[]> = {
 
 export const moth_antennae_emissive: Feature<boolean[]> = {
   name: 'Усики мотылька - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const moth_markings_toggle: FeatureToggle = {
-  name: 'Moth Markings',
+  name: 'Татту Мотыльков',
   component: CheckboxInput,
 };
 
@@ -468,7 +468,7 @@ export const moth_markings_color: Feature<string[]> = {
 
 export const moth_markings_emissive: Feature<boolean[]> = {
   name: 'Moth Markings Emissives',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -493,7 +493,7 @@ export const fluff_color: Feature<string[]> = {
 
 export const fluff_emissive: Feature<boolean[]> = {
   name: 'Мех - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -518,7 +518,7 @@ export const head_acc_color: Feature<string[]> = {
 
 export const head_acc_emissive: Feature<boolean[]> = {
   name: 'Head Accessories Emissives',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -539,7 +539,7 @@ export const ipc_screen_color: Feature<string> = {
 
 export const ipc_screen_emissive: Feature<boolean> = {
   name: 'IPC Screen Emissive',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: CheckboxInput,
 };
 
@@ -564,7 +564,7 @@ export const ipc_antenna_color: Feature<string[]> = {
 
 export const ipc_antenna_emissive: Feature<boolean[]> = {
   name: 'Антенна синта - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -655,7 +655,7 @@ export const skrell_hair_color: Feature<string[]> = {
 
 export const skrell_hair_emissive: Feature<boolean[]> = {
   name: 'Прическа скрелла - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -680,7 +680,7 @@ export const taur_color: Feature<string[]> = {
 
 export const taur_emissive: Feature<boolean[]> = {
   name: 'Тавр - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -712,7 +712,7 @@ export const xenodorsal_color: Feature<string[]> = {
 
 export const xenodorsal_emissive: Feature<boolean[]> = {
   name: 'Ксенодыхало - свечение',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 

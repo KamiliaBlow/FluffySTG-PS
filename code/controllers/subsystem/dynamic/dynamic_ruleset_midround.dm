@@ -681,7 +681,7 @@
 	min_antag_cap = 2
 	max_antag_cap = 3
 	repeatable_weight_decrease = 4
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 3,
 		DYNAMIC_TIER_MEDIUMHIGH = 4,
@@ -1107,7 +1107,7 @@
 	max_antag_cap = 4
 	repeatable_weight_decrease = 8
 	blacklisted_roles = list()
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 3,
 		DYNAMIC_TIER_MEDIUMHIGH = 8,

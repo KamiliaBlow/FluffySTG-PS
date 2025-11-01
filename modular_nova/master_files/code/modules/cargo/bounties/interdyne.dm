@@ -30,7 +30,7 @@
 	wanted_types = list(/obj/item/organ/appendix = TRUE)
 
 /datum/bounty/item/interdyne_med/ears
-	name = "Ears"
+	name = "Уши"
 	description = "After a chemical incident at Interdyne Vessel 29 left them deaf, new ears need to be provided. Cybernetic ones are fine, but basic cybernetics will not be accepted."
 	reward = CARGO_CRATE_VALUE * 10
 	required_count = 3

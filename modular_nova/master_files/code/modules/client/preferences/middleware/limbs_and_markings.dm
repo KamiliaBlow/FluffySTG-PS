@@ -14,29 +14,29 @@
 		"change_emissive" = PROC_REF(change_emissive_marking),
 	)
 	var/list/limbs_to_process = list(
-		"l_arm" = "Left Arm",
-		"r_arm" = "Right Arm",
-		"l_leg" = "Left Leg",
-		"r_leg" = "Right Leg",
-		"chest" = "Chest",
-		"head" = "Head",
-		"l_hand" = "Left Hand",
-		"r_hand" = "Right Hand"
+		"l_arm" = "Левая рука",
+		"r_arm" = "Правая рука",
+		"l_leg" = "Левая нога",
+		"r_leg" = "Правая нога",
+		"chest" = "Грудь",
+		"head" = "Голова",
+		"l_hand" = "Левая кисть",
+		"r_hand" = "Правая кисть"
 	)
 
 	var/list/organs_to_process = list(
-		"brain" = "Brain", //NOVA EDIT
-		"heart" = "Heart",
-		"lungs" = "Lungs",
-		"liver" = "Liver",
-		"stomach" = "Stomach",
-		"ears" = "Ears",
-		"eyes" = "Eyes",
-		"tongue" = "Tongue",
-		"Mouth implant" = "Mouth implant",
-		"Chest implant" = "Chest implant",
-		"Left Arm implant" = "Left Arm implant",
-		"Right Arm implant" = "Right Arm implant",
+		"brain" = "Мозг", //NOVA EDIT
+		"heart" = "Сердце",
+		"lungs" = "Легкие",
+		"liver" = "Печень",
+		"stomach" = "Желудок",
+		"ears" = "Уши",
+		"eyes" = "Глаза",
+		"tongue" = "Язык",
+		"Mouth implant" = "Имплант рта",
+		"Chest implant" = "Имплант груди",
+		"Left Arm implant" = "Имплант левой руки",
+		"Right Arm implant" = "Имплант правой руки",
 	)
 
 	var/list/aug_support = list(

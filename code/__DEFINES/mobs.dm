@@ -227,9 +227,9 @@
 
 // Preferences for leg types
 /// Legs that are normal
-#define NORMAL_LEGS "Normal Legs"
+#define NORMAL_LEGS "Нормальные ноги"
 /// Digitgrade legs that are like bended and uhhh no shoes
-#define DIGITIGRADE_LEGS "Digitigrade Legs"
+#define DIGITIGRADE_LEGS "Цидитиградные ноги"
 
 // Health/damage defines
 #define MAX_LIVING_HEALTH 100

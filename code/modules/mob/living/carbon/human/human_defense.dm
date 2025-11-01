@@ -557,9 +557,9 @@
 		return
 	var/list/combined_msg = list()
 
-	visible_message(span_notice("[src] examines [p_them()]self."))
+	visible_message(span_notice("[src] изучает [p_them()]self."))
 
-	combined_msg += span_notice("<b>You check yourself for injuries.</b>")
+	combined_msg += span_notice("<b>Вы проверяете себя на наличие травм.</b>")
 
 	var/list/missing = get_all_limbs()
 
@@ -578,7 +578,7 @@
 		//NOVA EDIT END
 
 	for(var/t in missing)
-		combined_msg += span_boldannounce("&rdsh; Your [parse_zone(t)] is missing!")
+		combined_msg += span_boldannounce("&rdsh; Ваша [parse_zone(t)] отсутствует!")
 
 	var/tox = getToxLoss() + (disgust / 5) + (HAS_TRAIT(src, TRAIT_SELF_AWARE) ? 0 : (rand(-3, 0) * 5))
 	switch(tox)

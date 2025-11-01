@@ -26,22 +26,22 @@ export function KnownLanguage(props: { language: Language }) {
         <Button
           color="bad"
           icon="brain"
-          tooltip="Forgetting how to understand the language will also prevent you from speaking it."
+          tooltip="Забыть, как понимать язык, вы также не сможете на нем говорить."
           onClick={() =>
             act('forget_understand_language', {
               language_name: props.language.name,
             })
           }
         >
-          Forget
+          Забыть
         </Button>
         <Button
           color={props.language.speaking ? 'good' : 'default'}
           icon={props.language.speaking ? 'comment' : 'comment-slash'}
           tooltip={
             props.language.speaking
-              ? 'Forget how to speak the language, but you keep your understanding of it.'
-              : 'Learn to speak the language.'
+              ? 'Забыть, как говорить на этом языке, но сохранить его понимание.'
+              : 'Научиться говорить на этом языке.'
           }
           onClick={() =>
             act(
@@ -52,7 +52,7 @@ export function KnownLanguage(props: { language: Language }) {
             )
           }
         >
-          Can {props.language.speaking ? 'speak' : 'only understand'}
+          {props.language.speaking ? 'Говорить' : 'Только понимать'}
         </Button>
       </Section>
     </Stack.Item>
@@ -83,22 +83,22 @@ export function UnknownLanguage(props: { language: Language }) {
         <Button
           color={!noPoints ? 'good' : 'grey'}
           icon="comment"
-          tooltip="Learn to speak and understand the language."
+          tooltip="Научиться говорить и понимать язык."
           onClick={() =>
             act('speak_language', { language_name: props.language.name })
           }
         >
-          Speak
+          Говорить
         </Button>
         <Button
           color={!!noPoints && 'grey'}
           icon="brain"
-          tooltip="Learn to understand the language but not speak it."
+          tooltip="Научиться понимать язык, но не говорить на нем."
           onClick={() =>
             act('understand_language', { language_name: props.language.name })
           }
         >
-          Understand
+          Понимать
         </Button>
       </Section>
     </Stack.Item>
@@ -110,19 +110,19 @@ export function LanguagesPage() {
   return (
     <>
       <Section textAlign="center">
-        Here, you can learn languages using a point system. The <b>Linguist</b>{' '}
-        neutral quirk will give you one extra point.
+        Здесь вы можете изучать языки с помощью системы баллов. Нейтральная особенность <b>Лингвист</b>{' '}
+        даст вам один дополнительный балл.
         <br />
-        Languages may be either <b>spoken and understood</b> or{' '}
-        <b>just understood.</b>
+        Языки могут быть либо теми <b>на которых говорят и которые понимают</b> либо{' '}
+        <b>те которые только понимают.</b>
         <br />
-        One language is worth <b>1 point,</b> even if that language is only
-        understood and not spoken.
+        Один язык стоит <b>1 балл,</b> даже если этот язык только
+        понимается, но не говорится.
         <br />
-        You must have at least one known language, and you must understand Sol
-        Common to play most station jobs. <br />
-        It does not cost points to toggle speech of a language—it only costs
-        points to add an entirely new language.
+        Вы должны знать хотя бы один язык и понимать язык Sol
+        Common чтобы выполнять большинство заданий на станции. <br />
+        Переключение речи с одного языка на другой не требует затрат очков,
+        очки требуются только для добавления совершенно нового языка.
       </Section>
       <Stack>
         <Stack.Item minWidth="50%">

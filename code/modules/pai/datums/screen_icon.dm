@@ -27,7 +27,7 @@
 	interface_icon = "grin-beam"
 
 /datum/pai_screen_image/face
-	name = "Face"
+	name = "Лицо"
 	icon_state = "pai-face"
 	interface_icon = "grin-alt"
 

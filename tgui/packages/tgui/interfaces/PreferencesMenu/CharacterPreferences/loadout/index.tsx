@@ -107,7 +107,7 @@ export function LoadoutPage(props) {
               </Stack.Item>
               <Stack.Item width="100%" height="20px">
                 <Input
-                  placeholder="Maximum of 24 characters long"
+                  placeholder="Максимум 24 символа"
                   width="100%"
                   maxLength={24}
                   onChange={(value) => onType(value)}
@@ -151,7 +151,7 @@ export function LoadoutPage(props) {
             <Input
               width="200px"
               onChange={setSearchLoadout}
-              placeholder="Search for an item..."
+              placeholder="Поиск по предметам..."
               value={searchLoadout}
             />
           }
@@ -310,7 +310,7 @@ function LoadoutTabs(props: LoadoutTabsProps) {
       <Stack.Item grow>
         {searching || activeCategory?.contents ? (
           <Section
-            title={searching ? 'Search results' : 'Catalog'}
+            title={searching ? 'Search results' : 'Каталог'}
             fill
             scrollable
             buttons={
@@ -422,7 +422,7 @@ function LoadoutSelectedSection(props: LoadoutSelectedSectionProps) {
 
   return (
     <Section
-      title="Selected Items"
+      title="Выбранные предметы"
       scrollable
       fill
       buttons={
@@ -460,7 +460,7 @@ function LoadoutPreviewSection() {
   return (
     <Section
       fill
-      title="Preview"
+      title="Предпоказ"
       buttons={
         <Button.Checkbox
           align="center"

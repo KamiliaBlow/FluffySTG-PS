@@ -1,7 +1,7 @@
 // One of these languages will actually work, I'm certain of it.
 /datum/language/voltaic
-	name = "Voltaic"
-	desc = "A sparky language made by manipulating electrical discharge."
+	name = "Вольтс"
+	desc = "Искристый язык, созданный путем манипулирования электрическим разрядом."
 	key = "v"
 	space_chance = 20
 	sentence_chance = 0

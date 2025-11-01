@@ -73,7 +73,7 @@
 //Engineering
 #define JOB_STATION_ENGINEER "Инженер"
 #define JOB_ATMOSPHERIC_TECHNICIAN "Атмосферный техник"
-#define JOB_TELECOMMS_SPECIALIST "Telecomms Specialist" // NOVA EDIT ADDITION
+#define JOB_TELECOMMS_SPECIALIST "Специалист по телекоммам" // NOVA EDIT ADDITION
 #define JOB_ENGINEERING_GUARD "Инженерная охрана" // NOVA EDIT ADDITION
 //Medical
 #define JOB_CORONER "Патологоанатом"
@@ -92,7 +92,7 @@
 #define JOB_CARGO_TECHNICIAN "Грузовой техник"
 #define JOB_CARGO_GORILLA "Cargo Gorilla"
 #define JOB_SHAFT_MINER "Шахтер"
-#define JOB_BITRUNNER "Bitrunner"
+#define JOB_BITRUNNER "Битраннер"
 #define JOB_CUSTOMS_AGENT "Таможенный агент" // NOVA EDIT ADDITION
 //Service
 #define JOB_BARTENDER "Бармен"

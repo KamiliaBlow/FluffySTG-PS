@@ -1,6 +1,6 @@
 /datum/language/draconic
-	name = "Draconic"
-	desc = "The common language of lizard-people, composed of sibilant hisses and rattles."
+	name = "Драконий"
+	desc = "Общий язык ящеролюдов, состоящий из шипящих звуков и треска."
 	key = "o"
 	flags = TONGUELESS_SPEECH
 	space_chance = 12

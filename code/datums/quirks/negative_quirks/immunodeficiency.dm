@@ -1,12 +1,12 @@
 /datum/quirk/item_quirk/immunodeficiency
-	name = "Immunodeficiency"
-	desc = "Whether by chronic illness or genetic happenstance, your body is a 24/7 Bed and Breakfast for bacteria, viruses, and parasites of all kinds. Even with your prescribed immunity boosters, you'll fare worse than most others."
+	name = "Иммунодефицит"
+	desc = "Будь то хроническое заболевание или генетическая случайность, ваше тело круглосуточно служит пристанищем для бактерий, вирусов и паразитов всех видов. Даже принимая прописанные вам иммуностимулирующие препараты, вы будете чувствовать себя хуже, чем большинство других людей."
 	icon = FA_ICON_MASK_FACE
 	value = -10
 	mob_trait = TRAIT_IMMUNODEFICIENCY
-	gain_text = span_danger("Just the thought of illness makes you feverish.")
-	lose_text = span_notice("Your immune system miraculously reasserts itself.")
-	medical_record_text = "Patient is afflicted with chronic immunodeficiency."
+	gain_text = span_danger("Лишь одна мысль о болезни вызывает у вас лихорадку.")
+	lose_text = span_notice("Ваша иммунная система чудесным образом восстанавливает свои функции.")
+	medical_record_text = "Пациент страдает хроническим иммунодефицитом."
 	mail_goodies = list(
 		/obj/item/reagent_containers/syringe/antiviral,
 		/obj/item/healthanalyzer/simple/disease

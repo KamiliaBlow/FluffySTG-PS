@@ -709,12 +709,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/dream, 32)
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/beekind, 32)
 
 /obj/structure/sign/poster/contraband/heart
-	name = "Heart"
+	name = "Сердце"
 	desc = "What a heartwarming poster."
 	icon_state = "heart"
 
 /obj/item/poster/contraband/heart
-	name = "Heart"
+	name = "Сердце"
 	poster_type = /obj/structure/sign/poster/contraband/heart
 	icon_state = "rolled_poster"
 

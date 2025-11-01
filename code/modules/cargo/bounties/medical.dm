@@ -1,5 +1,5 @@
 /datum/bounty/item/medical/heart
-	name = "Heart"
+	name = "Сердце"
 	description = "Commander Johnson is in critical condition after suffering yet another heart attack. Doctors say he needs a new heart fast. Ship one, pronto! We'll take a cybernetic one if need be, but only if it's upgraded."
 	reward = CARGO_CRATE_VALUE * 5
 	wanted_types = list(
@@ -11,7 +11,7 @@
 	)
 
 /datum/bounty/item/medical/lung
-	name = "Lungs"
+	name = "Легкие"
 	description = "A recent explosion at Central Command has left multiple staff with punctured lungs. Ship spare lungs to be rewarded. We'll take cybernetic ones if need be, but only if they're upgraded."
 	reward = CARGO_CRATE_VALUE * 10
 	required_count = 3
@@ -30,7 +30,7 @@
 	wanted_types = list(/obj/item/organ/appendix = TRUE)
 
 /datum/bounty/item/medical/ears
-	name = "Ears"
+	name = "Уши"
 	description = "Multiple staff at Station 12 have been left deaf due to unauthorized clowning. Ship them new ears. We'll take cybernetic ones if need be, but only if they're upgraded."
 	reward = CARGO_CRATE_VALUE * 10
 	required_count = 3

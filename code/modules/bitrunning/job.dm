@@ -32,7 +32,7 @@
 	job_flags = STATION_JOB_FLAGS
 
 /datum/outfit/job/bitrunner
-	name = "Bitrunner"
+	name = "Битраннер"
 	jobtype = /datum/job/bitrunner
 
 	id_trim = /datum/id_trim/job/bitrunner

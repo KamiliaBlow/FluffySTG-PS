@@ -1,7 +1,7 @@
 // LOADOUT ITEM DATUMS FOR THE EAR SLOT
 
 /datum/loadout_category/ears
-	category_name = "Ears"
+	category_name = "Уши"
 	category_ui_icon = FA_ICON_EAR_LISTEN
 	type_to_generate = /datum/loadout_item/ears
 	tab_order = /datum/loadout_category/face::tab_order + 1

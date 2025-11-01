@@ -27,7 +27,7 @@
 			RESKIN_ICON_STATE = "webbing_exp_corps",
 			RESKIN_WORN_ICON_STATE = "webbing_exp_corps"
 		),
-		"Belt" = list(
+		"Пояс" = list(
 			RESKIN_ICON_STATE = "belt_exp_corps",
 			RESKIN_WORN_ICON_STATE = "belt_exp_corps"
 		),
@@ -139,7 +139,7 @@
 			RESKIN_ICON_STATE = "exp_corps",
 			RESKIN_WORN_ICON_STATE = "exp_corps"
 		),
-		"Belt" = list(
+		"Пояс" = list(
 			RESKIN_ICON_STATE = "exp_corps_satchel",
 			RESKIN_WORN_ICON_STATE = "exp_corps_satchel"
 		),

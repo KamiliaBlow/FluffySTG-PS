@@ -1,7 +1,7 @@
 /obj/machinery/vending/clothing
 	product_categories_nova = list(
 		list(
-			"name" = "Head",
+			"name" = "Голова",
 			"icon" = "hat-cowboy",
 			"products" = list(
 				/obj/item/clothing/head/beret/badge = 5,
@@ -146,7 +146,7 @@
 		),
 
 		list(
-			"name" = "Shoes",
+			"name" = "Обувь",
 			"icon" = "socks",
 			"products" = list(
 				/obj/item/clothing/shoes/colorable_laceups = 5,

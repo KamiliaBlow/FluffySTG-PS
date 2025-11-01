@@ -94,7 +94,7 @@ MUTANT_SYNTH_CHASSIS, \
 						write_preference(preference, colors)
 						continue
 
-	to_chat(parent, boxed_message(span_greentext("Preference migration successful! You may safely interact with the preferences menu.")))
+	to_chat(parent, boxed_message(span_greentext("Перенос настроек выполнен успешно! Вы можете безопасно взаимодействовать с настройками.")))
 	tgui_prefs_migration = TRUE
 	nova_data["tgui_prefs_migration"] = tgui_prefs_migration
 

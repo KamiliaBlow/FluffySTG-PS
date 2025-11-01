@@ -44,12 +44,12 @@
 	job_flags = STATION_JOB_FLAGS
 
 /obj/effect/landmark/start/telecomms_specialist
-	name = "Telecomms Specialist"
+	name = "Специалист по телекоммам"
 	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
 	icon_state = "Engineering Guard"
 
 /datum/outfit/job/telecomms_specialist
-	name = "Telecomms Specialist"
+	name = "Специалист по телекоммам"
 	jobtype = /datum/job/telecomms_specialist
 
 	id_trim = /datum/id_trim/job/telecomms_specialist
@@ -90,7 +90,7 @@
 	)
 
 /datum/id_trim/job/telecomms_specialist
-	assignment = "Telecomms Specialist"
+	assignment = "Специалист по телекоммам"
 	trim_icon = 'modular_nova/master_files/icons/obj/card.dmi'
 	trim_state = "trim_telecommsspecialist"
 	department_color = COLOR_ENGINEERING_ORANGE

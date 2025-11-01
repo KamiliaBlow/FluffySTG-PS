@@ -14,19 +14,19 @@ GLOBAL_LIST_INIT(nearsighted_glasses, list(
 
 ///Options for the prosthetic limb quirk to choose from
 GLOBAL_LIST_INIT(prosthetic_limb_choice, list(
-	"Left Arm" = /obj/item/bodypart/arm/left/robot/surplus,
-	"Right Arm" = /obj/item/bodypart/arm/right/robot/surplus,
-	"Left Leg" = /obj/item/bodypart/leg/left/robot/surplus,
-	"Right Leg" = /obj/item/bodypart/leg/right/robot/surplus,
+	"Левая рука" = /obj/item/bodypart/arm/left/robot/surplus,
+	"Правая рука" = /obj/item/bodypart/arm/right/robot/surplus,
+	"Левая нога" = /obj/item/bodypart/leg/left/robot/surplus,
+	"Правая нога" = /obj/item/bodypart/leg/right/robot/surplus,
 ))
 
 
 ///Transhumanist quirk
 GLOBAL_LIST_INIT(part_choice_transhuman, list(
-	"Left Arm" = /obj/item/bodypart/arm/left/robot,
-	"Right Arm" = /obj/item/bodypart/arm/right/robot,
-	"Left Leg" = /obj/item/bodypart/leg/left/robot,
-	"Right Leg" = /obj/item/bodypart/leg/right/robot,
+	"Левая рука" = /obj/item/bodypart/arm/left/robot,
+	"Правая рука" = /obj/item/bodypart/arm/right/robot,
+	"Левая нога" = /obj/item/bodypart/leg/left/robot,
+	"Правая нога" = /obj/item/bodypart/leg/right/robot,
 	"Robotic Voice Box" = /obj/item/organ/tongue/robot,
 	"Flashlights for Eyes" = /obj/item/organ/eyes/robotic/flashlight,
 ))
@@ -89,10 +89,10 @@ GLOBAL_LIST_INIT(possible_alcoholic_addictions, list(
 
 ///Options for Prosthetic Organ
 GLOBAL_LIST_INIT(organ_choice, list(
-	"Heart" = ORGAN_SLOT_HEART,
-	"Lungs" = ORGAN_SLOT_LUNGS,
-	"Liver" = ORGAN_SLOT_LIVER,
-	"Stomach" = ORGAN_SLOT_STOMACH,
+	"Сердце" = ORGAN_SLOT_HEART,
+	"Легкие" = ORGAN_SLOT_LUNGS,
+	"Печень" = ORGAN_SLOT_LIVER,
+	"Желудок" = ORGAN_SLOT_STOMACH,
 ))
 
 ///Paraplegic Quirk

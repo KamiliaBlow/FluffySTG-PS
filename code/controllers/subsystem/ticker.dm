@@ -245,7 +245,7 @@ SUBSYSTEM_DEF(ticker)
 	return FALSE
 
 /datum/controller/subsystem/ticker/proc/setup()
-	to_chat(world, span_boldannounce("Starting game..."))
+	to_chat(world, span_boldannounce("Игра начинается..."))
 	var/init_start = world.timeofday
 
 	CHECK_TICK

@@ -60,7 +60,7 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 
 /// Opens character directory UI for a specific user
 /client/verb/show_character_directory(specific_ad as text|null)
-	set name = "Character Directory"
+	set name = "Каталог персонажей"
 	set category = "OOC"
 	set desc = "Shows a listing of all active characters, along with their associated OOC notes, flavor text, and more."
 
@@ -144,7 +144,7 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 /datum/character_directory/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "NovaCharacterDirectory", "Character Directory")
+		ui = new(user, src, "NovaCharacterDirectory", "Каталог персонажей")
 		ui.set_autoupdate(FALSE)
 		ui.open()
 

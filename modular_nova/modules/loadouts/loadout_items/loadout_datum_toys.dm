@@ -1,7 +1,7 @@
 // LOADOUT ITEM DATUMS FOR TOY ITEMS, PLACED DIRECTLY INTO THE BACKPACK
 
 /datum/loadout_category/toys
-	category_name = "Toys"
+	category_name = "Игрушки"
 	category_ui_icon = FA_ICON_TROPHY
 	type_to_generate = /datum/loadout_item/toys
 	tab_order = /datum/loadout_category/inhands::tab_order + 1

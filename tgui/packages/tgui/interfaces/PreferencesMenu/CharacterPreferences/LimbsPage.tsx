@@ -137,7 +137,7 @@ export const AugmentationPage = (props) => {
           <Stack fill vertical>
             <Stack.Item>
               <Stack fill>
-                <Stack.Item>Augumentation:</Stack.Item>
+                <Stack.Item>Аугментации:</Stack.Item>
                 <Stack.Item grow>
                   <Dropdown
                     width="100%"
@@ -163,7 +163,7 @@ export const AugmentationPage = (props) => {
             </Stack.Item>
             <Stack.Item>
               <Stack fill vertical>
-                <Stack.Item>Style:</Stack.Item>
+                <Stack.Item>Стиль:</Stack.Item>
                 <Stack.Item grow>
                   <Dropdown
                     width="100%"
@@ -234,7 +234,7 @@ export const LimbsPage = (props) => {
               width="100%"
               options={Object.values(markings)}
               selected={Object.values(markings)[1]}
-              placeholder="Pick a preset:"
+              placeholder="Выберите пресет:"
               onSelected={(value) => act('set_preset', { preset: value })}
             />
           </div>

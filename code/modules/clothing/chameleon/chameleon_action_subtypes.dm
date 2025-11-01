@@ -38,7 +38,7 @@
 
 /datum/action/item_action/chameleon/change/belt
 	chameleon_type = /obj/item/storage/belt
-	chameleon_name = "Belt"
+	chameleon_name = "Пояс"
 	active_type = /obj/item/storage/belt/utility
 
 /datum/action/item_action/chameleon/change/backpack
@@ -48,7 +48,7 @@
 
 /datum/action/item_action/chameleon/change/shoes
 	chameleon_type = /obj/item/clothing/shoes
-	chameleon_name = "Shoes"
+	chameleon_name = "Обувь"
 	active_type = /obj/item/clothing/shoes/sneakers/black
 
 /datum/action/item_action/chameleon/change/shoes/initialize_blacklist()

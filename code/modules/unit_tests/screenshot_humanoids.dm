@@ -11,7 +11,7 @@
 	lizard.dna.mutant_bodyparts["snout"] = list(MUTANT_INDEX_NAME = "Sharp + Light", MUTANT_INDEX_COLOR_LIST = list("#009999", "#009999", "#009999")) // NOVA EDIT - Customization - ORIGINAL: lizard.dna.features["snout"] = "Sharp + Light"
 	lizard.dna.mutant_bodyparts["horns"] = list(MUTANT_INDEX_NAME = "Simple", MUTANT_INDEX_COLOR_LIST = list("#009999", "#009999", "#009999")) // NOVA EDIT - Customization - ORIGINAL: lizard.dna.features["horns"] = "Simple"
 	lizard.dna.mutant_bodyparts["frills"] = list(MUTANT_INDEX_NAME = "Aquatic", MUTANT_INDEX_COLOR_LIST = list("#009999", "#009999", "#009999")) // NOVA EDIT - Customization - ORIGINAL: lizard.dna.features["frills"] = "Aquatic"
-	lizard.dna.features["legs"] = "Normal Legs"
+	lizard.dna.features["legs"] = "Нормальные ноги"
 	lizard.set_species(/datum/species/lizard)
 	lizard.equipOutfit(/datum/outfit/job/engineer)
 	test_screenshot("[/datum/species/lizard]", get_flat_icon_for_all_directions(lizard))

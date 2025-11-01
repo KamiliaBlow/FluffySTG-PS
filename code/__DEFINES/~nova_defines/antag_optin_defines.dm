@@ -9,10 +9,10 @@
 /// Fine with being round removed.
 #define OPT_IN_YES_ROUND_REMOVE 3
 
-#define OPT_IN_YES_TEMP_STRING "Yes - Temporary/Inconvenience"
-#define OPT_IN_YES_KILL_STRING "Yes - Kill"
-#define OPT_IN_YES_ROUND_REMOVE_STRING "Yes - Round Remove"
-#define OPT_IN_NOT_TARGET_STRING "No"
+#define OPT_IN_YES_TEMP_STRING "Да - Временно/Неудобно"
+#define OPT_IN_YES_KILL_STRING "Да - Убийство"
+#define OPT_IN_YES_ROUND_REMOVE_STRING "Да - Удаление из раунда"
+#define OPT_IN_NOT_TARGET_STRING "Нет"
 
 /// Assoc list of stringified opt_in_## define to the front-end string to show users as a representation of the setting.
 GLOBAL_LIST_INIT(antag_opt_in_strings, list(

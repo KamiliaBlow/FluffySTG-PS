@@ -75,9 +75,9 @@
 
 	tgui_prefs_migration = save_data["tgui_prefs_migration"]
 	if(!tgui_prefs_migration && save_data.len) // If save_data is empty, this is definitely a new character
-		to_chat(parent, boxed_message(span_redtext("PREFERENCE MIGRATION BEGINNING.\
-		\nDO NOT INTERACT WITH YOUR PREFERENCES UNTIL THIS PROCESS HAS BEEN COMPLETED.\
-		\nDO NOT DISCONNECT UNTIL THIS PROCESS HAS BEEN COMPLETED.\
+		to_chat(parent, boxed_message(span_redtext("НАЧАЛО МИГРАЦИИ НАСТРОЕК.\
+		\nНЕ МЕНЯЙТЕ СВОИ НАСТРОЙКИ, ПОКА ЭТОТ ПРОЦЕСС НЕ БУДЕТ ЗАВЕРШЕН.\
+		\nНЕ ОТКЛЮЧАЙТЕСЬ, ПОКА ЭТОТ ПРОЦЕСС НЕ БУДЕТ ЗАВЕРШЕН.\
 		")))
 		migrate_nova(save_data)
 		addtimer(CALLBACK(src, PROC_REF(check_migration)), 10 SECONDS)

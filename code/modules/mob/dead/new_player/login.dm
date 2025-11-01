@@ -60,5 +60,5 @@
 
 	if(SSticker.current_state < GAME_STATE_SETTING_UP)
 		var/tl = SSticker.GetTimeLeft()
-		to_chat(src, "Please set up your character and select \"Ready\". The game will start [tl > 0 ? "in about [DisplayTimeText(tl)]" : "soon"].")
+		to_chat(src, "Пожалуйста, настройте своего персонажа и выберите \"Ready\". Игра начнется [tl > 0 ? "через [DisplayTimeText(tl)]" : "очень скоро"].")
 

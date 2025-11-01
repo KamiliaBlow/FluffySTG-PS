@@ -123,7 +123,7 @@
 	affected_bodyparts = HEAD
 
 /datum/body_marking/other/ears
-	name = "Ears"
+	name = "Уши"
 	icon_state = "ears"
 	affected_bodyparts = HEAD
 
