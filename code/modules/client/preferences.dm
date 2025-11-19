@@ -291,7 +291,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			// Yielding
 			var/new_color = input(
 				usr,
-				"Select new color",
+				"Выберите новый цвет",
 				null,
 				default_value || COLOR_WHITE,
 			) as color | null
@@ -332,7 +332,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			// Yielding
 			var/new_color = input(
 				usr,
-				"Select new color",
+				"Выберите новый цвет",
 				null,
 				default_value || COLOR_WHITE,
 			) as color | null

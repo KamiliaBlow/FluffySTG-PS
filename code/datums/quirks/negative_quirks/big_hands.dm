@@ -1,10 +1,10 @@
 /datum/quirk/bighands
 	name = "Big Hands"
-	desc = "You have big hands, it sure does make it hard to use a lot of things."
+	desc = "У вас большие руки, это, конечно, затрудняет использование многих вещей."
 	icon = FA_ICON_HAND_DOTS
 	value = -6
 	mob_trait = TRAIT_CHUNKYFINGERS
-	gain_text = span_danger("Your hands are huge! You can't use small things anymore!")
-	lose_text = span_notice("Your hands are back to normal.")
-	medical_record_text = "Patient has unusually large hands. Made me question my masculinity..."
+	gain_text = span_danger("У вас огромные руки! Вы больше не сможете пользоваться мелкими предметами!")
+	lose_text = span_notice("Ваши руки вернулись в нормальное состояние.")
+	medical_record_text = "У пациента необычно большие руки. Это заставляет вас усомниться в своей маскулинности..."
 	hardcore_value = 5

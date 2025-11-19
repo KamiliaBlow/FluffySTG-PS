@@ -1,5 +1,5 @@
 /datum/language/kobold
-	name = "Кобольтовый"
+	name = "Kobold"
 	desc = "Ип ип."
 	key = "k"
 	space_chance = 100

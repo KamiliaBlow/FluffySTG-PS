@@ -1,11 +1,11 @@
 /datum/quirk/social_anxiety
 	name = "Social Anxiety"
-	desc = "Talking to people is very difficult for you, and you often lock up, especially if blown kisses or if you happen upon eye contact." //NOVA EDIT - CHANGE- ORIGINAL: desc = "Talking to people is very difficult for you, and you often stutter or even lock up."
+	desc = "Вам очень трудно общаться с людьми, и вы часто замыкаетесь в себе, особенно если вам посылают воздушные поцелуи или если вы случайно встречаетесь взглядом." //NOVA EDIT - CHANGE- ORIGINAL: desc = "Talking to people is very difficult for you, and you often stutter or even lock up."
 	icon = FA_ICON_COMMENT_SLASH
 	value = -3
-	gain_text = span_danger("You start worrying about what you're saying.")
-	lose_text = span_notice("You feel easier about talking again.") //if only it were that easy!
-	medical_record_text = "Patient is usually anxious in social encounters and prefers to avoid them."
+	gain_text = span_danger("Вы начинаете беспокоиться о том, что говорите.")
+	lose_text = span_notice("Вам снова становится легче разговаривать.") //if only it were that easy!
+	medical_record_text = "Пациент обычно испытывает беспокойство при общении с другими людьми и предпочитает избегать его."
 	hardcore_value = 4
 	mob_trait = TRAIT_ANXIOUS
 	mail_goodies = list(/obj/item/storage/pill_bottle/psicodine)
@@ -51,17 +51,17 @@
 		var/list/new_message = list()
 		for(var/word in message_split)
 			if(prob(max(5, moodmod)) && word != message_split[1]) //Minimum 1/20 chance of filler
-				new_message += pick("uh,","erm,","um,")
+				new_message += pick("ам,","эм,","хм,")
 				if(prob(min(5, moodmod))) //Max 1 in 20 chance of cutoff after a successful filler roll, for 50% odds in a 15 word sentence
 					quirk_holder.set_silence_if_lower(6 SECONDS)
-					to_chat(quirk_holder, span_danger("You feel self-conscious and stop talking. You need a moment to recover!"))
+					to_chat(quirk_holder, span_danger("Вы чувствуете себя неловко и перестаете говорить. Вам нужно время, чтобы прийти в себя!"))
 					break
 			new_message += word
 		message = jointext(new_message, " ")
 
 	if(prob(min(50, (0.50 * moodmod)))) //Max 50% chance of not talking
 		if(dumb_thing)
-			to_chat(quirk_holder, span_userdanger("You think of a dumb thing you said a long time ago and scream internally."))
+			to_chat(quirk_holder, span_userdanger("Вы вспоминаете глупость, которую сказали давным-давно, и внутренне кричите."))
 			dumb_thing = FALSE //only once per life
 			if(prob(1))
 				new/obj/item/food/spaghetti/pastatomato(get_turf(quirk_holder)) //now that's what I call spaghetti code
@@ -71,7 +71,7 @@
 				to_chat(quirk_holder, span_danger("You retreat into yourself. You <i>really</i> don't feel up to talking."))
 				quirk_holder.set_silence_if_lower(10 SECONDS)
 
-		speech_args[SPEECH_MESSAGE] = pick("Uh.","Erm.","Um.")
+		speech_args[SPEECH_MESSAGE] = pick("Ам.","Эм.","Хм.")
 	else
 		speech_args[SPEECH_MESSAGE] = message
 

@@ -1,7 +1,7 @@
 //Spinwarder - The common tongue of the various lands of the former Third Soviet Union, and the official language of the Spinward Stellar Coalition
 
 /datum/language/spinwarder
-	name = "Спинвардер"
+	name = "Spinwarder"
 	desc = "Официальный язык Звездной коалиции Спинвард, унаследованный от Третьего Советского Союза."
 	key = "s"
 	space_chance = 20

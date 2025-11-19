@@ -1,6 +1,6 @@
 // The language of the podpeople. Yes, it's a shameless ripoff of elvish.
 /datum/language/sylvan
-	name = "Сильван"
+	name = "Sylvan"
 	desc = "Сложный древний язык, на котором говорят разумные растения."
 	key = "h"
 	space_chance = 10

@@ -1,11 +1,11 @@
 /datum/quirk/item_quirk/asthma
 	name = "Asthma"
-	desc = "You suffer from asthma, a inflammatory disorder that causes your airpipe to squeeze shut! Be careful around smoke!"
+	desc = "Вы страдаете астмой, воспалительным заболеванием, которое вызывает сужение дыхательных путей! Будьте осторожны в местах, где курят!"
 	icon = FA_ICON_LUNGS_VIRUS
 	value = -4 // trivialized by NOBREATH but still quite dangerous
-	gain_text = span_danger("You have a harder time breathing.")
-	lose_text = span_notice("You suddenly feel like your lungs just got a lot better at breathing!")
-	medical_record_text = "Patient suffers from asthma."
+	gain_text = span_danger("Вам трудно дышать.")
+	lose_text = span_notice("Вы внезапно чувствуете, что ваши легкие стали гораздо лучше дышать!")
+	medical_record_text = "Пациент страдает астмой."
 	hardcore_value = 2
 	quirk_flags = QUIRK_HUMAN_ONLY
 	mail_goodies = list(/obj/item/reagent_containers/inhaler_canister/albuterol)
@@ -100,11 +100,11 @@
 	if (holder_histamine)
 		if (holder_histamine.overdosed) // uh oh!
 			if (SPT_PROB(15, seconds_per_tick))
-				to_chat(quirk_holder, span_boldwarning("You feel your neck swelling, squeezing on your windpipe more and more!"))
+				to_chat(quirk_holder, span_boldwarning("Вы чувствуете, как ваша шея опухает, все сильнее сдавливая трахею!"))
 			adjust_inflammation(histamine_OD_inflammation * seconds_per_tick)
 		else
 			if (SPT_PROB(5, seconds_per_tick))
-				to_chat(quirk_holder, span_warning("You find yourself wheezing a little harder as your neck swells..."))
+				to_chat(quirk_holder, span_warning("Вы замечаете, что дышите все тяжелее, а шея опухает..."))
 			adjust_inflammation(histamine_inflammation * seconds_per_tick)
 
 	var/datum/reagent/medicine/albuterol/albuterol = quirk_holder.reagents.has_reagent(/datum/reagent/medicine/albuterol)
@@ -185,7 +185,7 @@
 		if (prob(1 * change_mult))
 			quirk_holder.emote("wheeze")
 		if (prob(5 * change_mult))
-			to_chat(quirk_holder, span_warning("You feel your windpipe tightening..."))
+			to_chat(quirk_holder, span_warning("Вы чувствуете, как сжимается ваша трахея..."))
 
 /// Returns the % of health our lungs have, from 1-0. Used in reducing recovery and intensifying inflammation.
 /datum/quirk/item_quirk/asthma/proc/get_lung_health_mult()

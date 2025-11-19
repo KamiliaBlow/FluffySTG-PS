@@ -1,5 +1,5 @@
 /datum/language/carptongue
-	name = "Карповый"
+	name = "Carptongue"
 	desc = "Различные рыбные звуки, которые могут иметь смысл для космических карпов."
 	key = "c"
 	icon_state = "fish"

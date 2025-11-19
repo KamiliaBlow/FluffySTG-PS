@@ -3,9 +3,9 @@
 	if(SSticker.current_state == GAME_STATE_STARTUP)
 		dat += {"<img src="loading_screen.gif" class="bg" alt="">"}
 		dat += {"<div class="container_terminal" id="terminal"></div>"}
-		dat += {"<div class="papers_header">SUBSYSTEMS INFO</div>"}
+		dat += {"<div class="papers_header">ИНФО ПОДСИСТЕМ</div>"}
 		dat += {"<div class="container_progress" id="progress_container"><div class="progress_bar" id="progress"><div class="sub_progress_bar" id="sub_progress"></div></div></div>"}
-		dat += {"<div class="progress_label">LOADING GAME...</div>"}
+		dat += {"<div class="progress_label">ЗАПУСК СЕРВЕРА...</div>"}
 
 		dat += {"
 		<script language="JavaScript">
@@ -96,19 +96,19 @@
 		dat += {"<div class="container_nav">"}
 
 		if(!SSticker || SSticker.current_state <= GAME_STATE_PREGAME)
-			dat += {"<a id="ready" class="menu_button" href='byond://?src=[text_ref(src)];toggle_ready=1'>[ready == PLAYER_READY_TO_PLAY ? "READY" : "NOT READY"]</a>"}
+			dat += {"<a id="ready" class="menu_button" href='byond://?src=[text_ref(src)];toggle_ready=1'>[ready == PLAYER_READY_TO_PLAY ? "ГОТОВ" : "НЕ ГОТОВ"]</a>"}
 		else
 			dat += {"
-				<a class="menu_button" href='byond://?src=[text_ref(src)];late_join=1'>JOIN GAME</a>
-				<a class="menu_button" href='byond://?src=[text_ref(src)];view_manifest=1'>CREW MANIFEST</a>
+				<a class="menu_button" href='byond://?src=[text_ref(src)];late_join=1'>ПРИСОЕДИНИТЬСЯ</a>
+				<a class="menu_button" href='byond://?src=[text_ref(src)];view_manifest=1'>ЭКИПАЖ</a>
 				<hr>
 			"}
 
-		dat += {"<a class="menu_button" href='byond://?src=[text_ref(src)];observe=1'>OBSERVE</a>"}
+		dat += {"<a class="menu_button" href='byond://?src=[text_ref(src)];observe=1'>НАБЛЮДАТЬ</a>"}
 
 		dat += {"
-			<a class="menu_button" href='byond://?src=[text_ref(src)];view_directory=1'>CHARACTER DIRECTORY</a>
-			<a id="be_antag" class="menu_button" href='byond://?src=[text_ref(src)];toggle_antag=1'>[client.prefs.read_preference(/datum/preference/toggle/be_antag) ? "BE ANTAGONIST" : "NOT TO BE ANTAG"]</a>
+			<a class="menu_button" href='byond://?src=[text_ref(src)];view_directory=1'>СПИСОК ПЕРСОНАЖЕЙ</a>
+			<a id="be_antag" class="menu_button" href='byond://?src=[text_ref(src)];toggle_antag=1'>[client.prefs.read_preference(/datum/preference/toggle/be_antag) ? "БЫТЬ АНТАГОНИСТОМ" : "БЫТЬ ИГРОКОМ"]</a>
 			<hr>
 		"}
 
@@ -120,7 +120,7 @@
 		<script language="JavaScript">
 			var ready_int = 0;
 			var ready_mark = document.getElementById("ready");
-			var ready_marks = \[ "NOT READY", "READY" \];
+			var ready_marks = \[ "НЕ ГОТОВ", "ГОТОВ" \];
 			function toggle_ready(setReady) {
 				if(setReady) {
 					ready_int = setReady;
@@ -135,7 +135,7 @@
 			}
 			var antag_int = 0;
 			var antag_mark = document.getElementById("be_antag");
-			var antag_marks = \[ "NOT TO BE ANTAG", "BE ANTAGONIST" \];
+			var antag_marks = \[ "БЫТЬ АНТАГОНИСТОМ", "БЫТЬ ИГРОКОМ" \];
 			function toggle_antag(setAntag) {
 				if(setAntag) {
 					antag_int = setAntag;

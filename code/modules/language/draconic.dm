@@ -1,5 +1,5 @@
 /datum/language/draconic
-	name = "Драконий"
+	name = "Draconic"
 	desc = "Общий язык ящеролюдов, состоящий из шипящих звуков и треска."
 	key = "o"
 	flags = TONGUELESS_SPEECH

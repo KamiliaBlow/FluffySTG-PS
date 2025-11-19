@@ -61,15 +61,15 @@ SUBSYSTEM_DEF(statpanels)
 
 		global_data += list(
 			cached ? "Next Map: [cached.map_name]" : null,
-			"Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]",
-			"Connected Players: [GLOB.clients.len]",
+			"ID Раунда: [GLOB.round_id ? GLOB.round_id : "NULL"]",
+			"Подключенные игроки: [GLOB.clients.len]",
 			" ",
 			"OOC: [GLOB.ooc_allowed ? "Enabled" : "Disabled"]",
 			" ",
-			"Server Time: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]",
-			"Station Time: [station_time_timestamp()]",
-			"Round Timer: [ROUND_TIME()]",
-			"Actual Round Timer: [time2text(real_round_time, "hh:mm:ss", 0)]"
+			"Время на сервере: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]",
+			"Время на станции: [station_time_timestamp()]",
+			"Время раунда: [ROUND_TIME()]",
+			"Актуальное время раунда: [time2text(real_round_time, "hh:mm:ss", 0)]"
 		)
 		// NOVA EDIT ADDITION END
 
@@ -81,10 +81,10 @@ SUBSYSTEM_DEF(statpanels)
 		if(SSticker.reboot_timer)
 			var/reboot_time = timeleft(SSticker.reboot_timer)
 			if(reboot_time)
-				global_data += "Reboot: [DisplayTimeText(reboot_time, 1)]"
+				global_data += "Перезагрузка: [DisplayTimeText(reboot_time, 1)]"
 		// admin must have delayed round end
 		else if(SSticker.ready_for_reboot)
-			global_data += "Reboot: DELAYED"
+			global_data += "Перезагрузка: ЗАДЕРЖКА"
 
 		src.currentrun = GLOB.clients.Copy()
 		mc_data = null
@@ -154,7 +154,7 @@ SUBSYSTEM_DEF(statpanels)
 		return
 	target.stat_panel.send_message("update_stat", list(
 		"global_data" = global_data,
-		"ping_str" = "Ping: [round(target.lastping, 1)]ms (Average: [round(target.avgping, 1)]ms)",
+		"ping_str" = "Пинг: [round(target.lastping, 1)]ms (Average: [round(target.avgping, 1)]ms)",
 		"other_str" = target.mob?.get_status_tab_items(),
 	))
 
@@ -220,12 +220,12 @@ SUBSYSTEM_DEF(statpanels)
 
 /datum/controller/subsystem/statpanels/proc/generate_mc_data()
 	mc_data = list(
-		list("CPU:", world.cpu),
-		list("Instances:", "[num2text(world.contents.len, 10)]"),
-		list("World Time:", "[world.time]"),
-		list("Globals:", GLOB.stat_entry(), text_ref(GLOB)),
+		list("ЦП:", world.cpu),
+		list("Инстансы:", "[num2text(world.contents.len, 10)]"),
+		list("Мировое время:", "[world.time]"),
+		list("Глобалии:", GLOB.stat_entry(), text_ref(GLOB)),
 		list("[config]:", config.stat_entry(), text_ref(config)),
-		list("Byond:", "(FPS:[world.fps]) (TickCount:[world.time/world.tick_lag]) (TickDrift:[round(Master.tickdrift,1)]([round((Master.tickdrift/(world.time/world.tick_lag))*100,0.1)]%))\n  (Internal Tick Usage: [round(MAPTICK_LAST_INTERNAL_TICK_USAGE,0.1)]%)"),
+		list("Byond:", "(ФПС:[world.fps]) (TickCount:[world.time/world.tick_lag]) (TickDrift:[round(Master.tickdrift,1)]([round((Master.tickdrift/(world.time/world.tick_lag))*100,0.1)]%))\n  (Internal Tick Usage: [round(MAPTICK_LAST_INTERNAL_TICK_USAGE,0.1)]%)"),
 		list("Master Controller:", Master.stat_entry(), text_ref(Master)),
 		list("Failsafe Controller:", Failsafe.stat_entry(), text_ref(Failsafe)),
 		list("","")

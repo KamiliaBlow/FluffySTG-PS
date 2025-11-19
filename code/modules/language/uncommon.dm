@@ -1,5 +1,5 @@
 /datum/language/uncommon
-	name = "Галакт. необщий"
+	name = "Galactic Uncommon"
 	desc = "Второй по распространенности язык человечества."
 	key = "!"
 	flags = TONGUELESS_SPEECH
