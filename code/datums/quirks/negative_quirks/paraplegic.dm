@@ -1,5 +1,5 @@
 /datum/quirk/paraplegic
-	name = "Параплегик"
+	name = "Paraplegic"
 	desc = "Ваши ноги не функционируют. Ничто не исправит это. Но, эй, бесплатная инвалидная коляска!"
 	icon = FA_ICON_WHEELCHAIR
 	value = -12

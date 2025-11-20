@@ -1,5 +1,5 @@
 /datum/quirk/cursed
-	name = "Проклятый"
+	name = "Cursed"
 	desc = "Вы прокляты неудачей. Вы гораздо чаще подвергаетесь несчастным случаям и неприятностям. Когда дождь идет, то льет как из ведра."
 	icon = FA_ICON_CLOUD_SHOWERS_HEAVY
 	value = -8

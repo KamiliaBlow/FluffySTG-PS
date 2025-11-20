@@ -2,12 +2,12 @@
 
 /datum/quirk/hungry
 	name = "Hungry"
-	desc = "You have an insatiable appetite. In other words, your stomach is bottomless. You will need to eat much more than others to stave off hunger."
+	desc = "У вас ненасытный аппетит. Другими словами, ваш желудок бездонный. Вам нужно есть гораздо больше, чем другим, чтобы утолить голод."
 	value = -2
 	icon = FA_ICON_BOWL_FOOD
-	gain_text = span_notice("You feel like your stomach is bottomless.")
-	lose_text = span_notice("You no longer feel like your stomach is bottomless.")
-	medical_record_text = "Patient experiences hunger much more quickly than normal."
+	gain_text = span_notice("Вы чувствуете, что ваш желудок бездонный.")
+	lose_text = span_notice("Вы больше не чувствуете, что ваш желудок бездонный.")
+	medical_record_text = "Пациент испытывает голод гораздо быстрее, чем обычно."
 	quirk_flags = QUIRK_HUMAN_ONLY
 	mail_goodies = list(
 		/obj/item/food/chips,

@@ -1,5 +1,5 @@
 /datum/quirk/nonviolent
-	name = "Пацифист"
+	name = "Pacifist"
 	desc = "Мысль о насилии вызывает у вас отвращение. Настолько сильное, что вы не можете причинить никому вреда."
 	icon = FA_ICON_PEACE
 	value = -8

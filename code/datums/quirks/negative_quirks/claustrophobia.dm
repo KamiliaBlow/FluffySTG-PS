@@ -1,9 +1,9 @@
 /datum/quirk/claustrophobia
 	name = "Claustrophobia"
-	desc = "You are terrified of small spaces. If you are placed inside any container, locker, or machinery, a panic attack sets in and you struggle to breathe." // NOVA EDIT CHANGE - ORIGINAL: desc = "You are terrified of small spaces and certain jolly figures. If you are placed inside any container, locker, or machinery, a panic attack sets in and you struggle to breathe."
+	desc = "Вы панически боитесь замкнутых пространств. Если вас помещают в какой-либо контейнер, шкафчик или механизм, у вас начинается паническая атака, и вы с трудом дышите." // NOVA EDIT CHANGE - ORIGINAL: desc = "You are terrified of small spaces and certain jolly figures. If you are placed inside any container, locker, or machinery, a panic attack sets in and you struggle to breathe."
 	icon = FA_ICON_BOX_OPEN
 	value = -4
-	medical_record_text = "Patient demonstrates a fear of tight spaces."
+	medical_record_text = "Пациент демонстрирует боязнь замкнутых пространств."
 	hardcore_value = 5
 	quirk_flags = QUIRK_HUMAN_ONLY
 	mail_goodies = list(/obj/item/reagent_containers/syringe/convermol) // to help breathing
