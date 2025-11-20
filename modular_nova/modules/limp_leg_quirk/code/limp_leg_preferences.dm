@@ -7,7 +7,7 @@
 	return "Random"
 
 /datum/preference/choiced/limp_leg/init_possible_values()
-	return list("Random", "Left leg", "Right leg")
+	return list("Random", "Левая нога", "Правая нога")
 
 /datum/preference/choiced/limp_leg/apply_to_human(mob/living/carbon/human/target, value)
 	return

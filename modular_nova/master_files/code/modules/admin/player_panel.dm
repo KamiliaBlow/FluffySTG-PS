@@ -16,8 +16,8 @@ GLOBAL_DATUM_INIT(admin_state, /datum/ui_state/admin_state, new)
 
 GLOBAL_LIST_INIT(pp_limbs, list(
 	"Голова" 		= BODY_ZONE_HEAD,
-	"Left leg" 	= BODY_ZONE_L_LEG,
-	"Right leg" = BODY_ZONE_R_LEG,
+	"Левая нога" 	= BODY_ZONE_L_LEG,
+	"Правая нога" = BODY_ZONE_R_LEG,
 	"Left arm" 	= BODY_ZONE_L_ARM,
 	"Right arm" = BODY_ZONE_R_ARM
 ))
