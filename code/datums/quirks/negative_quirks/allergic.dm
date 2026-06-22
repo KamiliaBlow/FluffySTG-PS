@@ -1,11 +1,11 @@
 /datum/quirk/item_quirk/allergic
 	name = "Extreme Medicine Allergy"
-	desc = "Ever since you were a kid, you've been allergic to certain chemicals..."
+	desc = "С самого детства у вас была аллергия на определенные химические вещества..."
 	icon = FA_ICON_PRESCRIPTION_BOTTLE
 	value = -6
-	gain_text = span_danger("You feel your immune system shift.")
-	lose_text = span_notice("You feel your immune system phase back into perfect shape.")
-	medical_record_text = "Patient's immune system responds violently to certain chemicals."
+	gain_text = span_danger("Вы чувствуете, как меняется ваша иммунная система.")
+	lose_text = span_notice("Вы чувствуете, как ваша иммунная система возвращается в идеальную форму.")
+	medical_record_text = "Иммунная система пациента бурно реагирует на определенные химические вещества."
 	hardcore_value = 3
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_PROCESSES
 	mail_goodies = list(/obj/item/reagent_containers/hypospray/medipen) // epinephrine medipen stops allergic reactions

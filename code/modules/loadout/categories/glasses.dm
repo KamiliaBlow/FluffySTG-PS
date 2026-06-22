@@ -1,6 +1,6 @@
 /// Glasses Slot Items (Moves overrided items to backpack)
 /datum/loadout_category/glasses
-	category_name = "Glasses"
+	category_name = "Очки"
 	category_ui_icon = FA_ICON_GLASSES
 	type_to_generate = /datum/loadout_item/glasses
 	tab_order = /datum/loadout_category/head::tab_order + 1
@@ -14,15 +14,15 @@
 	outfit.glasses = item_path
 
 /datum/loadout_item/glasses/regular
-	name = "Glasses"
+	name = "Очки"
 	item_path = /obj/item/clothing/glasses/regular
 
 /datum/loadout_item/glasses/circle_glasses
-	name = "Circle Glasses"
+	name = "Круглые очки"
 	item_path = /obj/item/clothing/glasses/regular/circle
 
 /datum/loadout_item/glasses/hipster_glasses
-	name = "Hipster Glasses"
+	name = "Хипстерские очки"
 	item_path = /obj/item/clothing/glasses/regular/hipster
 
 /datum/loadout_item/glasses/jamjar_glasses
@@ -36,23 +36,23 @@
 */ // NOVA REMOVAL END
 
 /datum/loadout_item/glasses/cold_glasses
-	name = "Cold Glasses"
+	name = "Холодные очки"
 	item_path = /obj/item/clothing/glasses/cold
 
 /datum/loadout_item/glasses/heat_glasses
-	name = "Heat Glasses"
+	name = "Теплые очки"
 	item_path = /obj/item/clothing/glasses/heat
 
 /datum/loadout_item/glasses/orange_glasses
-	name = "Orange Glasses"
+	name = "Оранжевые очки"
 	item_path = /obj/item/clothing/glasses/orange
 
 /datum/loadout_item/glasses/red_glasses
-	name = "Red Glasses"
+	name = "Красные очки"
 	item_path = /obj/item/clothing/glasses/red
 
 /datum/loadout_item/glasses/eyepatch
-	name = "Eyepatch"
+	name = "Повязка на глаз"
 	item_path = /obj/item/clothing/glasses/eyepatch
 
 /** NOVA EDIT REMOVAL - We already have it in the loadout.

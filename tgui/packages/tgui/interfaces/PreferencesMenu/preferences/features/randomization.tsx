@@ -7,7 +7,7 @@ import { useRandomToggleState } from '../../useRandomToggleState';
 import { CheckboxInput, type Feature, type FeatureToggle } from './base';
 
 export const random_body: Feature<RandomSetting> = {
-  name: 'Random body',
+  name: 'Случайное тело',
   component: (props) => {
     const [randomToggle, setRandomToggle] = useRandomToggleState();
     const { act } = useBackend();
@@ -31,7 +31,7 @@ export const random_body: Feature<RandomSetting> = {
                   setRandomToggle(false);
                 }}
               >
-                Randomize
+                Случайно
               </Button>
             </Stack.Item>
 

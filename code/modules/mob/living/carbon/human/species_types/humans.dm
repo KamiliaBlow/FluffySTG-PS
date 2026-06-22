@@ -97,27 +97,27 @@
 	return 'sound/mobs/humanoids/human/hiss/human_hiss.ogg'
 
 /datum/species/human/get_species_description()
-	return "Humans are the dominant species in the known galaxy. \
-		Their kind extend from old Earth to the edges of known space."
+	return "Люди - доминирующий вид в известной галактике. \
+		Их вид распространяется от Старой Земли до самых пределов известного космоса."
 
 /datum/species/human/get_species_lore()
 	return list(
-		"These primate-descended creatures, originating from the mostly harmless Earth, \
-		have long-since outgrown their home and semi-benign designation. \
-		The space age has taken humans out of their solar system and into the galaxy-at-large.",
+		"Эти существа, происходящие от приматов и родом с в основном безвредной Земли, \
+        уже давно переросли рамки своей родной планеты и статус полублагоприятных существ. \
+		Эра космоса вывела человечество за пределы Солнечной системы и открыла ему просторы всей Галактики.",
 
-		"In traditional human fashion, this near-record pace from terra firma to the final frontier spat \
-		in the face of other races they now shared a stage with. \
-		This included the lizards - if anyone was offended by these upstarts, it was certainly lizardkind.",
+		"Как это свойственно людям, этот почти рекордный темп продвижения от суши к последнему рубежу стал \
+        настоящим ударом по самолюбию других рас, с которыми они теперь делили одну арену. \
+		В том числе и ящерицы - если кто-то и был оскорблён этими выскочками, то это, безусловно, был ящеричий род.",
 
-		"Humanity never managed to find the kind of peace to fully unite under one banner like other species. \
-		The pencil and paper pushing of the UN bureaucrat lives on in the mosaic that is TerraGov; \
-		a composite of the nation-states that still live on in human society.",
+		"Человечеству так и не удалось обрести такой мир, который позволил бы ему полностью объединиться под одним знаменем, как это сделали другие виды. \
+		Бумажная волокита, характерная для бюрократов ООН, находит своё продолжение в мозаике под названием TerraGov \
+		- совокупности национальных государств, которые по-прежнему существуют в человеческом обществе.",
 
-		"The human spirit of opportunity and enterprise continues on in its peak form: \
-		the hypercorporation. Acting outside of TerraGov's influence, literally and figuratively, \
-		hypercorporations buy the senate votes they need and establish territory far past the Earth Government's reach. \
-		In hypercorporation territory company policy is law, giving new meaning to \"employee termination\".",
+		"Человеческий дух стремления к новым возможностям и предпринимательства продолжает процветать в своей высшей форме: \
+        гиперкорпорации. Действуя вне сферы влияния TerraGov - как в прямом, так и в переносном смысле, \
+        гиперкорпорации покупают необходимые им голоса в сенате и закрепляют за собой территории, находящиеся далеко за пределами досягаемости Земного правительства. \
+		На территории гиперкорпорации политика компании - это закон, что придает новый смысл понятию \"увольнение сотрудника\".",
 	)
 
 /datum/species/human/create_pref_unique_perks()
@@ -127,9 +127,9 @@
 		to_add += list(list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "robot",
-			SPECIES_PERK_NAME = "Asimov Superiority",
-			SPECIES_PERK_DESC = "The AI and their cyborgs are, by default, subservient only \
-				to humans. As a human, silicons are required to both protect and obey you.",
+			SPECIES_PERK_NAME = "Превосходство Азимова",
+			SPECIES_PERK_DESC = "ИИ и их киборги по умолчанию подчиняются только \
+                людям. Как люди, кремниевые обязаны и защищать вас, и подчиняться вам.",
 		))
 
 	var/human_authority_setting = CONFIG_GET(string/human_authority)
@@ -138,8 +138,8 @@
 		to_add += list(list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "bullhorn",
-			SPECIES_PERK_NAME = "Chain of Command",
-			SPECIES_PERK_DESC = "Nanotrasen only recognizes humans for command roles, such as Captain.",
+			SPECIES_PERK_NAME = "Структура подчинения",
+			SPECIES_PERK_DESC = "Nanotrasen допускает к командным должностям, таким как капитан, только людей.",
 		))
 
 	return to_add

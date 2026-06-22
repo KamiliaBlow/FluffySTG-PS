@@ -54,7 +54,7 @@ export function CargoContent(props) {
                   color="transparent"
                   onClick={() => act('denyall')}
                 >
-                  Clear
+                  Убрать
                 </Button>
               )}
               {(tab === TAB.Catalog || tab === TAB.Cart) && (
@@ -69,7 +69,7 @@ export function CargoContent(props) {
               selected={tab === TAB.Catalog}
               onClick={() => setTab(TAB.Catalog)}
             >
-              Catalog
+              Каталог
             </Tabs.Tab>
             <Tabs.Tab
               icon="envelope"

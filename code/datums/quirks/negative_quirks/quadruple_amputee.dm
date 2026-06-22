@@ -1,9 +1,9 @@
 /datum/quirk/quadruple_amputee
 	name = "Quadruple Amputee"
-	desc = "Oops! All Prosthetics! Due to some truly cruel cosmic punishment, all your limbs have been replaced with surplus prosthetics."
+	desc = "Упс! Полное протезирование! В результате какого-то действительно жестокого космического наказания все ваши конечности были заменены на дешевые протезы."
 	icon = "tg-prosthetic-full"
 	value = -6
-	medical_record_text = "During physical examination, patient was found to have all low-budget prosthetic limbs."
+	medical_record_text = "При физическом осмотре у пациента были обнаружены протезы конечностей низкого качество."
 	hardcore_value = 6
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_CHANGES_APPEARANCE
 	mail_goodies = list(/obj/item/weldingtool/mini, /obj/item/stack/cable_coil/five)

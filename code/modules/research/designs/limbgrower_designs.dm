@@ -3,7 +3,7 @@
 /////////////////////////////////////
 
 /datum/design/leftarm
-	name = "Left Arm"
+	name = "Левая рука"
 	id = "arm/left"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 25)
@@ -11,7 +11,7 @@
 	category = list(RND_CATEGORY_INITIAL, SPECIES_HUMAN, SPECIES_LIZARD, SPECIES_MOTH, SPECIES_PLASMAMAN, SPECIES_ETHEREAL)
 
 /datum/design/rightarm
-	name = "Right Arm"
+	name = "Правая рука"
 	id = "arm/right"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 25)
@@ -19,7 +19,7 @@
 	category = list(RND_CATEGORY_INITIAL, SPECIES_HUMAN, SPECIES_LIZARD, SPECIES_MOTH, SPECIES_PLASMAMAN, SPECIES_ETHEREAL)
 
 /datum/design/leftleg
-	name = "Left Leg"
+	name = "Левая нога"
 	id = "leg/left"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 25)
@@ -27,7 +27,7 @@
 	category = list(RND_CATEGORY_INITIAL, SPECIES_HUMAN, SPECIES_LIZARD, SPECIES_MOTH, SPECIES_PLASMAMAN, SPECIES_ETHEREAL, RND_CATEGORY_LIMBS_DIGITIGRADE)
 
 /datum/design/rightleg
-	name = "Right Leg"
+	name = "Правая нога"
 	id = "leg/right"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 25)
@@ -37,7 +37,7 @@
 //Non-limb limb designs
 
 /datum/design/heart
-	name = "Heart"
+	name = "Сердце"
 	id = "heart"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 30)
@@ -45,7 +45,7 @@
 	category = list(SPECIES_HUMAN, RND_CATEGORY_INITIAL)
 
 /datum/design/lungs
-	name = "Lungs"
+	name = "Легкие"
 	id = "lungs"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 20)
@@ -53,7 +53,7 @@
 	category = list(SPECIES_HUMAN, RND_CATEGORY_INITIAL)
 
 /datum/design/liver
-	name = "Liver"
+	name = "Печень"
 	id = "liver"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 20)
@@ -61,7 +61,7 @@
 	category = list(SPECIES_HUMAN, RND_CATEGORY_INITIAL)
 
 /datum/design/stomach
-	name = "Stomach"
+	name = "Желудок"
 	id = "stomach"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 15)
@@ -77,7 +77,7 @@
 	category = list(SPECIES_HUMAN, RND_CATEGORY_INITIAL)
 
 /datum/design/eyes
-	name = "Eyes"
+	name = "Глаза"
 	id = "eyes"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 10)
@@ -85,7 +85,7 @@
 	category = list(SPECIES_HUMAN, RND_CATEGORY_INITIAL)
 
 /datum/design/ears
-	name = "Ears"
+	name = "Уши"
 	id = "ears"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 10)
@@ -93,7 +93,7 @@
 	category = list(SPECIES_HUMAN, RND_CATEGORY_INITIAL)
 
 /datum/design/tongue
-	name = "Tongue"
+	name = "Язык"
 	id = "tongue"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 10)

@@ -21,7 +21,7 @@
 			),
 		),
 		list(
-			"name" = "Toys",
+			"name" = "Игрушки",
 			"icon" = "hat-wizard",
 			"products" = list(
 				/obj/item/toy/captainsaid = 1,

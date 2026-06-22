@@ -1,7 +1,7 @@
 // LOADOUT ITEM DATUMS FOR THE UNDER (UNIFORM) SLOT
 
 /datum/loadout_category/undersuit
-	category_name = "Undersuit"
+	category_name = "Подкостюм"
 	category_ui_icon = FA_ICON_SHIRT
 	type_to_generate = /datum/loadout_item/under
 	tab_order = /datum/loadout_category/suits::tab_order + 1

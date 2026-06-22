@@ -2,7 +2,7 @@
 
 /datum/language/spinwarder
 	name = "Spinwarder"
-	desc = "The official language of the Spinward Stellar Coalition, as inherited from the Third Soviet Union."
+	desc = "Официальный язык Звездной коалиции Спинвард, унаследованный от Третьего Советского Союза."
 	key = "s"
 	space_chance = 20
 	sentence_chance = 0

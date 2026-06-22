@@ -102,44 +102,44 @@
 		temp_gender = gender
 	switch(temp_gender)
 		if(FEMALE)
-			return "she"
+			return "она"
 		if(MALE)
-			return "he"
+			return "он"
 		else
-			return "they"
+			return "они"
 
 /client/p_their(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
 	switch(temp_gender)
 		if(FEMALE)
-			return "her"
+			return "она"
 		if(MALE)
-			return "his"
+			return "он"
 		else
-			return "their"
+			return "они"
 
 /client/p_theirs(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
 	switch(temp_gender)
 		if(FEMALE)
-			return "hers"
+			return "она"
 		if(MALE)
-			return "his"
+			return "он"
 		else
-			return "theirs"
+			return "они"
 
 /client/p_them(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
 	switch(temp_gender)
 		if(FEMALE)
-			return "her"
+			return "она"
 		if(MALE)
-			return "him"
+			return "он"
 		else
-			return "them"
+			return "они"
 
 /client/p_have(temp_gender)
 	if(!temp_gender)
@@ -186,13 +186,13 @@
 		temp_gender = gender
 	switch(temp_gender)
 		if(FEMALE)
-			return "herself"
+			return "себя"
 		if(MALE)
-			return "himself"
+			return "себя"
 		if(PLURAL)
-			return "themselves"
+			return "себя"
 		else
-			return "itself"
+			return "себя"
 
 //mobs(and atoms but atoms don't really matter write your own proc overrides) also have gender!
 /mob/p_they(temp_gender)
@@ -200,52 +200,52 @@
 		temp_gender = gender
 	switch(temp_gender)
 		if(FEMALE)
-			return "she"
+			return "она"
 		if(MALE)
-			return "he"
+			return "он"
 		if(PLURAL)
-			return "they"
+			return "они"
 		else
-			return "it"
+			return "это"
 
 /mob/p_their(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
 	switch(temp_gender)
 		if(FEMALE)
-			return "her"
+			return "она"
 		if(MALE)
-			return "his"
+			return "он"
 		if(PLURAL)
-			return "their"
+			return "они"
 		else
-			return "its"
+			return "это"
 
 /mob/p_theirs(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
 	switch(temp_gender)
 		if(FEMALE)
-			return "hers"
+			return "она"
 		if(MALE)
-			return "his"
+			return "он"
 		if(PLURAL)
-			return "theirs"
+			return "они"
 		else
-			return "its"
+			return "эти"
 
 /mob/p_them(capitalized, temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
 	switch(temp_gender)
 		if(FEMALE)
-			return "her"
+			return "она"
 		if(MALE)
-			return "him"
+			return "он"
 		if(PLURAL)
-			return "them"
+			return "оно"
 		else
-			return "it"
+			return "это"
 
 /mob/p_have(temp_gender)
 	if(!temp_gender)

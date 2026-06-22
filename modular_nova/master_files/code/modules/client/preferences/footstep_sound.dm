@@ -4,13 +4,13 @@
 	savefile_key = "footstep_sound"
 
 /datum/preference/choiced/footstep_sound/init_possible_values()
-	return list("Default", "Shoes", "Highheels", "Claws", "Hooves")
+	return list("По умолчанию", "Обувь", "Высокие каблуки", "Когти", "Копыта")
 
 /datum/preference/choiced/footstep_sound/create_default_value()
-	return "Default"
+	return "По умолчанию"
 
 /datum/preference/choiced/footstep_sound/apply_to_human(mob/living/carbon/human/target, value)
-	if(value == "Default")
+	if(value == "По умолчанию")
 		return
 
 	/// Either use the TG footstep_type here, or specify a special_footstep_sounds list.
@@ -19,14 +19,14 @@
 	/// so if you want a new custom set of sounds that's the least-painful method of adding them, with the caveat of not being able to
 	/// support turf-based sounds.
 	var/static/list/value_to_define = list(
-		"Shoes" = FOOTSTEP_MOB_SHOE,
-		"Claws" = FOOTSTEP_MOB_CLAW,
-		"Highheels" = list(list(
+		"Обувь" = FOOTSTEP_MOB_SHOE,
+		"Когти" = FOOTSTEP_MOB_CLAW,
+		"Высокие каблуки" = list(list(
 			'modular_nova/master_files/sound/effects/footstep/highheel1.ogg',
 			'modular_nova/master_files/sound/effects/footstep/highheel2.ogg',
 			'modular_nova/master_files/sound/effects/footstep/highheel3.ogg',
 			'modular_nova/master_files/sound/effects/footstep/highheel4.ogg'), 70, 1),
-		"Hooves" = list(list(
+		"Копыта" = list(list(
 			'modular_nova/master_files/sound/effects/footstep/hardhoof1.ogg',
 			'modular_nova/master_files/sound/effects/footstep/hardhoof2.ogg',
 			'modular_nova/master_files/sound/effects/footstep/hardhoof3.ogg',

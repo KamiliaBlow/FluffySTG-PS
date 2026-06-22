@@ -53,6 +53,6 @@
 			LOCATION_BACKPACK,
 			LOCATION_HANDS,
 		),
-		flavour_text = "These pills will keep you alive until you can secure a supply of medication. Don't rely on them too much!",
+		flavour_text = "Эти таблетки помогут вам выжить, пока вы не сможете обеспечить себя запасом лекарств. Не полагайтесь на них слишком сильно!",
 		notify_player = TRUE,
 	)

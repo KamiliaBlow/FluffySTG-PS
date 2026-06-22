@@ -1,2 +1,2 @@
 /datum/language/terrum
-	desc = "A language commonly used by constructs with no dedicated vocalization organs."
+	desc = "Язык, обычно используемый конструкциями, не имеющими специальных органов голосообразования."

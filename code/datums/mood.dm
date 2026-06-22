@@ -398,7 +398,7 @@
 
 /// Prints the users mood, sanity, and moodies to chat
 /datum/mood/proc/print_mood(mob/user)
-	var/msg = "[span_info("<EM>My current mental status:</EM>")]<br>"
+	var/msg = "[span_info("<EM>Мое психическое состояние:</EM>")]<br>"
 
 	if(!HAS_TRAIT(src, TRAIT_NOHUNGER))
 		msg += span_notice("My hunger: ")
@@ -485,7 +485,7 @@
 	if (length(additional_lines))
 		msg += "[additional_lines.Join("<br>")]<br>"
 
-	msg += "[span_notice("Moodlets:")]<br>"//All moodlets
+	msg += "[span_notice("Реакции:")]<br>"//All moodlets
 	msg += get_alcohol_processing(user) // NOVA EDIT ADDITION
 	msg += get_drunk_mood(user) // NOVA EDIT ADDITION
 	if(mood_events.len && !HAS_TRAIT(user, TRAIT_MOOD_NOEXAMINE)) // NOVA EDIT CHANGE - ORIGINAL: if(mood_events.len)
@@ -506,7 +506,7 @@
 				if(MOOD_HAPPY2 to INFINITY)
 					msg += "[span_boldnicegreen(event.description)]<br>"
 	else
-		msg += "&bull; [span_grey("I don't have much of a reaction to anything right now.")]<br>"
+		msg += "&bull; [span_grey("Сейчас у меня нет особой реакции на что-либо.")]<br>"
 
 	if(LAZYLEN(mob_parent.quirks))
 		msg += span_notice("You have these quirks: [mob_parent.get_quirk_string(FALSE, CAT_QUIRK_ALL)].")

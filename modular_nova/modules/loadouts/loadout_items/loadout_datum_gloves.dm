@@ -1,7 +1,7 @@
 // LOADOUT ITEM DATUMS FOR THE HANDS SLOT
 
 /datum/loadout_category/hands
-	category_name = "Hands"
+	category_name = "Руки"
 	category_ui_icon = FA_ICON_HAND
 	type_to_generate = /datum/loadout_item/gloves
 	tab_order = /datum/loadout_category/belt::tab_order + 1

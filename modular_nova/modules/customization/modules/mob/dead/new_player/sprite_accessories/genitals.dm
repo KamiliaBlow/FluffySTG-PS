@@ -98,7 +98,7 @@
 
 /datum/sprite_accessory/genital/penis/human
 	icon_state = "human"
-	name = "Human"
+	name = "Человеческий"
 	color_src = USE_ONE_COLOR
 	default_color = DEFAULT_SKIN_OR_PRIMARY
 	has_skintone_shading = TRUE
@@ -289,11 +289,11 @@
 
 /datum/sprite_accessory/genital/vagina/human
 	icon_state = "human"
-	name = "Human"
+	name = "Человеческая"
 
 /datum/sprite_accessory/genital/vagina/tentacles
 	icon_state = "tentacle"
-	name = "Tentacle"
+	name = "Тентаклевая"
 
 /datum/sprite_accessory/genital/vagina/dentata
 	icon_state = "dentata"
@@ -301,7 +301,7 @@
 
 /datum/sprite_accessory/genital/vagina/hairy
 	icon_state = "hairy"
-	name = "Hairy"
+	name = "Заросшая"
 	alt_aroused = FALSE
 
 /datum/sprite_accessory/genital/vagina/spade
@@ -311,7 +311,7 @@
 
 /datum/sprite_accessory/genital/vagina/furred
 	icon_state = "furred"
-	name = "Furred"
+	name = "Меховая"
 	alt_aroused = FALSE
 
 /datum/sprite_accessory/genital/vagina/gaping
@@ -320,7 +320,7 @@
 
 /datum/sprite_accessory/genital/vagina/cloaca
 	icon_state = "cloaca"
-	name = "Cloaca"
+	name = "Клоака"
 
 /datum/sprite_accessory/genital/womb
 	organ_type = /obj/item/organ/genital/womb
@@ -336,7 +336,7 @@
 
 /datum/sprite_accessory/genital/womb/normal
 	icon_state = "none"
-	name = "Normal"
+	name = "Обычная"
 	color_src = null
 
 /datum/sprite_accessory/genital/anus
@@ -353,7 +353,7 @@
 
 /datum/sprite_accessory/genital/anus/normal
 	icon_state = "anus"
-	name = "Anus"
+	name = "Анус"
 	color_src = null
 
 /datum/sprite_accessory/genital/breasts

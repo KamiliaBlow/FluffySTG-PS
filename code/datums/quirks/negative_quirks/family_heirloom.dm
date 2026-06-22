@@ -1,9 +1,9 @@
 /datum/quirk/item_quirk/family_heirloom
 	name = "Family Heirloom"
-	desc = "You are the current owner of an heirloom, passed down for generations. You have to keep it safe!"
+	desc = "Вы являетесь нынешним владельцем семейной реликвии, передаваемой из поколения в поколение. Вы должны хранить ее в безопасности!"
 	icon = FA_ICON_TOOLBOX
 	value = -2
-	medical_record_text = "Patient demonstrates an unnatural attachment to a family heirloom."
+	medical_record_text = "Пациент демонстрирует ненормальную привязанность к семейной реликвии."
 	hardcore_value = 1
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_PROCESSES|QUIRK_MOODLET_BASED
 	/// A weak reference to our heirloom.
@@ -39,7 +39,7 @@
 			LOCATION_BACKPACK,
 			LOCATION_HANDS,
 		),
-		flavour_text = "This is a precious family heirloom, passed down from generation to generation. Keep it safe!",
+		flavour_text = "Это ценная семейная реликвия, передаваемая из поколения в поколение. Берегите ее!",
 		notify_player = TRUE,
 	)
 

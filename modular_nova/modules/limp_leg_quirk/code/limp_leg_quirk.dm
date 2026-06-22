@@ -1,11 +1,11 @@
 /datum/quirk/item_quirk/limp_leg
 	name = "Limp Leg"
-	desc = "Your leg is limp, for one reason or another. A crutch helps you keep up with everyone else."
+	desc = "Ваша нога не работает по той или иной причине. Костыль помогает вам не отставать от других."
 	icon = FA_ICON_WALKING
 	value = -4
-	gain_text = span_notice("You feel your leg give out beneath you.")
-	lose_text = span_notice("Walking feels natural again.")
-	medical_record_text = "The patient demonstrates impaired mobility due to a limp leg."
+	gain_text = span_notice("Вы чувствуете, как ноги подкашиваются под вами.")
+	lose_text = span_notice("Ходьба снова стала естественной.")
+	medical_record_text = "Пациент демонстрирует нарушение подвижности из-за хромоты ноги."
 	quirk_flags = QUIRK_HUMAN_ONLY
 
 /datum/quirk_constant_data/limp_leg
@@ -20,7 +20,7 @@
 		list(
 			LOCATION_HANDS,
 		),
-		flavour_text = "Your crutch is essential for moving at full speed. Don't lose it.",
+		flavour_text = "Ваш костыль необходим для передвижения на полной скорости. Не теряйте его.",
 		notify_player = TRUE,
 	)
 
@@ -31,9 +31,9 @@
 	switch(leg_side)
 		if("Random")
 			ADD_TRAIT(quirk_holder, pick(TRAIT_PARALYSIS_L_LEG, TRAIT_PARALYSIS_R_LEG), QUIRK_TRAIT)
-		if("Left leg")
+		if("Левая нога")
 			ADD_TRAIT(quirk_holder, TRAIT_PARALYSIS_L_LEG, QUIRK_TRAIT)
-		if("Right leg")
+		if("Правая нога")
 			ADD_TRAIT(quirk_holder, TRAIT_PARALYSIS_R_LEG, QUIRK_TRAIT)
 
 /datum/quirk/item_quirk/limp_leg/remove()

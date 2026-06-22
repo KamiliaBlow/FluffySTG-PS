@@ -18,7 +18,7 @@ import {
 import { FeatureDropdownInput } from '../../dropdowns';
 
 export const feature_leg_type: FeatureChoiced = {
-  name: 'Leg type',
+  name: 'Ноги - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -215,22 +215,22 @@ export const feature_body_markings: Feature<string> = {
 };
 
 export const body_markings_color: Feature<string[]> = {
-  name: 'Body Markings Colors',
+  name: 'Таттуировки - цвет',
   component: FeatureTriColorInput,
 };
 
 export const body_markings_emissive: Feature<boolean[]> = {
-  name: 'Body Markings Emissives',
+  name: 'Таттуировки - свечение',
   component: FeatureTriBoolInput,
 };
 
 export const tail_toggle: FeatureToggle = {
-  name: 'Tail',
+  name: 'Хвост',
   component: CheckboxInput,
 };
 
 export const feature_tail: Feature<string> = {
-  name: 'Tail Selection',
+  name: 'Хвост - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -239,23 +239,23 @@ export const feature_tail: Feature<string> = {
 };
 
 export const tail_color: Feature<string[]> = {
-  name: 'Tail Colors',
+  name: 'Хвост - цвет',
   component: FeatureTriColorInput,
 };
 
 export const tail_emissive: Feature<boolean[]> = {
-  name: 'Tail Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Хвост - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const snout_toggle: FeatureToggle = {
-  name: 'Snout',
+  name: 'Морда',
   component: CheckboxInput,
 };
 
 export const feature_snout: Feature<string> = {
-  name: 'Snout Selection',
+  name: 'Морда - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -264,23 +264,23 @@ export const feature_snout: Feature<string> = {
 };
 
 export const snout_color: Feature<string[]> = {
-  name: 'Snout Colors',
+  name: 'Морда - цвет',
   component: FeatureTriColorInput,
 };
 
 export const snout_emissive: Feature<boolean[]> = {
-  name: 'Snout Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Морда - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const horns_toggle: FeatureToggle = {
-  name: 'Horns',
+  name: 'Рога',
   component: CheckboxInput,
 };
 
 export const feature_horns: Feature<string> = {
-  name: 'Horns Selection',
+  name: 'Рога - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -289,23 +289,23 @@ export const feature_horns: Feature<string> = {
 };
 
 export const horns_color: Feature<string[]> = {
-  name: 'Horns Colors',
+  name: 'Рога - цвет',
   component: FeatureTriColorInput,
 };
 
 export const horns_emissive: Feature<boolean[]> = {
-  name: 'Horns Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Рога - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const ears_toggle: FeatureToggle = {
-  name: 'Ears',
+  name: 'Уши',
   component: CheckboxInput,
 };
 
 export const feature_ears: Feature<string> = {
-  name: 'Ears Selection',
+  name: 'Уши - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -314,23 +314,23 @@ export const feature_ears: Feature<string> = {
 };
 
 export const ears_color: Feature<string[]> = {
-  name: 'Ears Colors',
+  name: 'Уши - цвет',
   component: FeatureTriColorInput,
 };
 
 export const ears_emissive: Feature<boolean[]> = {
-  name: 'Ears Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Уши - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const wings_toggle: FeatureToggle = {
-  name: 'Wings',
+  name: 'Крылья',
   component: CheckboxInput,
 };
 
 export const feature_wings: Feature<string> = {
-  name: 'Wings Selection',
+  name: 'Крылья - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -339,23 +339,23 @@ export const feature_wings: Feature<string> = {
 };
 
 export const wings_color: Feature<string[]> = {
-  name: 'Wings Colors',
+  name: 'Крылья - цвет',
   component: FeatureTriColorInput,
 };
 
 export const wings_emissive: Feature<boolean[]> = {
-  name: 'Wings Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Крылья - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const frills_toggle: FeatureToggle = {
-  name: 'Frills',
+  name: 'Капюшон',
   component: CheckboxInput,
 };
 
 export const feature_frills: Feature<string> = {
-  name: 'Frills Selection',
+  name: 'Капюшон - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -364,23 +364,23 @@ export const feature_frills: Feature<string> = {
 };
 
 export const frills_color: Feature<string[]> = {
-  name: 'Frills Colors',
+  name: 'Капюшон - цвет',
   component: FeatureTriColorInput,
 };
 
 export const frills_emissive: Feature<boolean[]> = {
-  name: 'Frills Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Капюшон - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const spines_toggle: FeatureToggle = {
-  name: 'Spines',
+  name: 'Шипы',
   component: CheckboxInput,
 };
 
 export const feature_spines: Feature<string> = {
-  name: 'Spines Selection',
+  name: 'Шипы - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -389,18 +389,18 @@ export const feature_spines: Feature<string> = {
 };
 
 export const spines_color: Feature<string[]> = {
-  name: 'Spines Colors',
+  name: 'Шипы - цвет',
   component: FeatureTriColorInput,
 };
 
 export const spines_emissive: Feature<boolean[]> = {
-  name: 'Spines Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Шипы - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const digitigrade_legs: FeatureChoiced = {
-  name: 'Legs',
+  name: 'Ноги',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -409,12 +409,12 @@ export const digitigrade_legs: FeatureChoiced = {
 };
 
 export const caps_toggle: FeatureToggle = {
-  name: 'Cap',
+  name: 'Шляпка',
   component: CheckboxInput,
 };
 
 export const feature_caps: Feature<string> = {
-  name: 'Cap Selection',
+  name: 'Шляпка - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -423,23 +423,23 @@ export const feature_caps: Feature<string> = {
 };
 
 export const caps_color: Feature<string[]> = {
-  name: 'Cap Colors',
+  name: 'Шляпка - цвет',
   component: FeatureTriColorInput,
 };
 
 export const caps_emissive: Feature<boolean[]> = {
-  name: 'Caps Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Шляпка - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const moth_antennae_toggle: FeatureToggle = {
-  name: 'Moth Antenna',
+  name: 'Усики мотылька',
   component: CheckboxInput,
 };
 
 export const feature_moth_antennae: Feature<string> = {
-  name: 'Moth Antenna Selection',
+  name: 'Усики мотылька - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -448,18 +448,18 @@ export const feature_moth_antennae: Feature<string> = {
 };
 
 export const moth_antennae_color: Feature<string[]> = {
-  name: 'Moth Antenna Colors',
+  name: 'Усики мотылька - цвет',
   component: FeatureTriColorInput,
 };
 
 export const moth_antennae_emissive: Feature<boolean[]> = {
-  name: 'Moth Antenna Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Усики мотылька - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const moth_markings_toggle: FeatureToggle = {
-  name: 'Moth Markings',
+  name: 'Татту Мотыльков',
   component: CheckboxInput,
 };
 
@@ -479,17 +479,17 @@ export const moth_markings_color: Feature<string[]> = {
 
 export const moth_markings_emissive: Feature<boolean[]> = {
   name: 'Moth Markings Emissives',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const fluff_toggle: FeatureToggle = {
-  name: 'Fluff',
+  name: 'Мех',
   component: CheckboxInput,
 };
 
 export const feature_fluff: Feature<string> = {
-  name: 'Fluff Selection',
+  name: 'Мех - вид',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -498,13 +498,13 @@ export const feature_fluff: Feature<string> = {
 };
 
 export const fluff_color: Feature<string[]> = {
-  name: 'Fluff Colors',
+  name: 'Мех - цвет',
   component: FeatureTriColorInput,
 };
 
 export const fluff_emissive: Feature<boolean[]> = {
-  name: 'Fluff Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Мех - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
@@ -550,17 +550,17 @@ export const ipc_screen_color: Feature<string> = {
 
 export const ipc_screen_emissive: Feature<boolean> = {
   name: 'IPC Screen Emissive',
-  description: 'Emissive parts glow in the dark.',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: CheckboxInput,
 };
 
 export const ipc_antenna_toggle: FeatureToggle = {
-  name: 'Synth Antenna',
+  name: 'Антенна синта',
   component: CheckboxInput,
 };
 
 export const feature_ipc_antenna: Feature<string> = {
-  name: 'Synth Antenna Selection',
+  name: 'Антенна синта - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -569,19 +569,19 @@ export const feature_ipc_antenna: Feature<string> = {
 };
 
 export const ipc_antenna_color: Feature<string[]> = {
-  name: 'Synth Antenna Colors',
+  name: 'Антенна синта - цвет',
   component: FeatureTriColorInput,
 };
 
 export const ipc_antenna_emissive: Feature<boolean[]> = {
-  name: 'Synth Antenna Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Антенна синта - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const feature_ipc_chassis: Feature<string> = {
-  name: 'Synth Chassis Selection',
-  description: 'Only works for synths.',
+  name: 'Шасси синта - тип',
+  description: 'Работает только для синтов.',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -590,15 +590,15 @@ export const feature_ipc_chassis: Feature<string> = {
 };
 
 export const ipc_chassis_color: Feature<string> = {
-  name: 'Synth Chassis Colors',
+  name: 'Шасси синта - цвет',
   description:
-    'Only works for Synths and chassis that support greyscale coloring.',
+    'Работает только для синтов и шасси, поддерживающих раскраску в серые тона.',
   component: FeatureColorInput,
 };
 
 export const feature_ipc_head: Feature<string> = {
-  name: 'Synth Head Selection',
-  description: 'Only works for Synths.',
+  name: 'Голова синта - тип',
+  description: 'Работает только для синтов.',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -607,17 +607,17 @@ export const feature_ipc_head: Feature<string> = {
 };
 
 export const ipc_head_color: Feature<string> = {
-  name: 'Synth Head Colors',
+  name: 'Голова синта - цвет',
   component: FeatureColorInput,
 };
 
 export const feature_hair_opacity_toggle: Feature<boolean> = {
-  name: 'Hair Opacity Override',
+  name: 'Прическа - прозрачность',
   component: CheckboxInput,
 };
 
 export const feature_hair_opacity: Feature<number> = {
-  name: 'Hair Opacity',
+  name: 'Прическая - уровень прозрасности',
   component: FeatureNumberInput,
 };
 
@@ -652,12 +652,12 @@ export const neck_acc_emissive: Feature<boolean[]> = {
 };
 
 export const skrell_hair_toggle: FeatureToggle = {
-  name: 'Skrell Hair',
+  name: 'Прическа скрелла',
   component: CheckboxInput,
 };
 
 export const feature_skrell_hair: Feature<string> = {
-  name: 'Skrell Hair Selection',
+  name: 'Прическа скрелла - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -666,23 +666,23 @@ export const feature_skrell_hair: Feature<string> = {
 };
 
 export const skrell_hair_color: Feature<string[]> = {
-  name: 'Skrell Hair Colors',
+  name: 'Прическа скрелла - цвет',
   component: FeatureTriColorInput,
 };
 
 export const skrell_hair_emissive: Feature<boolean[]> = {
-  name: 'Skrell Hair Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Прическа скрелла - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const taur_toggle: FeatureToggle = {
-  name: 'Taur',
+  name: 'Тавр',
   component: CheckboxInput,
 };
 
 export const feature_taur: Feature<string> = {
-  name: 'Taur Selection',
+  name: 'Тавр - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -723,23 +723,23 @@ export const feature_xenodorsal: Feature<string> = {
 };
 
 export const xenodorsal_color: Feature<string[]> = {
-  name: 'Xenodorsal Colors',
+  name: 'Ксенодыхало - цвет',
   component: FeatureTriColorInput,
 };
 
 export const xenodorsal_emissive: Feature<boolean[]> = {
-  name: 'Xenodorsal Emissives',
-  description: 'Emissive parts glow in the dark.',
+  name: 'Ксенодыхало - свечение',
+  description: 'Светящиеся части тела светятся в темноте.',
   component: FeatureTriBoolInput,
 };
 
 export const xenohead_toggle: FeatureToggle = {
-  name: 'Xeno Head',
+  name: 'Ксеноголова',
   component: CheckboxInput,
 };
 
 export const feature_xenohead: Feature<string> = {
-  name: 'Xeno Head Selection',
+  name: 'Ксеноголова - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -748,12 +748,12 @@ export const feature_xenohead: Feature<string> = {
 };
 
 export const xenohead_color: Feature<string[]> = {
-  name: 'Xeno Head Colors',
+  name: 'Ксеноголова - цвет',
   component: FeatureTriColorInput,
 };
 
 export const xenohead_emissive: Feature<boolean[]> = {
-  name: 'Xeno Head Emissives',
+  name: 'Ксеноголова - свечение',
   description: 'Emissive parts glow in the dark.',
   component: FeatureTriBoolInput,
 };
@@ -769,12 +769,12 @@ export const socks_color: Feature<string> = {
 };
 
 export const heterochromia_toggle: FeatureToggle = {
-  name: 'Heterochromia',
+  name: 'Гетерохромия',
   component: CheckboxInput,
 };
 
 export const feature_heterochromia: Feature<string> = {
-  name: 'Heterochromia Selection',
+  name: 'Гетерохромия - тип',
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
@@ -783,12 +783,12 @@ export const feature_heterochromia: Feature<string> = {
 };
 
 export const heterochromia_color: Feature<string[]> = {
-  name: 'Heterochromia Colors',
+  name: 'Гетерохромия - цвет',
   component: FeatureTriColorInput,
 };
 
 export const heterochromia_emissive: Feature<boolean[]> = {
-  name: 'Heterochromia Emissives',
+  name: 'Гетерохромия - свечение',
   description: 'Emissive parts glow in the dark.',
   component: FeatureTriBoolInput,
 };

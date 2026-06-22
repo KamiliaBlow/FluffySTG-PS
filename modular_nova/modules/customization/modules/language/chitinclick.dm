@@ -1,6 +1,6 @@
 /datum/language/chitinclick
 	name = "Chitinclick"
-	desc = "A popular non-Human language that finds extensive use by various types of anthropomorphic invertebrates. It consists of complex flutters, chittering, antenna movements, and sparse guttural syllables."
+	desc = "Популярный нечеловеческий язык, широко используемый различными видами антропоморфных беспозвоночных. Он состоит из сложных трепетаний, щебетания, движений антенн и редких гортанных слогов."
 	key = "C"
 	space_chance = 40
 	sentence_chance = 10

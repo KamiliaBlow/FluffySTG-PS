@@ -1,10 +1,10 @@
 /datum/quirk/indebted
 	name = "Indebted"
-	desc = "Bad life decisions, medical bills, student loans, whatever it may be, you've incurred quite the debt. A portion of all you receive will go towards extinguishing it."
+	desc = "Неудачные жизненные решения, медицинские счета, студенческие ссуды - что бы это ни было, вы накопили немалый долг. Часть всего, что вы получаете, пойдет на его погашение."
 	icon = FA_ICON_DOLLAR
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_HIDE_FROM_SCAN
 	value = -2
-	medical_record_text = "Alas, the patient struggled to scrape together enough money to pay the checkup bill."
+	medical_record_text = "Увы, пациент с трудом собрал достаточно денег, чтобы оплатить счет за осмотр."
 	hardcore_value = 2
 
 /datum/quirk/indebted/add_unique(client/client_source)

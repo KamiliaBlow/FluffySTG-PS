@@ -96,7 +96,7 @@ export function FeatureColorInput(props: FeatureValueProps<string>) {
           />
         </Stack.Item>
 
-        {!shrink && <Stack.Item>Change</Stack.Item>}
+        {!shrink && <Stack.Item>Изм</Stack.Item>}
       </Stack>
     </Button>
   );
@@ -324,7 +324,7 @@ export const FeatureTriColorInput = (props: FeatureValueProps<string[]>) => {
               />
             </Stack.Item>
 
-            {!shrink && <Stack.Item>Change</Stack.Item>}
+            {!shrink && <Stack.Item>Изм</Stack.Item>}
           </Stack>
         </Button>
       </Stack.Item>

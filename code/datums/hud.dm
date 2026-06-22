@@ -24,7 +24,7 @@ GLOBAL_ALIST_INIT(huds, alist(
 ))
 
 /// Assoc list of traits to the huds they give.
-GLOBAL_LIST_INIT(trait_to_hud, list(
+GLOBAL_LIST_INIT(trait_to_hud, alist(
 	TRAIT_ABDUCTOR_HUD = DATA_HUD_ABDUCTOR,
 	TRAIT_BOT_PATH_HUD = DATA_HUD_BOT_PATH,
 	TRAIT_CLOWN_ENJOYER = DATA_HUD_FAN,
@@ -40,7 +40,7 @@ GLOBAL_LIST_INIT(trait_to_hud, list(
 ))
 
 /// Assoc list of traits that block other traits' huds to list of hud (traits) that they block
-GLOBAL_LIST_INIT(trait_blockers_to_hud, list(
+GLOBAL_LIST_INIT(trait_blockers_to_hud, alist(
 	TRAIT_BLOCK_SECHUD = list(TRAIT_SECURITY_HUD, TRAIT_SECURITY_HUD_ID_ONLY),
 ))
 

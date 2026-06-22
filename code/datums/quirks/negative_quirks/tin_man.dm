@@ -1,10 +1,10 @@
 /datum/quirk/tin_man
 	name = "Tin Man"
-	desc = "Oops! All Prosthetics! Due to some truly cruel cosmic punishment, most of your internal organs have been replaced with surplus prosthetics."
+	desc = "Упс! Полное протезирование! В результате какого-то действительно жестокого космического наказания большинство ваших внутренних органов были заменены дешевыми протезами."
 	icon = FA_ICON_USER_GEAR
 	value = -6
-	medical_record_text = "During physical examination, patient was found to have numerous low-budget prosthetic internal organs. \
-		<b>Removal of these organs is known to be dangerous to the patient as well as the practitioner.</b>"
+	medical_record_text = "При физическом осмотре у пациента было обнаружено множество недорогих протезов внутренних органов. \
+		<b>Известно, что удаление этих органов опасно как для пациента, так и для врача.</b>"
 	hardcore_value = 6
 	mail_goodies = list(/obj/item/storage/organbox)
 
@@ -33,5 +33,5 @@
 		new_organ.Insert(human_holder, special = TRUE, movement_flags = DELETE_IF_REPLACED)
 
 /datum/quirk/tin_man/post_add()
-	to_chat(quirk_holder, span_bolddanger("Most of your internal organs have been replaced with surplus prosthetics. They are fragile and will easily come apart under duress. \
-	Additionally, any EMP will make them stop working entirely."))
+	to_chat(quirk_holder, span_bolddanger("Большинство ваших внутренних органов были заменены дешевыми протезами. Они хрупкие и легко разваливаются под давлением. \
+	Кроме того, любой ЭМИ разряд приведет к их полной остановке."))

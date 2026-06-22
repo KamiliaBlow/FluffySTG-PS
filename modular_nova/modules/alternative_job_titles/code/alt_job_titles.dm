@@ -71,7 +71,7 @@
 
 /datum/job/bitrunner
 	alt_titles = list(
-		"Bitrunner",
+		"Битраннер",
 		"Bitdomain Technician",
 		"Data Retrieval Specialist",
 		"Netdiver",
@@ -503,7 +503,7 @@
 
 /datum/job/telecomms_specialist
 	alt_titles = list(
-		"Telecomms Specialist",
+		"Специалист по телекоммам",
 		"Wireless Operator",
 		"Network Engineer",
 		"Sysadmin",

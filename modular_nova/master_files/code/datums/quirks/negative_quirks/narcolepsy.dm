@@ -5,8 +5,8 @@
 	var/stim_medication = /obj/item/storage/pill_bottle/prescription_stimulant
 
 /datum/quirk/item_quirk/narcolepsy/synth
-	name = "Spurious Interrupt Error"
-	medical_record_text = "Patient is malfunctioning and may involuntarily reboot during normal operation."
+	name = "Ошибка ложного прерывания"
+	medical_record_text = "Пациент может непроизвольно засыпать во время обычной деятельности."
 	mail_goodies = list(
 		/obj/item/food/energybar,
 		/obj/item/disk/neuroware/pumpup,

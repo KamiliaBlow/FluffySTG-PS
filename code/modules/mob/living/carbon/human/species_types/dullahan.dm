@@ -141,18 +141,18 @@
 	owner_first_client_connection_handled = TRUE
 
 /datum/species/dullahan/get_physical_attributes()
-	return "A dullahan is much like a human, but their head is detached from their body and must be carried around."
+	return "Дуллахан очень похожи на человека, но их голова отделена от тела, и им приходится носить её с собой."
 
 /datum/species/dullahan/get_species_description()
-	return "An angry spirit, hanging onto the land of the living for \
-		unfinished business. Or that's what the books say. They're quite nice \
-		when you get to know them."
+	return "Злой дух, задержавшийся в мире живых из-за \
+        незавершённых дел. По крайней мере, так пишут в книгах. На самом деле они довольно милые, \
+        когда с ними поближе познакомишься."
 
 /datum/species/dullahan/get_species_lore()
 	return list(
-		"\"No wonder they're all so grumpy! Their hands are always full! I used to think, \
-		\"Wouldn't this be cool?\" but after watching these creatures suffer from their head \
-		getting dunked down disposals for the nth time, I think I'm good.\" - Captain Larry Dodd"
+		"\"Неудивительно, что они все такие ворчливые! У них всегда руки заняты! Раньше я думал: \
+		\"Разве это не круто?\" но после того, как я в n-й раз увидел, как этим существам \
+		засунули головы в мусоропровод, я решил, что мне этого хватит.\" - Капитан Ларри Додд"
 	)
 
 /datum/species/dullahan/create_pref_unique_perks()
@@ -161,10 +161,10 @@
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = "horse-head",
-		SPECIES_PERK_NAME = "Headless and Horseless",
-		SPECIES_PERK_DESC = "Dullahans must lug their head around in their arms. While \
-			many creative uses can come out of your head being independent of your \
-			body, Dullahans will find it mostly a pain.",
+		SPECIES_PERK_NAME = "Без головы и без лошади",
+		SPECIES_PERK_DESC = "Дуллаханы вынуждены носить свои головы на руках. Хотя \
+            от того, что голова отделена от тела, может возникнуть множество творческих возможностей, \
+            для дуллаханов это, в основном, доставляет массу неудобств.",
 	))
 
 	return to_add
@@ -176,11 +176,11 @@
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = "skull",
-		SPECIES_PERK_NAME = "Minor Undead",
-		SPECIES_PERK_DESC = "[name] are minor undead. \
-			Minor undead enjoy some of the perks of being dead, like \
-			not needing to breathe or eat, but do not get many of the \
-			environmental immunities involved with being fully undead.",
+		SPECIES_PERK_NAME = "Неполноценная нежить",
+		SPECIES_PERK_DESC = "[name] являются неполноценной нежитью. \
+            Неполноценные нежить обладают некоторыми преимуществами мертвецов, такими как \
+            отсутствие необходимости дышать или питаться, но лишены многих \
+            видов иммунитета к воздействиям окружающей среды, присущих полноценной нежити.",
 	))
 
 	return to_add

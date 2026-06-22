@@ -1,7 +1,7 @@
 // LOADOUT ITEM DATUMS FOR THE MASK SLOT
 
 /datum/loadout_category/face
-	category_name = "Face"
+	category_name = "Лицо"
 	category_ui_icon = FA_ICON_MASK
 	type_to_generate = /datum/loadout_item/mask
 	tab_order = /datum/loadout_category/glasses::tab_order + 1

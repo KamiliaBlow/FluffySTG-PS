@@ -14,7 +14,7 @@
 	//STUFF SOLD HERE//
 	product_categories = list(
 		list(
-			"name" = "Toys",
+			"name" = "Игрушки",
 			"icon" = FA_ICON_MAGIC_WAND_SPARKLES,
 			"products" = list(
 				//Sex Toys
