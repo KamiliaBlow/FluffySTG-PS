@@ -37,11 +37,11 @@
 
 /obj/machinery/jukebox/examine(mob/user)
 	. = ..()
-	if(music_player.active_song_sound)
+	if(music_player.our_sound)
 		. += "Now playing: [music_player.selection.song_name]"
 
 /obj/machinery/jukebox/wrench_act(mob/living/user, obj/item/tool)
-	if(!isnull(music_player.active_song_sound))
+	if(!isnull(music_player.our_sound))
 		return NONE
 
 	if(default_unfasten_wrench(user, tool) == SUCCESSFUL_UNFASTEN)
@@ -50,7 +50,7 @@
 	return ITEM_INTERACT_BLOCKING
 
 /obj/machinery/jukebox/update_icon_state()
-	icon_state = "[base_icon_state][music_player.active_song_sound ? "-active" : null]"
+	icon_state = "[base_icon_state][music_player.our_sound ? "-active" : null]"
 	return ..()
 
 /obj/machinery/jukebox/attack_hand_secondary(mob/user, list/modifiers)
@@ -97,7 +97,7 @@
 			return TRUE
 
 		if("select_track")
-			if(!isnull(music_player.active_song_sound))
+			if(!isnull(music_player.our_sound))
 				to_chat(user, span_warning("Error: You cannot change the song until the current one is over."))
 				return TRUE
 
@@ -124,7 +124,7 @@
 
 ///If a song is playing, cut it. If none is playing, and the cooldown is up, start the queued track.
 /obj/machinery/jukebox/proc/toggle_playing(mob/user)
-	if(!isnull(music_player.active_song_sound))
+	if(!isnull(music_player.our_sound))
 		stop_music()
 		return
 	if(COOLDOWN_FINISHED(src, jukebox_song_cd))
@@ -136,7 +136,7 @@
 		COOLDOWN_START(src, jukebox_error_cd, 15 SECONDS)
 
 /obj/machinery/jukebox/proc/activate_music()
-	if(!isnull(music_player.active_song_sound))
+	if(!isnull(music_player.our_sound))
 		return FALSE
 
 	music_player.start_music()
@@ -250,7 +250,7 @@
 
 /obj/machinery/jukebox/disco/proc/lights_spin()
 	for(var/i in 1 to 25)
-		if(QDELETED(src) || isnull(music_player.active_song_sound))
+		if(QDELETED(src) || isnull(music_player.our_sound))
 			return
 		var/obj/effect/overlay/sparkles/S = new /obj/effect/overlay/sparkles(src)
 		S.alpha = 0
@@ -269,7 +269,7 @@
 	for(var/s in sparkles)
 		var/obj/effect/overlay/sparkles/reveal = s
 		reveal.alpha = 255
-	while(!isnull(music_player.active_song_sound))
+	while(!isnull(music_player.our_sound))
 		for(var/g in spotlights) // The multiples reflects custom adjustments to each colors after dozens of tests
 			var/obj/item/flashlight/spotlight/glow = g
 			if(QDELETED(glow))

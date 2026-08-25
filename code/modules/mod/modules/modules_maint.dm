@@ -143,7 +143,7 @@
 
 /obj/item/mod/module/visor/rave/on_deactivation(mob/activator, display_message = TRUE, deleting = FALSE)
 	QDEL_NULL(rave_screen)
-	if(isnull(music_player.active_song_sound))
+	if(isnull(music_player.our_sound))
 		return
 
 	music_player.unlisten_all()
@@ -158,7 +158,7 @@
 
 	var/mutable_appearance/visor_overlay = mod.get_visor_overlay(standing)
 	visor_overlay.appearance_flags |= RESET_COLOR
-	if (!isnull(music_player.active_song_sound))
+	if (!isnull(music_player.our_sound))
 		visor_overlay.color = rainbow_order[rave_number]
 	. += visor_overlay
 
@@ -177,7 +177,7 @@
 /obj/item/mod/module/visor/rave/configure_edit(key, value)
 	switch(key)
 		if("selection")
-			if(!isnull(music_player.active_song_sound))
+			if(!isnull(music_player.our_sound))
 				return
 
 			var/datum/track/new_song = music_player.songs[value]

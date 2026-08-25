@@ -146,13 +146,13 @@ VOTE_PERIOD 600
 ## 0 = Cannot respawn (default)
 ## 1 = Can respawn
 ## 2 = Can respawn if choosing a different character
-ALLOW_RESPAWN 0
+ALLOW_RESPAWN 2
 
 ## Respawn delay (deciseconds), which doesn't allow to return to lobby
 RESPAWN_DELAY 0
 
 ## set a hosted by name for unix platforms
-HOSTEDBY PupaandLupa
+HOSTEDBY Pupa_and_Lupa
 
 ## Uncomment this to stop people connecting to your server without a registered ckey. (i.e. guest-* are all blocked from connecting).
 ## You probably want this enabled for a production server.
@@ -372,12 +372,12 @@ ANNOUNCE_ADMIN_LOGOUT
 
 ## Map rotation
 ## You should edit maps.txt to match your configuration when you enable this.
-MAPROTATION
+#MAPROTATION
 
 ## Map voting
 ## Allows players to vote with their preffered map setting
 ## When it's set to zero, the map will be randomly picked each round
-PREFERENCE_MAP_VOTING 1
+#PREFERENCE_MAP_VOTING 1
 
 ## AUTOADMIN
 ## The default admin rank

@@ -1,11 +1,11 @@
 //This file is used to contain unique properties of every map, and how we wish to alter them on a per-map basis.
 //Use JSON files that match the datum layout and you should be set from there.
-//Right now, we default to MetaStation to ensure something does indeed load by default.
+//Right now, we default to IceBoxStation to ensure something does indeed load by default.
 //  -san7890 (with regards to Cyberboss)
 
 /datum/map_config
 	// Metadata
-	var/config_filename = "_maps/metastation.json"
+	var/config_filename = "_maps/icebox.json"
 	var/defaulted = TRUE  // set to FALSE by LoadConfig() succeeding
 	// Config from maps.txt
 	var/config_max_users = 0
