@@ -1,9 +1,9 @@
 // Override of Blood Deficiency quirk for jelly species.
 /datum/quirk/blooddeficiency/add(client/client_source)
 	if(isjellyperson(quirk_holder))
-		name = "Jelly Desiccation"
-		desc = "Your body can't produce enough jelly to sustain itself."
-		medical_record_text = "Patient requires regular treatment for slime jelly loss."
+		name = "Недостаток желе"
+		desc = "Ваш организм не способен вырабатывать достаточное количество желе, чтобы обеспечить свои потребности."
+		medical_record_text = "Пациенту требуется регулярное лечение в связи с потерей слизистого желе."
 		mail_goodies = list(/obj/item/reagent_containers/blood/toxin)
 	return ..()
 
@@ -26,6 +26,6 @@
 			LOCATION_BACKPACK,
 			LOCATION_HANDS,
 		),
-		flavour_text = "These will keep you alive until you can secure a supply of medication. Don't rely on them too much!",
+		flavour_text = "Они помогут вам выжить, пока вы не сможете обеспечить себя запасом лекарств. Но не полагайтесь на них слишком сильно!",
 		notify_player = TRUE,
 	)

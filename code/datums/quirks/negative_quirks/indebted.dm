@@ -1,5 +1,5 @@
 /datum/quirk/indebted
-	name = "Indebted"
+	name = "В долгу"
 	desc = "Неудачные жизненные решения, медицинские счета, студенческие ссуды - что бы это ни было, вы накопили немалый долг. Часть всего, что вы получаете, пойдет на его погашение."
 	icon = FA_ICON_DOLLAR
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_HIDE_FROM_SCAN

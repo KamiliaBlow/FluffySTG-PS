@@ -1,5 +1,5 @@
 /datum/quirk/item_quirk/limp_leg
-	name = "Limp Leg"
+	name = "Вялая нога"
 	desc = "Ваша нога не работает по той или иной причине. Костыль помогает вам не отставать от других."
 	icon = FA_ICON_WALKING
 	value = -4

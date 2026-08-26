@@ -1,11 +1,11 @@
 /datum/quirk/clumsy
-	name = "Clumsy"
-	desc = "You're clumsy, a goofball, a silly dude. You big loveable himbo/bimbo you! Hope you weren't planning on using your hands for anything that takes even a LICK of dexterity."
+	name = "Глупенький"
+	desc = "Вы неуклюжи, несуразны, и вообще выглядите потешно. У вас глупенький вид как у парня/девушки! Надеюсь, вы не собираетесь использовать свои руки для чего-то, что требует хоть капельку ловкости."
 	icon = FA_ICON_FACE_DIZZY
 	value = -8
 	mob_trait = TRAIT_CLUMSY
-	gain_text = span_danger("You feel your IQ sink like your brain is liquid.")
-	lose_text = span_notice("You feel like your IQ went up to at least average.")
-	medical_record_text = "Patient has demonstrated an extreme difficulty with high motor skill paired with an inability to demonstrate critical thinking."
-	medical_symptom_text = "Exhibits poor coordination and frequent accidents, along with difficulty in problem-solving and decision-making tasks."
+	gain_text = span_danger("Вы чувствуете, как ваш IQ падает, словно мозг превратился жидкость.")
+	lose_text = span_notice("Вам кажется, что ваш IQ поднялся как минимум до среднего уровня.")
+	medical_record_text = "Пациент продемонстрировал крайние затруднения в выполнении сложных моторных навыков в сочетании с неспособностью проявить критическое мышление."
+	medical_symptom_text = "Наблюдается плохая координация движений и частые несчастные случаи, а также затруднения при решении задач и принятии решений."
 	quirk_flags = QUIRK_TRAUMALIKE

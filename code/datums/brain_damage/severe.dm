@@ -137,12 +137,12 @@
 	paralysis_type = "right"
 
 /datum/brain_trauma/severe/narcolepsy
-	name = "Narcolepsy"
-	desc = "Patient may involuntarily fall asleep during normal activities."
+	name = "Нарколепсия"
+	desc = "Пациент может непроизвольно заснуть во время обычных повседневных занятий."
 	scan_desc = "traumatic narcolepsy"
-	symptoms = "Experiences sudden and uncontrollable episodes of drowsiness or sleepiness during regular activities."
-	gain_text = span_warning("You have a constant feeling of drowsiness...")
-	lose_text = span_notice("You feel awake and aware again.")
+	symptoms = "Испытывает внезапные и неконтролируемые приступы сонливости или усталости во время повседневных занятий."
+	gain_text = span_warning("Вы постоянно ощущаете сонливость...")
+	lose_text = span_notice("Вы снова чувствуете себя бодро и сосредоточенно.")
 	/// Odds seconds_per_tick the user falls asleep
 	var/sleep_chance = 1
 	/// Odds seconds_per_tick the user falls asleep while running
@@ -184,12 +184,12 @@
 
 	//if not drowsy, don't fall asleep but make them drowsy
 	if(!drowsy)
-		to_chat(owner, span_warning("You feel tired..."))
+		to_chat(owner, span_warning("Вы чувствуете усталость..."))
 		owner.adjust_drowsiness(rand(drowsy_time_minimum, drowsy_time_maximum))
 		if(prob(50))
 			owner.emote("yawn")
 		else if(prob(33)) //rarest message is a custom emote
-			owner.visible_message("rubs [owner.p_their()] eyes.", visible_message_flags = EMOTE_MESSAGE)
+			owner.visible_message("потирает [owner.p_their()] глаза.", visible_message_flags = EMOTE_MESSAGE)
 	//drowsy, so fall asleep. you've had your chance to remedy it
 	else
 		to_chat(owner, span_warning("You fall asleep."))
@@ -207,13 +207,13 @@
 	known_trauma = FALSE
 
 /datum/brain_trauma/severe/monophobia
-	name = "Monophobia"
-	desc = "Patient feels sick and distressed when not around other people, leading to potentially lethal levels of stress."
+	name = "Монофобия"
+	desc = "Пациент чувствует себя плохо и испытывает дискомфорт, когда рядом нет других людей, что приводит к стрессу, уровень которого может достигать смертельно опасных значений."
 	scan_desc = "monophobia"
-	symptoms = "Experiences intense fear and anxiety when alone, often leading to panic attacks, \
-		nausea, rapid heartbeat, and in severe cases, fainting, vomiting, or heart failure."
-	gain_text = span_warning("You feel really lonely...")
-	lose_text = span_notice("You feel like you could be safe on your own.")
+	symptoms = "Испытывает сильный страх и тревогу, когда остается наедине, что часто приводит к приступам паники, \
+		тошноте, учащенному сердцебиению, а в тяжелых случаях - к обмороку, рвоте или сердечной недостаточности."
+	gain_text = span_warning("Вам действительно очень одиноко...")
+	lose_text = span_notice("Вам кажется, что в одиночестве вы можете чувствовать себя в безопасности.")
 
 /datum/brain_trauma/severe/monophobia/on_gain()
 	. = ..()
@@ -224,12 +224,12 @@
 	owner.RemoveComponentSource(REF(src), /datum/component/fearful)
 
 /datum/brain_trauma/severe/discoordination
-	name = "Discoordination"
-	desc = "Patient is unable to use complex tools or machinery."
+	name = "Нарушение координации"
+	desc = "Пациент не может пользоваться сложными инструментами или механизмами."
 	scan_desc = "extreme discoordination"
-	symptoms = "Completely incapable of performing tasks that require fine motor skills or coordination, such as using tools or operating machinery."
-	gain_text = span_warning("You can barely control your hands!")
-	lose_text = span_notice("You feel in control of your hands again.")
+	symptoms = "Полностью неспособен выполнять задачи, требующие мелкой моторики или координации движений, такие как использование инструментов или управление механизмами."
+	gain_text = span_warning("Вы едва можете держать руки под контролем!")
+	lose_text = span_notice("Вы снова чувствуете, что можете управлять своими руками.")
 
 /datum/brain_trauma/severe/discoordination/on_gain()
 	. = ..()
@@ -240,13 +240,13 @@
 	return ..()
 
 /datum/brain_trauma/severe/pacifism
-	name = "Traumatic Non-Violence"
-	desc = "Patient is extremely unwilling to harm others in violent ways."
+	name = "Травматическое ненасилие"
+	desc = "Пациент категорически не желает причинять вред другим людям с применением насилия."
 	scan_desc = "pacific syndrome"
-	symptoms = "Completely incapable of willing themselves to commit acts of violence or harm towards others, \
-		often going to great lengths to avoid confrontations or situations that may lead to violence."
-	gain_text = span_notice("You feel oddly peaceful.")
-	lose_text = span_notice("You no longer feel compelled to not harm.")
+	symptoms = "Полностью неспособные заставить себя совершать акты насилия или причинять вред другим, \
+		часто прилагая все усилия, чтобы избежать конфликтов или ситуаций, которые могут привести к насилию."
+	gain_text = span_notice("Вы чувствуете странное умиротворение.")
+	lose_text = span_notice("Вы больше не чувствуете необходимости не причинять вреда.")
 
 /datum/brain_trauma/severe/pacifism/on_gain()
 	ADD_TRAIT(owner, TRAIT_PACIFISM, TRAUMA_TRAIT)
@@ -257,13 +257,13 @@
 	..()
 
 /datum/brain_trauma/severe/hypnotic_stupor
-	name = "Hypnotic Stupor"
-	desc = "Patient is prone to episodes of extreme stupor that leaves them extremely suggestible."
+	name = "Гипнотический ступор"
+	desc = "Пациент подвержен приступам глубокого ступора, в результате чего он становится чрезвычайно внушаемым."
 	scan_desc = "oneiric feedback loop"
-	symptoms = "Experiences sudden episodes of deep stupor or trance-like states, during which the patient becomes highly suggestible to external influences, \
-		often leading to altered perceptions or behaviors, memories imposed by others, or in severe cases, danger to self or others."
-	gain_text = span_warning("You feel somewhat dazed.")
-	lose_text = span_notice("You feel like a fog was lifted from your mind.")
+	symptoms = "У пациента наблюдаются внезапные приступы глубокого ступора или трансоподобных состояний, во время которых он становится крайне подверженным влиянию извне, \
+		что зачастую приводит к искажению восприятия или поведения, навязыванию чужих воспоминаний или, в тяжелых случаях, к угрозе для себя или окружающих."
+	gain_text = span_warning("Вы чувствуете себя немного ошеломлённо.")
+	lose_text = span_notice("Вы чувствуете, будто туман рассеялся в вашей голове.")
 
 /datum/brain_trauma/severe/hypnotic_stupor/on_lose() //hypnosis must be cleared separately, but brain surgery should get rid of both anyway
 	..()
@@ -275,11 +275,11 @@
 		owner.apply_status_effect(/datum/status_effect/trance, rand(100,300), FALSE)
 
 /datum/brain_trauma/severe/hypnotic_trigger
-	name = "Hypnotic Trigger"
-	desc = "Patient has a trigger phrase set in their subconscious that will trigger a suggestible trance-like state."
+	name = "Гипнотический триггер"
+	desc = "У пациента в подсознании заложена триггерная фраза, которая вызывает поддающееся внушению трансоподобное состояние."
 	scan_desc = "oneiric feedback loop"
-	gain_text = span_warning("You feel odd, like you just forgot something important.")
-	lose_text = span_notice("You feel like a weight was lifted from your mind.")
+	gain_text = span_warning("Вы чувствуете себя как-то странно, будто только что забыли что-то важное.")
+	lose_text = span_notice("Вы чувствуете, будто с души сняли тяжелый груз.")
 	random_gain = FALSE
 	known_trauma = FALSE
 	var/trigger_phrase = "Nanotrasen"
@@ -304,17 +304,17 @@
 		hearing_args[HEARING_RAW_MESSAGE] = reg.Replace(hearing_args[HEARING_RAW_MESSAGE], span_hypnophrase("*********"))
 
 /datum/brain_trauma/severe/hypnotic_trigger/proc/hypnotrigger()
-	to_chat(owner, span_warning("The words trigger something deep within you, and you feel your consciousness slipping away..."))
+	to_chat(owner, span_warning("Эти слова пробуждают что-то глубоко внутри вас, и вы чувствуете, как ваше сознание ускользает..."))
 	owner.apply_status_effect(/datum/status_effect/trance, rand(100,300), FALSE)
 
 /datum/brain_trauma/severe/dyslexia
-	name = "Dyslexia"
-	desc = "Patient is unable to read or write."
+	name = "Дислексия"
+	desc = "Пациент не умеет ни читать, ни писать."
 	scan_desc = "dyslexia"
-	symptoms = "Experiences significant difficulties in reading and writing, often confusing letters and words, \
-		leading to challenges in literacy-related tasks such as reading scanners or completing paperwork."
-	gain_text = span_warning("You have trouble reading or writing...")
-	lose_text = span_notice("You suddenly remember how to read and write.")
+	symptoms = "Испытывает значительные трудности при чтении и письме, часто путает буквы и слова, \
+		что приводит к проблемам при выполнении задач, связанных с грамотностью, таких как чтение скан-кодов или заполнение документов."
+	gain_text = span_warning("У вас возникают трудности с чтением или письмом...")
+	lose_text = span_notice("Вы вдруг вспоминаете, как читать и писать.")
 
 /datum/brain_trauma/severe/dyslexia/on_gain()
 	ADD_TRAIT(owner, TRAIT_ILLITERATE, TRAUMA_TRAIT)
@@ -325,13 +325,13 @@
 	..()
 
 /datum/brain_trauma/severe/kleptomaniac
-	name = "Kleptomania"
-	desc = "Patient is prone to stealing things."
+	name = "Клептомания"
+	desc = "Пациент имеет склонность к кражам."
 	scan_desc = "kleptomania"
-	symptoms = "Experiences an uncontrollable urge to steal nearby items, often without need or reason, \
-		leading to compulsive theft behaviors that can interfere with daily life and social interactions."
-	gain_text = span_warning("You feel a sudden urge to take that. Surely no one will notice.")
-	lose_text = span_notice("You no longer feel the urge to take things.")
+	symptoms = "Испытывает неконтролируемое желание украсть предметы, находящиеся поблизости, зачастую без необходимости и без причины, \
+		что приводит к компульсивному воровству, которое может мешать повседневной жизни и социальному взаимодействию."
+	gain_text = span_warning("Вы чувствуете внезапное желание взять что-то. Наверняка никто и не заметит.")
+	lose_text = span_notice("Вы больше не испытываете желания что-то брать.")
 	/// Cooldown between allowing steal attempts
 	COOLDOWN_DECLARE(steal_cd)
 

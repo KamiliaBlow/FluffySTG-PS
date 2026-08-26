@@ -1,40 +1,40 @@
 // NOVA NEUTRAL TRAITS
 /datum/quirk/excitable
-	name = "Excitable!"
-	desc = "Head patting makes your tail wag! You're very excitable! WAG WAG."
-	gain_text = span_notice("You crave for some headpats!")
-	lose_text = span_notice("You no longer care for headpats all that much.")
-	medical_record_text = "Patient seems to get excited easily."
+	name = "Волнующе!"
+	desc = "Когда вас поглаживают по голове, вы начинаете вилять хвостом! Вы такой возбудимый! ВИЛЯТЬ-ВИЛЯТЬ."
+	gain_text = span_notice("Вам так хочется, чтобы вас погладили по голове!")
+	lose_text = span_notice("Вам уже не так сильно нравятся поглаживания по голове.")
+	medical_record_text = "Пациент, похоже, легко возбуждается."
 	value = 0
 	mob_trait = TRAIT_EXCITABLE
 	icon = FA_ICON_LAUGH_BEAM
 
 /datum/quirk/affectionaversion
-	name = "Affection Aversion"
-	desc = "You refuse to be licked or nosed by quadruped cyborgs."
-	gain_text = span_notice("You've been added to the Do Not Lick and No Nosing registries.")
-	lose_text = span_notice("You've been removed from the Do Not Lick and No Nosing registries.")
-	medical_record_text = "Patient is in the Do Not Lick and No Nosing registries."
+	name = "Отвращение к ласке от киборгов"
+	desc = "Вы не позволяете четвероногим киборгам лизать вас или тыкать в вас носом."
+	gain_text = span_notice("Вы были внесены в реестры 'Не лизать' и 'Не тыкаться носом'.")
+	lose_text = span_notice("Вы были исключены из списков 'Не лизать' и 'Не тыкаться носом'.")
+	medical_record_text = "Пациент внесен в реестры 'Не лизать' и 'Не тыкаться носом'."
 	value = 0
 	mob_trait = TRAIT_AFFECTION_AVERSION
 	icon = FA_ICON_CIRCLE_EXCLAMATION
 
 /datum/quirk/personalspace
-	name = "Personal Space"
-	desc = "You'd rather people keep their hands off your rear end."
-	gain_text = span_notice("You'd like it if people kept their hands off your butt.")
-	lose_text = span_notice("You're less concerned about people touching your butt.")
-	medical_record_text = "Patient demonstrates negative reactions to their posterior being touched."
+	name = "Личное пространство"
+	desc = "Вы бы предпочли, чтобы люди не трогали вас за жопу."
+	gain_text = span_notice("Вам бы понравилось, если бы люди не трогали вас за жопу.")
+	lose_text = span_notice("Вас меньше беспокоит, когда люди трогают вас за жопу.")
+	medical_record_text = "Пациент проявляет негативную реакцию на прикосновения к задней части тела."
 	value = 0
 	mob_trait = TRAIT_PERSONALSPACE
 	icon = FA_ICON_HAND_PAPER
 
 /datum/quirk/dnr
-	name = "Do Not Revive"
-	desc = "For whatever reason, you cannot be revived in any way."
-	gain_text = span_notice("Your spirit gets too scarred to accept revival.")
-	lose_text = span_notice("You can feel your soul healing again.")
-	medical_record_text = "Patient is a DNR, and cannot be revived in any way."
+	name = "Невоскрешаемость"
+	desc = "По какой бы то ни было причине вас невозможно воскресить никаким способом."
+	gain_text = span_notice("Ваша душа становится слишком израненной, чтобы принять возрождение.")
+	lose_text = span_notice("Вы снова чувствуете, как ваша душа исцеляется.")
+	medical_record_text = "Пациент находится в состоянии НВ и не подлежит реанимации ни при каких обстоятельствах."
 	value = 0
 	mob_trait = TRAIT_DNR
 	icon = FA_ICON_SKULL_CROSSBONES
@@ -75,11 +75,11 @@
 
 // uncontrollable laughter
 /datum/quirk/item_quirk/joker
-	name = "Pseudobulbar Affect"
-	desc = "At random intervals, you suffer uncontrollable bursts of laughter."
+	name = "Псевдобульбарный аффект"
+	desc = "Время от времени вас охватывают неконтролируемые приступы смеха."
 	value = 0
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_PROCESSES
-	medical_record_text = "Patient suffers with sudden and uncontrollable bursts of laughter."
+	medical_record_text = "Пациент страдает от внезапных и неконтролируемых приступов смеха."
 	var/pcooldown = 0
 	var/pcooldown_time = 60 SECONDS
 	icon = FA_ICON_GRIN_TEARS
@@ -100,22 +100,22 @@
 				addtimer(CALLBACK(user, /mob/proc/emote, "laugh"), 10 SECONDS)
 
 /obj/item/paper/joker
-	name = "disability card"
+	name = "удостоверение инвалидности"
 	icon = 'modular_nova/master_files/icons/obj/card.dmi'
 	icon_state = "joker"
-	desc = "Smile, though your heart is aching."
+	desc = "Улыбайтесь, даже если сердце болит."
 	default_raw_text = "<i>\
 			<div style='border-style:solid;text-align:center;border-width:5px;margin: 20px;margin-bottom:0px'>\
 			<div style='margin-top:20px;margin-bottom:20px;font-size:150%;'>\
-			Forgive my laughter:<br>\
-			I have a condition.\
+			Прости, что я смеюсь:<br>\
+			У меня такое заболевание.\
 			</div>\
 			</div>\
 			</i>\
 			<br>\
 			<center>\
 			<b>\
-			MORE ON BACK\
+			БОЛЬШЕ НА ОБОРОТЕ\
 			</b>\
 			</center>"
 	/// Whether or not the card is currently flipped.
@@ -125,11 +125,11 @@
 			<div style='border-style:solid;text-align:center;border-width:5px;margin: 20px;margin-bottom:0px'>\
 			<div style='margin-top:20px;margin-bottom:20px;font-size:100%;'>\
 			<b>\
-			It's a medical condition causing sudden,<br>\
-			frequent and uncontrollable laughter that<br>\
-			doesn't match how you feel.<br>\
-			It can happen in people with a brain injury<br>\
-			or certain neurological conditions.<br>\
+			Это заболевание, вызывающее внезапный,<br>\
+			частый и неконтролируемый смех, который<br>\
+			не соответствует вашему настроению.<br>\
+			Это может наблюдаться у людей с черепно-мозговой травмой<br>\
+			или при определенных неврологических заболеваниях.<br>\
 			</b>\
 			</div>\
 			</div>\
@@ -137,7 +137,7 @@
 			<br>\
 			<center>\
 			<b>\
-			KINDLY RETURN THIS CARD\
+			ПОЖАЛУЙСТА, ВЕРНИТЕ ЭТУ КАРТУ ВЛАДЕЛЬЦУ\
 			</b>\
 			</center>"
 	/// Flipside version of raw_text_inputs.
@@ -210,11 +210,11 @@
 	return CLICK_ACTION_SUCCESS
 
 /datum/quirk/feline_aspect
-	name = "Feline Traits"
-	desc = "You happen to act like a feline, for whatever reason. This will replace most other tongue-based speech quirks."
-	gain_text = span_notice("Nya could go for some catnip right about now...")
-	lose_text = span_notice("You feel less attracted to lasers.")
-	medical_record_text = "Patient seems to possess behavior much like a feline."
+	name = "Кошачьи манеры"
+	desc = "По каким-то причинам вы ведете себя как представитель кошачьих. Это заменит большинство других речевых особенностей, связанных с языком."
+	gain_text = span_notice("Вы'мяу бы сейчас как раз не отказались бы от кошачьей мяты...")
+	lose_text = span_notice("Вас уже не так привлекают лазеры.")
+	medical_record_text = "Поведение пациента, судя по всему, очень напоминает поведение кошачьих."
 	mob_trait = TRAIT_FELINE
 	icon = FA_ICON_CAT
 
@@ -237,14 +237,14 @@
 	new_tongue.Insert(human_holder, special = TRUE, movement_flags = DELETE_IF_REPLACED)
 
 /datum/quirk/canine_aspect
-	name = "Canidae Traits"
-	desc = "Bark. You seem to act like a canine for whatever reason. This will replace most other tongue-based speech quirks."
-	gain_text = span_notice("B-.. Bacon strips...")
-	lose_text = span_notice("You feel less abandonment issues.")
+	name = "Собачьи манеры"
+	desc = "Гав! По какой-то причине вы ведете себя как представитель собачьих. Это заменит большинство других речевых особенностей, связанных с использованием языка."
+	gain_text = span_notice("Га-.. Полоски бекона...")
+	lose_text = span_notice("Вы меньше испытываете чувство покинутости.")
 	mob_trait = TRAIT_CANINE
 	icon = FA_ICON_DOG
 	value = 0
-	medical_record_text = "Patient was seen digging through the trash can. Keep an eye on them."
+	medical_record_text = "Было замечено, как пациент роется в мусорном ведре. Следите за ним."
 
 /datum/quirk/canine_aspect/add_unique(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder
@@ -261,14 +261,14 @@
 	new_tongue.Insert(human_holder, special = TRUE, movement_flags = DELETE_IF_REPLACED)
 
 /datum/quirk/avian_aspect
-	name = "Avian Traits"
-	desc = "You're a birdbrain, or you've got a bird's brain. This will replace most other tongue-based speech quirks."
-	gain_text = span_notice("BAWWWWWK LEAVE THE HEADSET BAWKKKKK!")
-	lose_text = span_notice("You feel less inclined to sit on eggs.")
+	name = "Птичьи манеры"
+	desc = "Вы - птичий мозг или у вас мозг как у птицы. Это заменит большинство других речевых особенностей, связанных с языком."
+	gain_text = span_notice("ВЯЯЯЯЯ ОСТАВЬТЕ ГАРНИТУУУУРУ В ПОКОЕЕ!")
+	lose_text = span_notice("У вас меньше желания сидеть сложа руки.")
 	mob_trait = TRAIT_AVIAN
 	icon = FA_ICON_KIWI_BIRD
 	value = 0
-	medical_record_text = "Patient exhibits avian-adjacent mannerisms."
+	medical_record_text = "У пациента наблюдаются манеры поведения, сходные с поведением птиц."
 
 /datum/quirk/avian_aspect/add_unique(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder
@@ -297,11 +297,11 @@ GLOBAL_LIST_INIT(possible_snout_sensitivities, list(
 ))
 
 /datum/quirk/sensitivesnout
-	name = "Sensitive Snout"
-	desc = "Your face has always been sensitive, and it really hurts when someone pokes it!"
-	gain_text = span_notice("Your face is awfully sensitive.")
-	lose_text = span_notice("Your face feels numb.")
-	medical_record_text = "Patient's nose seems to have a cluster of nerves in the tip, would advise against direct contact."
+	name = "Чувствительный нос"
+	desc = "У вас всегда была чувствительная кожа на лице, и когда кто-то тыкает вас в лицо, это действительно больно!"
+	gain_text = span_notice("У вас ужасно чувствительная кожа на лице.")
+	lose_text = span_notice("Теперь прикосновения к лицу вас не беспокоят.")
+	medical_record_text = "Похоже, в кончике носа пациента находится скопление нервов, поэтому я не рекомендую прикасаться к нему напрямую."
 	value = 0
 	mob_trait = TRAIT_SENSITIVESNOUT
 	icon = FA_ICON_FINGERPRINT
@@ -326,20 +326,20 @@ GLOBAL_LIST_INIT(possible_snout_sensitivities, list(
 		human_holder.force_say()
 	switch(severity)
 		if(SEVERITY_STUN)
-			to_chat(quirk_holder, span_warning("[attacker] boops you on your sensitive nose, freezing you in place!"))
+			to_chat(quirk_holder, span_warning("[attacker] слегка тыкает вас в ваш чувствительный нос, и вы замираете на месте!"))
 			quirk_holder.Stun(1 SECONDS)
 		if(SEVERITY_SNEEZE)
 			quirk_holder.Stun(1 SECONDS)
 			if(can_emote)
-				to_chat(quirk_holder, span_warning("[attacker] boops you on your sensitive nose! You can't hold back a sneeze!"))
+				to_chat(quirk_holder, span_warning("[attacker] тыкает вас в ваш чувствительный нос! Вы не можешь сдержать чих!"))
 				quirk_holder.emote("sneeze")
 		if(SEVERITY_KNOCKDOWN)
-			to_chat(quirk_holder, span_warning("[attacker] boops you on your sensitive nose, sending you to the ground!"))
+			to_chat(quirk_holder, span_warning("[attacker] тыкает вас в ваш чувствительный нос, и вы падаешь на землю!"))
 			quirk_holder.Knockdown(1 SECONDS)
 			quirk_holder.apply_damage(30, STAMINA)
 		if(SEVERITY_BLEP)
 			if(can_emote)
-				to_chat(quirk_holder, span_warning("[attacker] boops you on your sensitive nose! You stick your tongue out on reflex!"))
+				to_chat(quirk_holder, span_warning("[attacker] тыкает вас в ваш чувствительный нос! Вы рефлекторно высовываете язык!"))
 				quirk_holder.emote("blep")
 
 #undef SEVERITY_STUN
@@ -348,13 +348,13 @@ GLOBAL_LIST_INIT(possible_snout_sensitivities, list(
 #undef SEVERITY_BLEP
 
 /datum/quirk/overweight
-	name = "Overweight"
-	desc = "You weigh more than an average person at your size, you've gotten used to it by now."
-	gain_text = span_notice("Your body feels heavy.")
-	lose_text = span_notice("Your suddenly feel lighter!")
+	name = "Лишний вес"
+	desc = "Вы весите больше, чем средний человек вашего роста, но к этому вы уже привыкли."
+	gain_text = span_notice("Ваше тело кажется тяжёлым.")
+	lose_text = span_notice("Вы вдруг почувствовали, что стали легче!")
 	value = 0
 	icon = FA_ICON_HAMBURGER // I'm very hungry. Give me the burger!
-	medical_record_text = "Patient weighs higher than average."
+	medical_record_text = "Вес пациента превышает средний показатель."
 	mob_trait = TRAIT_OFF_BALANCE_TACKLER
 
 /datum/quirk/overweight/add(client/client_source)
@@ -370,4 +370,4 @@ GLOBAL_LIST_INIT(possible_snout_sensitivities, list(
 	. = ..()
 	if(HAS_TRAIT_FROM(owner, TRAIT_OFF_BALANCE_TACKLER, QUIRK_TRAIT))
 		mood_change = 0 // They are probably used to it, no reason to be viscerally upset about it.
-		description = "<b>I'm fat.</b>"
+		description = "<b>У меня проблемы с весом.</b>"

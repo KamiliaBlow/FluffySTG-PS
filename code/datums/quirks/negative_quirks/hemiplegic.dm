@@ -1,5 +1,5 @@
 /datum/quirk/hemiplegic
-	name = "Hemiplegic"
+	name = "Гемиплегия"
 	desc = "Половина вашего тела не работает. Ничто не исправит это."
 	icon = FA_ICON_CIRCLE_HALF_STROKE
 	value = -10 // slightly more bearable than paraplegic but not by much

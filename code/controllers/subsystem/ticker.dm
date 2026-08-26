@@ -244,7 +244,7 @@ SUBSYSTEM_DEF(ticker)
 	return player_states
 
 /datum/controller/subsystem/ticker/proc/setup()
-	to_chat(world, span_boldannounce("Starting game..."))
+	to_chat(world, span_boldannounce("Запуск игры..."))
 	var/init_start = world.timeofday
 
 	var/list/players_and_readiness = get_player_ready_states()
@@ -262,11 +262,11 @@ SUBSYSTEM_DEF(ticker)
 	if(!GLOB.debugging_enabled)
 		if(!can_continue)
 			log_game("Game failed pre_setup")
-			to_chat(world, "<B>Error setting up game.</B> Reverting to pre-game lobby.")
+			to_chat(world, "<B>Ошибка при запуска игры.</B> Возврат в лобби перед началом игры.")
 			SSjob.reset_occupations()
 			return FALSE
 	else
-		message_admins(span_notice("DEBUG: Bypassing prestart checks..."))
+		message_admins(span_notice("DEBUG: Пропуск проверок перед запуском..."))
 
 	CHECK_TICK
 
@@ -364,7 +364,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/list/adm = get_admin_counts()
 	var/list/allmins = adm["present"]
-	send2adminchat("Server", "Round [GLOB.round_id ? "#[GLOB.round_id]" : ""] has started[allmins.len ? ".":" with no active admins online!"]")
+	send2adminchat("Server", "Раунд [GLOB.round_id ? "#[GLOB.round_id]" : ""] начат[allmins.len ? ".":" без активного администратора в сети!!"]")
 	setup_done = TRUE
 
 	for(var/i in GLOB.start_landmarks_list)

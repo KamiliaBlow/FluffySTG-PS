@@ -1,7 +1,7 @@
 /obj/machinery/vending/boozeomat
 	product_categories_nova = list(
 		list(
-		"name" = "Alcoholic",
+		"name" = "Спиртное",
 		"icon" = "wine-bottle",
 		"products" = list(
 			/obj/item/reagent_containers/cup/soda_cans/nova/synthanolcan = 6,

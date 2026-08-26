@@ -33,8 +33,8 @@
 	category = SPELLBOOK_CATEGORY_OFFENSIVE
 
 /datum/spellbook_entry/blind
-	name = "Blind"
-	desc = "Temporarily blinds a single target."
+	name = "Слепота"
+	desc = "Временно ослепляет одну цель."
 	spell_type = /datum/action/cooldown/spell/pointed/blind
 	category = SPELLBOOK_CATEGORY_OFFENSIVE
 	cost = 1

@@ -1,5 +1,5 @@
 /datum/quirk/prosthetic_organ
-	name = "Prosthetic Organ"
+	name = "Протез органа"
 	desc = "В результате несчастного случая вы лишились одного из органов. Из-за этого у вас теперь есть дешевый протез!"
 	icon = FA_ICON_LUNGS
 	value = -3

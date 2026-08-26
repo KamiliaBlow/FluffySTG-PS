@@ -176,8 +176,8 @@
 		)
 
 /atom/movable/screen/alert/status_effect/cursed
-	name = "Cursed!"
-	desc = "The brand on your hand reminds you of your greed, yet you seem to be okay otherwise."
+	name = "Проклятие!"
+	desc = "Клеймо на вашей руке напоминает вас о вашей жадности, но в остальном вы, похоже, в порядке."
 	use_user_hud_icon = USER_HUD_STYLE_INHERIT
 	overlay_state = "cursed_by_slots"
 
@@ -187,10 +187,10 @@
 	var/curses = linked_effect?.curse_count
 	switch(curses)
 		if(2)
-			desc = "Your greed is catching up to you..."
+			desc = "Ваша жадность настигает вас..."
 		if(3)
-			desc = "You really don't feel good right now... But why stop now?"
+			desc = "Вам сейчас действительно не очень хорошо... Но зачем останавливаться именно сейчас?"
 		if(4 to INFINITY)
-			desc = "Real winners quit before they reach the ultimate prize."
+			desc = "Настоящие победители сдаются, не дойдя до главного приза."
 
 #undef DEFAULT_MAX_CURSE_COUNT

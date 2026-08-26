@@ -11,9 +11,9 @@ GLOBAL_LIST_INIT(possible_adapted_lungs, list(
 ))
 
 /datum/quirk/adapted_lungs
-	name = "Adapted Lungs"
-	desc = "Your lungs have adapted to be resistant to certain atmospheric conditions, at the cost of being more vulnerable to others."
-	medical_record_text = "Patient has abnormal lungs." // this gets overwritten
+	name = "Адаптированные лёгкие"
+	desc = "Ваши лёгкие приспособились к определённым атмосферным условиям, но при этом стали более уязвимыми к другим."
+	medical_record_text = "У пациента наблюдаются патологические изменения в лёгких." // this gets overwritten
 	icon = FA_ICON_WIND
 	value = 0
 	/// the choice of lungs the player has selected
@@ -21,7 +21,7 @@ GLOBAL_LIST_INIT(possible_adapted_lungs, list(
 
 /datum/quirk/adapted_lungs/add_unique(client/client_source)
 	if(!quirk_holder.get_organ_slot(ORGAN_SLOT_LUNGS))
-		to_chat(quirk_holder, span_warning("Your [name] quirk couldn't properly execute due to your species/body lacking a pair of lungs!"))
+		to_chat(quirk_holder, span_warning("Не удалось применить квирк [name]: у вашего тела нет лёгких!"))
 		qdel(src)
 		return
 
@@ -55,9 +55,22 @@ GLOBAL_LIST_INIT(possible_adapted_lungs, list(
 
 /datum/quirk/adapted_lungs/post_add()
 	add_adaptation()
-	medical_record_text = "Patient has lungs adapted to [desired_lungs] environments."
-	gain_text = span_notice("Your lungs are adapted to [desired_lungs] environments.")
-	lose_text = span_warning("Your lungs are no longer adapted to [desired_lungs] environments.")
+	
+	// Переводим тип легких для корректного вывода в текст
+	var/env_text
+	switch(desired_lungs)
+		if(COLD_ADAPTED_LUNGS)
+			env_text = "холодным"
+		if(HOT_ADAPTED_LUNGS)
+			env_text = "жарким"
+		if(TOX_ADAPTED_LUNGS)
+			env_text = "токсичным"
+		if(LOW_O2_ADAPTED_LUNGS)
+			env_text = "бедным кислородом"
+
+	medical_record_text = "У пациента лёгкие, приспособленные к [env_text] условиям окружающей среды."
+	gain_text = span_notice("Ваши лёгкие приспособлены к [env_text] условиям окружающей среды.")
+	lose_text = span_warning("Ваши лёгкие больше не приспособлены к [env_text] условиям окружающей среды.")
 
 /datum/quirk/adapted_lungs/remove()
 	UnregisterSignal(quirk_holder, COMSIG_CARBON_GAIN_ORGAN, PROC_REF(on_gain_organ))
@@ -87,16 +100,16 @@ GLOBAL_LIST_INIT(possible_adapted_lungs, list(
 
 /// lungs which can breathe cold but not hot
 /datum/quirk/adapted_lungs/proc/add_cold(obj/item/organ/lungs/target_lungs)
-	target_lungs.cold_message = "a slightly painful, though bearable, cold sensation"
+	target_lungs.cold_message = "слегка болезненное, хотя и терпимое ощущение холода"
 	target_lungs.cold_level_1_threshold = 208
 	target_lungs.cold_level_2_threshold = 200
 	target_lungs.cold_level_3_threshold = 170
-	target_lungs.cold_level_1_damage = COLD_GAS_DAMAGE_LEVEL_1 //Keep in mind with gas damage levels, you can set these to be negative, if you want someone to heal, instead.
+	target_lungs.cold_level_1_damage = COLD_GAS_DAMAGE_LEVEL_1 // Имейте в виду: урон от газов можно сделать отрицательным, если хотите, чтобы персонаж лечился.
 	target_lungs.cold_level_2_damage = COLD_GAS_DAMAGE_LEVEL_1
 	target_lungs.cold_level_3_damage = COLD_GAS_DAMAGE_LEVEL_2
 	target_lungs.cold_damage_type = BURN
 
-	target_lungs.hot_message = "the searing heat with every breath you take"
+	target_lungs.hot_message = "обжигающий жар с каждым вдохом"
 	target_lungs.heat_level_1_threshold = 318
 	target_lungs.heat_level_2_threshold = 348
 	target_lungs.heat_level_3_threshold = 1000
@@ -107,16 +120,16 @@ GLOBAL_LIST_INIT(possible_adapted_lungs, list(
 
 /// lungs which can breathe hot but not cold
 /datum/quirk/adapted_lungs/proc/add_hot(obj/item/organ/lungs/target_lungs)
-	target_lungs.cold_message = "the freezing cold with every breath you take"
+	target_lungs.cold_message = "пронизывающий холод с каждым вдохом"
 	target_lungs.cold_level_1_threshold = 248
 	target_lungs.cold_level_2_threshold = 220
 	target_lungs.cold_level_3_threshold = 170
-	target_lungs.cold_level_1_damage = COLD_GAS_DAMAGE_LEVEL_2 //Keep in mind with gas damage levels, you can set these to be negative, if you want someone to heal, instead.
+	target_lungs.cold_level_1_damage = COLD_GAS_DAMAGE_LEVEL_2 
 	target_lungs.cold_level_2_damage = COLD_GAS_DAMAGE_LEVEL_2
 	target_lungs.cold_level_3_damage = COLD_GAS_DAMAGE_LEVEL_3
 	target_lungs.cold_damage_type = BURN
 
-	target_lungs.hot_message = "a slightly painful, though bearable, warmth"
+	target_lungs.hot_message = "слегка болезненное, хотя и терпимое, ощущение тепла"
 	target_lungs.heat_level_1_threshold = 373
 	target_lungs.heat_level_2_threshold = 473
 	target_lungs.heat_level_3_threshold = 523
@@ -130,16 +143,16 @@ GLOBAL_LIST_INIT(possible_adapted_lungs, list(
 	target_lungs.safe_plasma_max = 27
 	target_lungs.safe_co2_max = 27
 
-	target_lungs.cold_message = "the freezing cold with every breath you take"
+	target_lungs.cold_message = "пронизывающий холод с каждым вдохом"
 	target_lungs.cold_level_1_threshold = 248
 	target_lungs.cold_level_2_threshold = 220
 	target_lungs.cold_level_3_threshold = 170
-	target_lungs.cold_level_1_damage = COLD_GAS_DAMAGE_LEVEL_2 //Keep in mind with gas damage levels, you can set these to be negative, if you want someone to heal, instead.
+	target_lungs.cold_level_1_damage = COLD_GAS_DAMAGE_LEVEL_2 
 	target_lungs.cold_level_2_damage = COLD_GAS_DAMAGE_LEVEL_2
 	target_lungs.cold_level_3_damage = COLD_GAS_DAMAGE_LEVEL_3
 	target_lungs.cold_damage_type = BRUTE
 
-	target_lungs.hot_message = "the searing heat with every breath you take"
+	target_lungs.hot_message = "обжигающий жар с каждым вдохом"
 	target_lungs.heat_level_1_threshold = 318
 	target_lungs.heat_level_2_threshold = 348
 	target_lungs.heat_level_3_threshold = 1000
@@ -152,7 +165,7 @@ GLOBAL_LIST_INIT(possible_adapted_lungs, list(
 /datum/quirk/adapted_lungs/proc/add_low_oxy(obj/item/organ/lungs/target_lungs)
 	target_lungs.safe_oxygen_min = 5
 
-	target_lungs.hot_message = "the searing heat with every breath you take"
+	target_lungs.hot_message = "обжигающий жар с каждым вдохом"
 	target_lungs.heat_level_1_threshold = 318
 	target_lungs.heat_level_2_threshold = 348
 	target_lungs.heat_level_3_threshold = 1000
@@ -161,11 +174,11 @@ GLOBAL_LIST_INIT(possible_adapted_lungs, list(
 	target_lungs.heat_level_3_damage = HEAT_GAS_DAMAGE_LEVEL_3
 	target_lungs.heat_damage_type = BURN
 
-	target_lungs.cold_message = "the freezing cold with every breath you take"
+	target_lungs.cold_message = "пронизывающий холод с каждым вдохом"
 	target_lungs.cold_level_1_threshold = 248
 	target_lungs.cold_level_2_threshold = 220
 	target_lungs.cold_level_3_threshold = 170
-	target_lungs.cold_level_1_damage = COLD_GAS_DAMAGE_LEVEL_2 //Keep in mind with gas damage levels, you can set these to be negative, if you want someone to heal, instead.
+	target_lungs.cold_level_1_damage = COLD_GAS_DAMAGE_LEVEL_2 
 	target_lungs.cold_level_2_damage = COLD_GAS_DAMAGE_LEVEL_2
 	target_lungs.cold_level_3_damage = COLD_GAS_DAMAGE_LEVEL_3
 	target_lungs.cold_damage_type = BURN

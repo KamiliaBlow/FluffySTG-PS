@@ -1,12 +1,12 @@
 /datum/quirk/echolocation
-	name = "Echolocation"
-	desc = "Though your eyes no longer function, you accommodate for it by some means of extrasensory echolocation and sensitive hearing. Beware: if you're ever deafened, you'll also lose your echolocation until you recover!"
-	gain_text = span_notice("The slightest sounds map your surroundings.")
-	lose_text = span_notice("The world resolves into colour and clarity.")
+	name = "Эхолокация"
+	desc = "Хотя ваши глаза больше не функционируют, вы компенсируете это с помощью некой формы экстрасенсорной эхолокации и обостренного слуха. Будьте осторожны: если вы когда-нибудь оглохнете, то лишитесь и эхолокации, пока не поправитесь!"
+	gain_text = span_notice("Малейшие звуки помогают составить представление об окружающей обстановке.")
+	lose_text = span_notice("Мир обретает яркость и четкость.")
 	value = -8 // FLUFFY FRONTIER CHANGE: was 0
 	icon = FA_ICON_EAR_LISTEN
 	mob_trait = TRAIT_GOOD_HEARING
-	medical_record_text = "Patient's eyes are biologically nonfunctional. Hearing tests indicate almost supernatural acuity."
+	medical_record_text = "Глаза пациента с биологической точки зрения нефункциональны. Результаты тестов слуха свидетельствуют о почти сверхъестественной остроте слуха."
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_CHANGES_APPEARANCE
 	mail_goodies = list(/obj/item/clothing/glasses/sunglasses, /obj/item/cane/white)
 	/// where we store easy access to the character's echolocation component (for stuff like drugs)

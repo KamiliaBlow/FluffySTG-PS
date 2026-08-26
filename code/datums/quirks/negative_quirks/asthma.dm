@@ -1,10 +1,10 @@
 /datum/quirk/item_quirk/asthma
-	name = "Asthma"
-	desc = "You suffer from asthma, an inflammatory disorder that causes your airpipe to squeeze shut! Be careful around smoke!"
+	name = "Астма"
+	desc = "У вас астма - воспалительное заболевание, при котором ваши дыхательные пути сужаются и перекрываются! Будьте осторожны в местах, где есть дым!"
 	icon = FA_ICON_LUNGS_VIRUS
 	value = -4 // trivialized by NOBREATH but still quite dangerous
-	gain_text = span_danger("You have a harder time breathing.")
-	lose_text = span_notice("You suddenly feel like your lungs just got a lot better at breathing!")
+	gain_text = span_danger("Вам становится труднее дышать.")
+	lose_text = span_notice("Вдруг создаётся ощущение, будто ваши лёгкие стали гораздо лучше дышать!")
 	medical_record_text = "Patient suffers from asthma."
 	hardcore_value = 2
 	quirk_flags = QUIRK_HUMAN_ONLY
@@ -126,7 +126,7 @@
 	RegisterSignal(current_attack, COMSIG_QDELETING, PROC_REF(attack_deleting))
 
 	if (current_attack.alert_ghosts)
-		notify_ghosts("[quirk_holder] is having an asthma attack: [current_attack.name]!", source = quirk_holder, notify_flags = NOTIFY_CATEGORY_NOFLASH, header = "Asthma attack!")
+		notify_ghosts("[quirk_holder] похоже переживает приступ астмы: [current_attack.name]!", source = quirk_holder, notify_flags = NOTIFY_CATEGORY_NOFLASH, header = "Asthma attack!")
 
 /// Setter proc for [inflammation]. Adjusts the amount by lung health, adjusts pressure mult, gives feedback messages if silent is FALSE.
 /datum/quirk/item_quirk/asthma/proc/adjust_inflammation(amount, silent = FALSE)

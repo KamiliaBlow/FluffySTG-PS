@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/pointed/blind
-	name = "Blind"
-	desc = "This spell temporarily blinds a single target."
+	name = "Слепота"
+	desc = "Это заклинание временно ослепляет одну цель."
 	button_icon_state = "blind"
 	ranged_mousepointer = 'icons/effects/mouse_pointers/blind_target.dmi'
 

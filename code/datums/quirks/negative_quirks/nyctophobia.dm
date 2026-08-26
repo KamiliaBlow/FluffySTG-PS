@@ -1,11 +1,11 @@
 /datum/quirk/nyctophobia
-	name = "Nyctophobia"
-	desc = "As far as you can remember, you've always been afraid of the dark. While in the dark without a light source, you instinctively act careful, and constantly feel a sense of dread."
+	name = "Никтофобия"
+	desc = "Насколько вы можете вспомнить, вы всегда боялись темноты. Находясь в темноте без источника света, вы инстинктивно ведете себя осторожно и постоянно испытываете чувство страха."
 	icon = FA_ICON_LIGHTBULB
 	value = -3
-	medical_record_text = "Patient demonstrates a fear of the dark. (Seriously?)"
-	medical_symptom_text = "Experiences panic attacks and shortness of breath when in dark environments. \
-		Medication such as Psicodine may lessen the severity of the reaction."
+	medical_record_text = "Пациент испытывает страх перед темнотой. (Серьёзно?)"
+	medical_symptom_text = "В темноте у пациента возникают приступы паники и одышка. \
+		Такие лекарства, как 'Псикодин', могут ослабить выраженность реакции."
 	hardcore_value = 5
 	mail_goodies = list(/obj/effect/spawner/random/engineering/flashlight)
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_TRAUMALIKE

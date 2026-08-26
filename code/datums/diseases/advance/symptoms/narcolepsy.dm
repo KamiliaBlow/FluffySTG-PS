@@ -7,8 +7,8 @@
  * Bonus: Causes drowsiness and sleep.
 */
 /datum/symptom/narcolepsy
-	name = "Narcolepsy"
-	desc = "The virus causes a hormone imbalance, making the host sleepy and narcoleptic."
+	name = "Нарколепсия"
+	desc = "Вирус вызывает гормональный дисбаланс, в результате чего у зараженного человека появляется сонливость и развивается нарколепсия."
 	illness = "Aurora Snorealis"
 	stealth = -1
 	resistance = -2
@@ -22,8 +22,8 @@
 	cure_color = "yellow"
 	var/yawning = FALSE
 	threshold_descs = list(
-		"Transmission 4" = "Causes the host to periodically emit a yawn that tries to infect bystanders within 6 meters of the host.",
-		"Stage Speed 10" = "Causes narcolepsy more often, increasing the chance of the host falling asleep.",
+		"Transmission 4" = "Заставляет носителя периодически издавать зевок, который пытается заразить окружающих, находящихся в радиусе 6 метров от него.",
+		"Stage Speed 10" = "Чаще вызывает нарколепсию, повышая вероятность того, что человек засыпает.",
 	)
 
 /datum/symptom/narcolepsy/Start(datum/disease/advance/A)
@@ -45,22 +45,22 @@
 	switch(A.stage)
 		if(1)
 			if(prob(50))
-				to_chat(M, span_warning("You feel tired."))
+				to_chat(M, span_warning("Вы чувствуете усталость."))
 		if(2)
 			if(prob(50))
-				to_chat(M, span_warning("You feel very tired."))
+				to_chat(M, span_warning("Вы чувствуете себя очень устало."))
 		if(3)
 			if(prob(50))
-				to_chat(M, span_warning("You try to focus on staying awake."))
+				to_chat(M, span_warning("Вы стараетесь сосредоточиться на том, чтобы не заснуть."))
 
 			M.adjust_drowsiness_up_to(10 SECONDS, 140 SECONDS)
 
 		if(4)
 			if(prob(50))
 				if(yawning)
-					to_chat(M, span_warning("You try and fail to suppress a yawn."))
+					to_chat(M, span_warning("Вы пытаетесь сдержать зевок, но у вас не получается."))
 				else
-					to_chat(M, span_warning("You nod off for a moment.")) //you can't really yawn while nodding off, can you?
+					to_chat(M, span_warning("Вы на мгновение задремали.")) //you can't really yawn while nodding off, can you?
 
 			M.adjust_drowsiness_up_to(20 SECONDS, 140 SECONDS)
 
@@ -70,7 +70,7 @@
 
 		if(5)
 			if(prob(50))
-				to_chat(M, span_warning("[pick("So tired...","You feel very sleepy.","You have a hard time keeping your eyes open.","You try to stay awake.")]"))
+				to_chat(M, span_warning("[pick("Так устали...","Вам очень хочется спать.","Вам с трудом удаётся не закрыть глаза.","Вы пытаетесь не заснуть.")]"))
 
 			M.adjust_drowsiness_up_to(80 SECONDS, 140 SECONDS)
 

@@ -1,10 +1,10 @@
 /datum/quirk/coldblooded
-	name = "Cold Blooded"
-	desc = "You're cold blooded like lizards! Try to control your body temperature or you're dead."
+	name = "Хладнокровие"
+	desc = "Вы хладнокровны, как ящерица! Постарайтесь регулировать температуру тела, иначе вам конец."
 	value = -2
-	medical_record_text = "Patient is cold blooded."
-	gain_text = "You feel like you're unable to warm yourself."
-	lose_text = "You feel like you're able to warm yourself again."
+	medical_record_text = "Пациент хладнокровен."
+	gain_text = "Вам кажется, что вы не можете согреться."
+	lose_text = "Вам кажется, что вы снова можешь согреться."
 	icon = FA_ICON_SNOWFLAKE
 	mob_trait = TRAIT_COLDBLOODED
 

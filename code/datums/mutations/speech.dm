@@ -134,12 +134,12 @@
 	speech_args[SPEECH_MESSAGE] = message
 
 /datum/mutation/mute
-	name = "Mute"
-	desc = "Completely inhibits the vocal section of the brain."
+	name = "Немота"
+	desc = "Полностью блокирует голосовую зону головного мозга отвечающую за речь."
 	instability = NEGATIVE_STABILITY_MAJOR
 	quality = NEGATIVE
-	text_gain_indication = span_danger("You feel unable to express yourself at all.")
-	text_lose_indication = span_danger("You feel able to speak freely again.")
+	text_gain_indication = span_danger("Вы чувствуете, что совершенно не можете выразить свои мысли.")
+	text_lose_indication = span_danger("Вы снова чувствуете, что можете говорить свободно.")
 
 /datum/mutation/mute/on_acquiring(mob/living/carbon/human/owner)
 	. = ..()
@@ -153,12 +153,12 @@
 	REMOVE_TRAIT(owner, TRAIT_MUTE, GENETIC_MUTATION)
 
 /datum/mutation/unintelligible
-	name = "Unintelligible"
-	desc = "Partially inhibits the vocal center of the brain, severely distorting speech."
+	name = "Бормотание"
+	desc = "Частично подавляет работу речевого центра головного мозга, что приводит к сильному искажению речи."
 	instability = NEGATIVE_STABILITY_MODERATE
 	quality = NEGATIVE
-	text_gain_indication = span_danger("You can't seem to form any coherent thoughts!")
-	text_lose_indication = span_danger("Your mind feels more clear.")
+	text_gain_indication = span_danger("Похоже, вы не можете сформулировать ни одной связной мысли!")
+	text_lose_indication = span_danger("Ваш ум становится яснее.")
 
 /datum/mutation/unintelligible/on_acquiring(mob/living/carbon/human/owner)
 	. = ..()
@@ -173,36 +173,36 @@
 
 /datum/mutation/swedish
 	name = "Swedish"
-	desc = "A horrible mutation originating from the distant past. Thought to be eradicated after the incident in 2037."
+	desc = "Ужасная мутация, берущая своё начало в далёком прошлом. Считалось, что она была искоренена после инцидента 2037 года."
 	instability = NEGATIVE_STABILITY_MINI
 	quality = MINOR_NEGATIVE
-	text_gain_indication = span_notice("You feel Swedish, however that works.")
+	text_gain_indication = span_notice("Вы чувствуете себя шведом - как бы это ни было.")
 	text_lose_indication = span_notice("The feeling of Swedishness passes.")
-	var/static/list/language_mutilation = list("w" = "v", "j" = "y", "bo" = "bjo", "a" = list("å","ä","æ","a"), "o" = list("ö","ø","o"))
+	var/static/list/language_mutilation = list("в" = "v", "ж" = "y", "бо" = "bjo", "а" = list("å","ä","æ","a"), "о" = list("ö","ø","o"))
 
 /datum/mutation/swedish/New(datum/mutation/copymut)
 	. = ..()
 	AddComponent(/datum/component/speechmod, replacements = language_mutilation, end_string = list("",", bork",", bork, bork"), end_string_chance = 30)
 
 /datum/mutation/chav
-	name = "Chav"
-	desc = "Unknown"
+	name = "Быдло"
+	desc = "Нет"
 	instability = NEGATIVE_STABILITY_MINI
 	quality = MINOR_NEGATIVE
-	text_gain_indication = span_notice("Ye feel like a reet prat like, innit?")
-	text_lose_indication = span_notice("You no longer feel like being rude and sassy.")
+	text_gain_indication = span_notice("Вы чувствуете себя настоящим придурком, да?")
+	text_lose_indication = span_notice("Вам больше не хочется вести себя грубо и дерзко.")
 
 /datum/mutation/chav/New(datum/mutation/copymut)
 	. = ..()
 	AddComponent(/datum/component/speechmod, replacements = strings("chav_replacement.json", "chav"), end_string = ", mate", end_string_chance = 30)
 
 /datum/mutation/elvis
-	name = "Elvis"
-	desc = "A terrifying mutation named after its 'patient-zero'."
+	name = "Элвис"
+	desc = "Ужасающая мутация, названная в честь своего 'нулевого пациента'."
 	instability = NEGATIVE_STABILITY_MINI
 	quality = MINOR_NEGATIVE
-	text_gain_indication = span_notice("You feel pretty good, honeydoll.")
-	text_lose_indication = span_notice("You feel a little less conversation would be great.")
+	text_gain_indication = span_notice("Вы чувствуете себя просто отлично, солнышко.")
+	text_lose_indication = span_notice("Вам кажется, что было бы неплохо поменьше болтать.")
 
 /datum/mutation/elvis/New(datum/mutation/copymut)
 	. = ..()
@@ -212,19 +212,19 @@
 	switch(pick(1,2))
 		if(1)
 			if(SPT_PROB(7.5, seconds_per_tick))
-				var/list/dancetypes = list("swinging", "fancy", "stylish", "20'th century", "jivin'", "rock and roller", "cool", "salacious", "bashing", "smashing")
+				var/list/dancetypes = list("зажигательных движений", "эффектных движений", "стильных движений", "движений в стиле 20-го века!", "крутых движений'", "рок-н-ролльных движений", "крутых движений", "похотливых движений", "ударных движений", "сногшибательных движений")
 				var/dancemoves = pick(dancetypes)
-				owner.visible_message("<b>[owner]</b> busts out some [dancemoves] moves!")
+				owner.visible_message("<b>[owner]</b> выполняет несколько [dancemoves]!")
 		if(2)
 			if(SPT_PROB(7.5, seconds_per_tick))
-				owner.visible_message("<b>[owner]</b> [pick("jiggles their hips", "rotates their hips", "gyrates their hips", "taps their foot", "dances to an imaginary song", "jiggles their legs", "snaps their fingers")]!")
+				owner.visible_message("<b>[owner]</b> [pick("покачивают бедрами", "вращает бедрами", "кружит бедрами", "притопывает ногой", "танцует под воображаемую песню", "покачивает ножками", "щелкает пальцами")]!")
 
 /datum/mutation/stoner
-	name = "Stoner"
-	desc = "A common mutation that severely decreases intelligence."
+	name = "Дуболом"
+	desc = "Распространенная мутация, которая значительно снижает интеллект."
 	quality = NEGATIVE
-	text_gain_indication = span_notice("You feel...totally chill, man!")
-	text_lose_indication = span_notice("You feel like you have a better sense of time.")
+	text_gain_indication = span_notice("Вы чувствуете себя… просто супер, чееел!")
+	text_lose_indication = span_notice("Вам кажется, что вы стали лучше ориентироваться во времени.")
 
 /datum/mutation/stoner/on_acquiring(mob/living/carbon/human/owner)
 	. = ..()
@@ -239,12 +239,12 @@
 	owner.remove_blocked_language(subtypesof(/datum/language) - /datum/language/beachbum, source = LANGUAGE_STONER)
 
 /datum/mutation/medieval
-	name = "Medieval"
-	desc = "A horrible mutation originating from the distant past, thought to have once been a common gene in all of old world Europe."
+	name = "Средневековие"
+	desc = "Ужасная мутация, берущая своё начало в далёком прошлом, которая, как полагают, когда-то была распространённым геном во всей Европе Старого Света."
 	instability = NEGATIVE_STABILITY_MINI
 	quality = MINOR_NEGATIVE
-	text_gain_indication = span_notice("You feel like seeking the holy grail!")
-	text_lose_indication = span_notice("You no longer feel like seeking anything.")
+	text_gain_indication = span_notice("У вас возникает желание отправиться на поиски Святого Грааля!")
+	text_lose_indication = span_notice("Вам больше не хочется ничего искать.")
 
 /datum/mutation/medieval/on_acquiring(mob/living/carbon/human/owner)
 	. = ..()
@@ -281,12 +281,12 @@
 		speech_args[SPEECH_MESSAGE] = message
 
 /datum/mutation/piglatin
-	name = "Pig Latin"
-	desc = "Historians say back in the 2020's humanity spoke entirely in this mystical language."
+	name = "Свиной латинский"
+	desc = "Историки утверждают, что ещё в 2020-х годах человечество общалось исключительно на этом загадочном языке."
 	instability = NEGATIVE_STABILITY_MINI
 	quality = MINOR_NEGATIVE
-	text_gain_indication = span_notice("Omethingsay eelsfay offyay.")
-	text_lose_indication = span_notice("The off sensation passes.")
+	text_gain_indication = span_notice("Ометинсэй, иилсфай оффай.")
+	text_lose_indication = span_notice("Это ощущение дискомфорта проходит.")
 
 /datum/mutation/piglatin/on_acquiring(mob/living/carbon/human/owner)
 	. = ..()

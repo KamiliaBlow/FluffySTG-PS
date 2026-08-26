@@ -114,7 +114,7 @@
 	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 /datum/job/chief_engineer
-	banned_quirks = list(HEAD_RESTRICTED_QUIRKS, "Paraplegic" = TRUE)
+	banned_quirks = list(HEAD_RESTRICTED_QUIRKS, "Параплегия" = TRUE)
 	species_blacklist = list(HEAD_RESTRICTED_SPECIES)
 	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 

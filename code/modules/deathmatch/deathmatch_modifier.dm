@@ -220,8 +220,8 @@
 	player.become_nearsighted(DEATHMATCH_TRAIT)
 
 /datum/deathmatch_modifier/ocelot
-	name = "Ocelot"
-	description = "Shoot faster, with extra ricochet and less spread. You're pretty good!"
+	name = "Оцелот"
+	description = "Стреляйте быстрее - с большим рикошетом и меньшим разбросом. У вас неплохо получается!"
 	blacklisted_modifiers = list(/datum/deathmatch_modifier/stormtrooper)
 
 /datum/deathmatch_modifier/ocelot/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
@@ -242,8 +242,8 @@
 	projectile.accuracy_falloff = 0
 
 /datum/deathmatch_modifier/stormtrooper
-	name = "Stormtrooper Aim"
-	description = "Fresh out of the 'I Can't Aim For Shit' School"
+	name = "Глаз штурмовика"
+	description = "Вы только что закончили школу 'Я ни черта не могу прицелиться'"
 	blacklisted_modifiers = list(/datum/deathmatch_modifier/ocelot)
 
 /datum/deathmatch_modifier/stormtrooper/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
@@ -262,8 +262,8 @@
 	player.change_number_of_hands(4)
 
 /datum/deathmatch_modifier/paraplegic
-	name = "Paraplegic"
-	description = "Wheelchairs. For. Everyone."
+	name = "Параплегия"
+	description = "Инвалидные коляски. Для. Всех."
 
 /datum/deathmatch_modifier/paraplegic/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
 	player.gain_trauma(/datum/brain_trauma/severe/paralysis/paraplegic, TRAUMA_RESILIENCE_ABSOLUTE)
@@ -275,8 +275,8 @@
 	wheels.buckle_mob(player)
 
 /datum/deathmatch_modifier/mounts
-	name = "Mounts"
-	description = "A horse! A horse! My kingdom for a horse!"
+	name = "Крепления"
+	description = "Лошадь! Лошадь! Мое королевство за лошадь!"
 
 /datum/deathmatch_modifier/mounts/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
 	///We do a bit of fun over balance here, some mounts may be better than others.
@@ -300,8 +300,8 @@
 		implant.implant(mount, silent = TRUE, force = TRUE)
 
 /datum/deathmatch_modifier/no_gravity
-	name = "No Gravity"
-	description = "Hone your robusting skills in zero g"
+	name = "Отсутствие гравитации"
+	description = "Отточите свои навыки повышения устойчивости в условиях невесомости"
 	blacklisted_modifiers = list(/datum/deathmatch_modifier/mounts, /datum/deathmatch_modifier/paraplegic, /datum/deathmatch_modifier/minefield)
 
 /datum/deathmatch_modifier/no_gravity/on_start_game(datum/deathmatch_lobby/lobby)

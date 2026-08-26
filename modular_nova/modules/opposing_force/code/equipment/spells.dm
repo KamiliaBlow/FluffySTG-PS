@@ -18,10 +18,10 @@
 	description = "This spells spawns a cloud of choking smoke at your location."
 
 /datum/opposing_force_equipment/spells/blind
-	name = "Blind"
+	name = "Слепота"
 	item_type = /obj/item/book/granter/action/spell/blind
-	description = "This spells temporarily blinds a single target."
-	admin_note = "WARNING: Notably strong in 1-v-1s."
+	description = "Это заклинание временно ослепляет одну цель."
+	admin_note = "ВНИМАНИЕ: Особенно силен в поединках один на один."
 
 /datum/opposing_force_equipment/spells/mindswap
 	name = "Mindswap"

@@ -1,7 +1,7 @@
 // Re-labels TG brainproblems to be more generic. There never was a tumor anyways!
 /datum/quirk/item_quirk/brainproblems
-	name = "Brain Degeneration"
-	desc = "You have a lethal condition in your brain that is slowly destroying it. Better bring some mannitol!"
+	name = "Дегенерация мозга"
+	desc = "У вас в мозге развивается смертельное заболевание, которое постепенно разрушает его. Лучше принесите немного маннитола!"
 	medical_record_text = "Patient has a lethal condition in their brain that is slowly causing brain death."
 	icon = FA_ICON_BRAIN
 	species_quirks = list(/datum/species/synthetic = /datum/quirk/item_quirk/brainproblems/synth)
@@ -13,8 +13,8 @@
 // Does not appear in TGUI or the character preferences window.
 /datum/quirk/item_quirk/brainproblems/synth
 	name = "Positronic Cascade Anomaly"
-	gain_text = span_danger("You feel glitchy.")
-	lose_text = span_notice("You no longer feel glitchy.")
+	gain_text = span_danger("Вы чувствуете глюки в системе.")
+	lose_text = span_notice("Вы больше не чувствуете глюков в системе.")
 	mail_goodies = list(/obj/item/storage/pill_bottle/liquid_solder/braintumor)
 	abstract_type = /datum/quirk/item_quirk/brainproblems/synth
 	medicine_to_get = /obj/item/storage/pill_bottle/liquid_solder
@@ -43,4 +43,4 @@
 		if(/obj/item/organ/brain/synth/circuit/cyberdeck)
 			name = "System Destabilization"
 
-	medical_record_text = "Patient has a malfunction in their [synth_brain.name] that is slowly causing brain death."
+	medical_record_text = "У пациента наблюдается сбой в работе [synth_brain.name], который постепенно приводит к смерти мозга."

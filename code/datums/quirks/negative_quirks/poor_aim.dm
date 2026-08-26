@@ -1,5 +1,5 @@
 /datum/quirk/poor_aim
-	name = "Stormtrooper Aim"
+	name = "Глаз штурмовика"
 	desc = "Вы никогда в жизни не достигали того, к чему стремились."
 	icon = FA_ICON_BULLSEYE
 	value = -4

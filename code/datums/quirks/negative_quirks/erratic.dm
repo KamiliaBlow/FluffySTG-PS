@@ -1,12 +1,12 @@
 /datum/quirk/erratic
-	name = "Erratic"
-	desc = "You mood swings like a pendulum, causing your personality to change on a whim every so often."
+	name = "Биполярное расстройство"
+	desc = "Ваше настроение меняется, как маятник, из-за чего ваша личность время от времени меняется по прихоти."
 	icon = FA_ICON_MASKS_THEATER
 	value = -3
-	gain_text = span_danger("You feel erratic.") // say that again?
-	lose_text = span_notice("You feel more stable.")
-	medical_record_text = "Patient has a bipolar personality disorder."
-	medical_symptom_text = "Exhibits sudden and unpredictable changes in personality, mood, and behavior, often swinging between extremes of emotion and demeanor."
+	gain_text = span_danger("Вы чувствуете себя нестабильно.") // say that again?
+	lose_text = span_notice("Вы чувствуете себя более уравновешенно.")
+	medical_record_text = "У пациента диагностировано биполярное расстройство личности."
+	medical_symptom_text = "Проявляет внезапные и непредсказуемые изменения в характере, настроении и поведении, часто переходя от одной крайности к другой в эмоциях и манере поведения."
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_MOODLET_BASED|QUIRK_PROCESSES|QUIRK_TRAUMALIKE
 	hardcore_value = 3
 	mail_goodies = list(/obj/item/storage/pill_bottle/psicodine)

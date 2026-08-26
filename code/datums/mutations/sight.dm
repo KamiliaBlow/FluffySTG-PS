@@ -168,7 +168,7 @@
 
 	if(!source.combat_mode)
 		return
-	to_chat(source, span_warning("You shoot with your laser eyes!"))
+	to_chat(source, span_warning("Вы стреляете своими лазерными глазами!"))
 	source.changeNext_move(CLICK_CD_RANGE)
 	source.newtonian_move(get_angle(source, target))
 	var/obj/projectile/beam/laser/laser_eyes/LE = new(source.loc)
@@ -185,12 +185,12 @@
 	icon_state = "eyelasers"
 
 /datum/mutation/illiterate
-	name = "Illiterate"
-	desc = "Causes a severe case of Aphasia that prevents reading or writing."
+	name = "Неграмотность"
+	desc = "Вызывает тяжелую форму афазии, которая не позволяет читать или писать."
 	instability = NEGATIVE_STABILITY_MAJOR
 	quality = NEGATIVE
-	text_gain_indication = span_danger("You feel unable to read or write.")
-	text_lose_indication = span_danger("You feel able to read and write again.")
+	text_gain_indication = span_danger("Вы чувствуете, что не можете ни читать, ни писать.")
+	text_lose_indication = span_danger("Вы снова чувствуете, что можете читать и писать.")
 
 /datum/mutation/illiterate/on_acquiring(mob/living/carbon/human/owner)
 	. = ..()

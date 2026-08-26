@@ -1,13 +1,13 @@
 /datum/quirk/social_anxiety
-	name = "Social Anxiety"
-	desc = "Talking to people is very difficult for you, and you often lock up, especially if blown kisses or if you happen upon eye contact." //NOVA EDIT - CHANGE- ORIGINAL: desc = "Talking to people is very difficult for you, and you often stutter or even lock up."
+	name = "Социальная тревожность"
+	desc = "Вам очень трудно общаться с людьми, и вы часто теряетесь, особенно если вам посылают воздушные поцелуи или если случайно встречаетесь взглядам." //NOVA EDIT - CHANGE- ORIGINAL: desc = "Talking to people is very difficult for you, and you often stutter or even lock up."
 	icon = FA_ICON_COMMENT_SLASH
 	value = -3
-	gain_text = span_danger("You start worrying about what you're saying.")
-	lose_text = span_notice("You feel easier about talking again.") //if only it were that easy!
-	medical_record_text = "Patient is usually anxious in social encounters and prefers to avoid them."
-	medical_symptom_text = "Experiences intense anxiety and discomfort in social situations, \
-		leading to avoidance of social interactions and difficulty in communication."
+	gain_text = span_danger("Вы начинаете переживать из-за того, что говорите.")
+	lose_text = span_notice("Вам снова стало легче общаться.") //if only it were that easy!
+	medical_record_text = "Пациент, как правило, испытывает тревогу при общении с людьми и предпочитает избегать таких ситуаций."
+	medical_symptom_text = "Испытывает сильную тревогу и дискомфорт в социальных ситуациях, \
+		что приводит к избеганию социальных контактов и затруднениям в общении."
 	hardcore_value = 4
 	mob_trait = TRAIT_ANXIOUS
 	mail_goodies = list(/obj/item/storage/pill_bottle/psicodine)
@@ -69,9 +69,9 @@
 			if(prob(1))
 				new/obj/item/food/spaghetti/pastatomato(get_turf(quirk_holder)) //now that's what I call spaghetti code
 		else
-			to_chat(quirk_holder, span_warning("You think that wouldn't add much to the conversation and decide not to say it."))
+			to_chat(quirk_holder, span_warning("Вы думаете, что это не внесет ничего существенного в разговор, и решаете не говорить об этом."))
 			if(prob(min(25, (0.25 * moodmod)))) //Max 25% chance of silence stacks after successful not talking roll
-				to_chat(quirk_holder, span_danger("You retreat into yourself. You <i>really</i> don't feel up to talking."))
+				to_chat(quirk_holder, span_danger("Вы замыкаешься в себе. Вам <i>действительно</i> не хочется разговаривать."))
 				quirk_holder.set_silence_if_lower(10 SECONDS)
 
 		speech_args[SPEECH_MESSAGE] = pick("Ам.","Эм.","Хм.")
@@ -95,26 +95,26 @@
 		return
 	var/msg
 	if(triggering_examiner)
-		msg = "You make eye contact with [other_mob], "
+		msg = "Вы устанавливаете зрительный контакт с [other_mob], "
 	else
-		msg = "[other_mob] makes eye contact with you, "
+		msg = "[other_mob] смотрит вам в глаза, "
 
 	switch(rand(1,3))
 		if(1)
 			quirk_holder.set_jitter_if_lower(20 SECONDS)
-			msg += "causing you to start fidgeting!"
+			msg += "от чего вы начинаете нервничать!"
 		if(2)
 			quirk_holder.set_confusion(2 SECONDS) // NOVA EDIT CHANGE - ORIGINAL: quirk_holder.set_stutter_if_lower(6 SECONDS)
-			msg += "causing you to trip over your own feet!" // NOVA EDIT CHANGE - ORIGINAL: msg += "causing you to start stuttering!"
+			msg += "от чего вы спотыкаетесь о собственные ноги!" // NOVA EDIT CHANGE - ORIGINAL: msg += "causing you to start stuttering!"
 		if(3)
 			quirk_holder.Stun(2 SECONDS)
-			msg += "causing you to freeze up!"
+			msg += "от чего вы замираете на месте!"
 
 	quirk_holder.add_mood_event("anxiety_eyecontact", /datum/mood_event/anxiety_eyecontact)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), quirk_holder, span_userdanger("[msg]")), 3) // so the examine signal has time to fire and this will print after
 	return COMSIG_BLOCK_EYECONTACT
 
 /datum/mood_event/anxiety_eyecontact
-	description = "Sometimes eye contact makes me so nervous..."
+	description = "Иногда зрительный контакт заставляет меня так нервничать..."
 	mood_change = -5
 	timeout = 3 MINUTES

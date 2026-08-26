@@ -78,7 +78,9 @@
 		var/datum/quirk_constant_data/constant_data = GLOB.all_quirk_constant_data[quirk]
 		var/list/datum/preference/customization_options = constant_data?.get_customization_data()
 
-		quirk_info[sanitize_css_class_name(quirk_name)] = list(
+		// Non-latin (translated) names sanitize to an empty string, which would
+		// collapse every such quirk into a single entry; fall back to a hash key.
+		quirk_info[sanitize_css_class_name(quirk_name) || md5(quirk_name)] = list(
 			"description" = initial(quirk.desc),
 			"icon" = initial(quirk.icon),
 			"name" = quirk_name,
@@ -152,6 +154,6 @@
 			preferences.all_quirks -= quirk
 			continue
 		//NOVA EDIT END
-		selected_quirks += sanitize_css_class_name(quirk)
+		selected_quirks += sanitize_css_class_name(quirk) || md5(quirk)
 
 	return selected_quirks

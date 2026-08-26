@@ -1,5 +1,5 @@
 /datum/quirk/prosthetic_limb
-	name = "Prosthetic Limb"
+	name = "Протез конечности"
 	desc = "В результате несчастного случая вы лишились одной из конечностей. Из-за этого у вас теперь есть дешевый протез!"
 	icon = "tg-prosthetic-leg"
 	value = -3

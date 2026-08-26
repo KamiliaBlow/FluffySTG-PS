@@ -1,7 +1,7 @@
 #define QUIRK_HUNGRY_MOD 2
 
 /datum/quirk/hungry
-	name = "Hungry"
+	name = "Голод"
 	desc = "У вас ненасытный аппетит. Другими словами, ваш желудок бездонный. Вам нужно есть гораздо больше, чем другим, чтобы утолить голод."
 	value = -2
 	icon = FA_ICON_BOWL_FOOD

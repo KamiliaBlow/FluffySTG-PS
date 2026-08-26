@@ -6,15 +6,15 @@
 #define JOB_UNAVAILABLE_FLAVOUR (JOB_UNAVAILABLE_LANGUAGE + 1)
 #define JOB_UNAVAILABLE_AUGMENT (JOB_UNAVAILABLE_FLAVOUR + 1)
 
-#define SEC_RESTRICTED_QUIRKS "Blind" = TRUE, "Brain Tumor" = TRUE, "Deaf" = TRUE, "Paraplegic" = TRUE, "Hemiplegic" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Pacifist" = TRUE, "No Guns" = TRUE, "Illiterate" = TRUE, "Nerve Stapled" = TRUE, "Underworld Connections" = TRUE
-#define HEAD_RESTRICTED_QUIRKS "Blind" = TRUE, "Deaf" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Brain Tumor" = TRUE, "Illiterate" = TRUE, "Underworld Connections" = TRUE
-#define HEAD_RESTRICTED_QUIRKS_QM "Blind" = TRUE, "Deaf" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Brain Tumor" = TRUE, "Illiterate" = TRUE
-#define GUARD_RESTRICTED_QUIRKS "Blind" = TRUE, "Deaf" = TRUE, "Foreigner" = TRUE, "Pacifist" = TRUE, "Nerve Stapled" = TRUE
+#define SEC_RESTRICTED_QUIRKS "Слепота" = TRUE, "Дегенерация мозга" = TRUE, "Глухота" = TRUE, "Параплегия" = TRUE, "Гемиплегия" = TRUE, "Немота" = TRUE, "Foreigner" = TRUE, "Пацифизм" = TRUE, "Никаких пушек" = TRUE, "Неграмотность" = TRUE, "Сшивание нерва" = TRUE, "Underworld Connections" = TRUE
+#define HEAD_RESTRICTED_QUIRKS "Слепота" = TRUE, "Глухота" = TRUE, "Немота" = TRUE, "Foreigner" = TRUE, "Дегенерация мозга" = TRUE, "Неграмотность" = TRUE, "Underworld Connections" = TRUE
+#define HEAD_RESTRICTED_QUIRKS_QM "Слепота" = TRUE, "Глухота" = TRUE, "Немота" = TRUE, "Foreigner" = TRUE, "Дегенерация мозга" = TRUE, "Неграмотность" = TRUE
+#define GUARD_RESTRICTED_QUIRKS "Слепота" = TRUE, "Глухота" = TRUE, "Foreigner" = TRUE, "Пацифизм" = TRUE, "Сшивание нерва" = TRUE
 #define PRISONER_RESTRICTED_QUIRKS "Underworld Connections" = TRUE
 
 #define SEC_RESTRICTED_SPECIES SPECIES_ABDUCTORWEAK = TRUE, SPECIES_GOLEMWEAK = TRUE, SPECIES_DULLAHAN = TRUE
 #define HEAD_RESTRICTED_SPECIES SPECIES_ABDUCTORWEAK = TRUE, SPECIES_GOLEMWEAK = TRUE, SPECIES_DULLAHAN = TRUE
-#define RESTRICTED_QUIRKS_EXCEPTIONS list("Mute" = "Signer")
+#define RESTRICTED_QUIRKS_EXCEPTIONS list("Немота" = "Signer")
 
 /// Time after clocking out before you can clock in again
 #define TIMECLOCK_COOLDOWN 5 MINUTES

@@ -1,13 +1,13 @@
 /datum/quirk/unstable
-	name = "Unstable"
-	desc = "Due to past troubles, you are unable to recover your sanity if you lose it. Be very careful managing your mood!"
+	name = "Нестабильность"
+	desc = "Из-за проблем в прошлом вы не сможете восстановить рассудок, если его утратите. Будьте очень осторожны, и следите за своим настроением!"
 	icon = FA_ICON_ANGRY
 	value = -10
 	mob_trait = TRAIT_UNSTABLE
-	gain_text = span_danger("There's a lot on your mind right now.")
-	lose_text = span_notice("Your mind finally feels calm.")
-	medical_record_text = "Patient's mind is in a vulnerable state, and cannot recover from traumatic events."
-	medical_symptom_text = "Exhibits severe mood instability and an inability to recover from psychological stressors."
+	gain_text = span_danger("Сейчас у вас на уме много всего.")
+	lose_text = span_notice("Ваш разум наконец-то обрёл покой.")
+	medical_record_text = "Психика пациента находится в уязвимом состоянии и не может оправиться от травмирующих событий."
+	medical_symptom_text = "Наблюдается выраженная нестабильность настроения и неспособность восстанавливаться после психологических стрессовых факторов."
 	hardcore_value = 9
 	mail_goodies = list(/obj/effect/spawner/random/entertainment/plushie)
 	quirk_flags = QUIRK_TRAUMALIKE

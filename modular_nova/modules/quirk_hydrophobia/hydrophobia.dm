@@ -1,9 +1,9 @@
 /datum/quirk/hydrophobia
-	name = "Hydrophobia"
-	desc = "You're terrified of water! For Slime Hybrids, this also means you will be unable to repel water."
-	gain_text = span_danger("You believe that water is the worst thing to ever exist.")
-	lose_text = span_danger("You no longer believe that water is all that bad.")
-	medical_record_text = "Patient suffers from hydrophobia, exhibiting extreme anxiety around water sources."
+	name = "Гидрофобия"
+	desc = "Вы панически боитесь воды! Для гибридов-слизней это также означает, что вы не сможете отталкивать воду."
+	gain_text = span_danger("Вы считаете, что вода - это самое ужасное, что только может существовать.")
+	lose_text = span_danger("Вы больше не считаете, что вода - это что-то такое уж плохое.")
+	medical_record_text = "Пациент страдает гидрофобией, проявляя крайнюю тревогу вблизи водоемов."
 	value = -2
 	mob_trait = TRAIT_WATER_HATER
 	icon = FA_ICON_WATER_LADDER

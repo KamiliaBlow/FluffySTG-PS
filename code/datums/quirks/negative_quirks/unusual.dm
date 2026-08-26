@@ -1,5 +1,5 @@
 /datum/quirk/touchy
-	name = "Touchy"
+	name = "Тактильность"
 	desc = "Вы очень тактичны и должны физически прикоснуться к чему-либо, чтобы его осмотреть."
 	icon = FA_ICON_HAND
 	value = -2

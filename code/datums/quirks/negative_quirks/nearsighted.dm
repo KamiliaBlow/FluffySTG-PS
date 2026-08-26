@@ -1,5 +1,5 @@
 /datum/quirk/item_quirk/nearsighted
-	name = "Nearsighted"
+	name = "Близорукость"
 	desc = "У вас близорукость и вы ничего не видите без очков, но появляетесь с парой очков."
 	icon = FA_ICON_GLASSES
 	value = -4

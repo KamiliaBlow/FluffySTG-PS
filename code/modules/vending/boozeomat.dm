@@ -7,7 +7,7 @@
 
 	product_categories = list(
 		list(
-			"name" = "Alcoholic",
+			"name" = "Спиртное",
 			"icon" = "wine-bottle",
 			"products" = list(
 				/obj/item/reagent_containers/cup/glass/bottle/curacao = 5,
@@ -43,7 +43,7 @@
 		),
 
 		list(
-			"name" = "Non-Alcoholic",
+			"name" = "Не-Спиртное",
 			"icon" = "bottle-water",
 			"products" = list(
 				/obj/item/reagent_containers/cup/glass/ice = 10,

@@ -1,5 +1,5 @@
 /datum/quirk/quadruple_amputee
-	name = "Quadruple Amputee"
+	name = "Без конечностей"
 	desc = "Упс! Полное протезирование! В результате какого-то действительно жестокого космического наказания все ваши конечности были заменены на дешевые протезы."
 	icon = "tg-prosthetic-full"
 	value = -6
