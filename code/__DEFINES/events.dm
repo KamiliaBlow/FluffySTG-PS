@@ -19,7 +19,7 @@
 ///Events that spawn creatures with simple desires, such as to hunt
 #define EVENT_CATEGORY_ENTITIES "Entities"
 ///Events that should have no harmful effects, and might be useful to the crew
-#define EVENT_CATEGORY_FRIENDLY "Friendly"
+#define EVENT_CATEGORY_FRIENDLY "Дружелюбие"
 ///Events that affect the body and mind
 #define EVENT_CATEGORY_HEALTH "Health"
 ///Events reserved for special occasions

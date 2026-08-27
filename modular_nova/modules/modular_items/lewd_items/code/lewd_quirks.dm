@@ -185,13 +185,13 @@
 	var/erp_quirk = FALSE
 
 /datum/quirk/masochism
-	name = "Masochism"
-	desc = "Pain brings you indescribable pleasure."
+	name = "Мазохизм"
+	desc = "Боль доставляет вам неописуемое удовольствие."
 	value = 0 //ERP Traits don't have price. They are priceless. Ba-dum-tss
 	mob_trait = TRAIT_MASOCHISM
-	gain_text = span_danger("You have a sudden desire for pain...")
-	lose_text = span_notice("Ouch! Pain is... Painful again! Ou-ou-ouch!")
-	medical_record_text = "Subject has masochism."
+	gain_text = span_danger("У вас внезапно возникло желание испытать боль...")
+	lose_text = span_notice("Ай! Боль… Снова причиняет боль! Ай-ай-ай!")
+	medical_record_text = "У пациента наблюдается мазохизм."
 	icon = FA_ICON_HEART_BROKEN
 	erp_quirk = TRUE
 
@@ -212,11 +212,11 @@
 */
 
 /datum/brain_trauma/very_special/neverboner
-	name = "Loss of libido"
-	desc = "The patient has completely lost sexual interest."
+	name = "Снижение либидо"
+	desc = "Пациент полностью утратил сексуальный интерес."
 	scan_desc = "lack of libido"
-	gain_text = span_notice("You don't feel horny anymore.")
-	lose_text = span_notice("A pleasant warmth spreads over your body.")
+	gain_text = span_notice("Вы больше не испытываете сексуального влечения. Полностью утратив интерес к сексу.")
+	lose_text = span_notice("По всему телу распространяется приятное тепло.")
 	random_gain = FALSE
 	resilience = TRAUMA_RESILIENCE_ABSOLUTE
 
@@ -235,13 +235,13 @@
 */
 
 /datum/quirk/sadism
-	name = "Sadism"
-	desc = "You feel pleasure when you see someone in agony."
+	name = "Садизм"
+	desc = "Вы испытываете удовольствие, когда видите, как кто-то мучается."
 	value = 0 //ERP Traits don't have price. They are priceless. Ba-dum-tss
 	mob_trait = TRAIT_SADISM
-	gain_text = span_danger("You feel a sudden desire to inflict pain.")
-	lose_text = span_notice("Others' pain doesn't satisfy you anymore.")
-	medical_record_text = "Subject has sadism."
+	gain_text = span_danger("Вы испытываете внезапное желание причинить боль.")
+	lose_text = span_notice("Чужая боль вас больше не удовлетворяет.")
+	medical_record_text = "У пациента наблюдается садизм."
 	icon = FA_ICON_HAMMER
 	erp_quirk = TRUE
 
@@ -256,11 +256,11 @@
 	affected_human?.cure_trauma_type(/datum/brain_trauma/very_special/sadism, TRAUMA_RESILIENCE_ABSOLUTE)
 
 /datum/brain_trauma/very_special/sadism
-	name = "Sadism"
-	desc = "The subject's cerebral pleasure centers are more active when someone is suffering."
+	name = "Садизм"
+	desc = "Центры удовольствия в головном мозге пациента проявляют повышенную активность, когда кто-то страдает."
 	scan_desc = "sadistic tendencies"
-	gain_text = span_purple("You feel a desire to hurt somebody.")
-	lose_text = span_notice("You feel compassion again.")
+	gain_text = span_purple("Вы испытываете желание причинить кому-то боль.")
+	lose_text = span_notice("Вы снова испытываешь сострадание.")
 	can_gain = TRUE
 	random_gain = FALSE
 	resilience = TRAUMA_RESILIENCE_ABSOLUTE
@@ -290,13 +290,13 @@
 //Shibari update quirks: Rope bunny and rigger. One have additional mood bonus (0) and exist for same reason as ananas affinity, other one can faster tie ropes on character because why not.
 //Rope bunny code
 /datum/quirk/ropebunny
-	name = "Rope bunny"
-	desc = "You love being tied up."
+	name = "Верёвочный зайчик"
+	desc = "Вам нравится, когда вас связывают."
 	value = 0 //ERP Traits don't have price. They are priceless. Ba-dum-tss
 	mob_trait = TRAIT_ROPEBUNNY
-	medical_record_text = "Subject has a fondness for restraints."
-	gain_text = span_danger("You really want to be restrained for some reason.")
-	lose_text = span_notice("Being restrained doesn't arouse you anymore.")
+	medical_record_text = "У пациента наблюдается склонность к ограничениям."
+	gain_text = span_danger("Вы по какой-то причине действительно хотите, чтобы вас связали.")
+	lose_text = span_notice("Скованность вас больше не возбуждает.")
 	icon = FA_ICON_HANDCUFFS
 	erp_quirk = TRUE
 
@@ -312,13 +312,13 @@
 
 //Rigger code
 /datum/quirk/rigger
-	name = "Rigger"
-	desc = "You find the weaving of rope knots on the body wonderful."
+	name = "Любитель веревок"
+	desc = "Вам кажется, что узелки на теле выглядят просто великолепно."
 	value = 0 //ERP Traits don't have price. They are priceless. Ba-dum-tss
 	mob_trait = TRAIT_RIGGER
-	medical_record_text = "Subject has increased dexterity when tying knots."
-	gain_text = span_danger("Suddenly you understand rope weaving much better than before.")
-	lose_text = span_notice("Rope knots looks complicated again.")
+	medical_record_text = "Пациент демонстрирует повышенную ловкость при завязывании узлов."
+	gain_text = span_danger("И вдруг вы понимаете, что в плетении веревок разбираетесь гораздо лучше, чем раньше.")
+	lose_text = span_notice("Верёвочные узлы снова кажутся сложными.")
 	icon = FA_ICON_CHAIN_BROKEN
 	erp_quirk = TRUE
 
@@ -332,7 +332,7 @@
 	var/mob/living/carbon/human/affected_mob = quirk_holder
 	REMOVE_TRAIT(affected_mob, TRAIT_RIGGER, TRAIT_LEWDQUIRK)
 /datum/mood_event/sadistic
-	description = span_purple("Others' suffering makes me happier.\n")
+	description = span_purple("Страдания других делают меня счастливее.\n")
 
 /*
 *	EMPATH BONUS
@@ -348,14 +348,14 @@
 		var/arousal_message
 		switch(arousal)
 			if(AROUSAL_MINIMUM_DETECTABLE to AROUSAL_LOW)
-				arousal_message = span_purple("[p_They()] [p_are()] slightly flushed in the cheeks.") + "\n"
+				arousal_message = span_purple("кажется слегка краснеет.") + "\n"
 			if(AROUSAL_LOW to AROUSAL_MEDIUM)
-				arousal_message = span_purple("[p_They()] [p_are()] quite aroused and seems to be stirring up lewd thoughts in [p_their()] head.") + "\n"
+				arousal_message = span_purple("находится в состоянии сильного возбуждения, и, похоже, в голове рождаются непристойные мысли.") + "\n"
 			if(AROUSAL_HIGH to AROUSAL_AUTO_CLIMAX_THRESHOLD)
-				arousal_message = span_purple("[p_They()] [p_are()] aroused as hell.") + "\n"
+				arousal_message = span_purple("испытывает сильное возбуждение.") + "\n"
 			if(AROUSAL_AUTO_CLIMAX_THRESHOLD to INFINITY)
-				arousal_message = span_purple("[p_They()] [p_are()] extremely excited, exhausted from intolerable desire.") + "\n"
+				arousal_message = span_purple("находится в состоянии крайнего возбуждения, измученные невыносимым желанием.") + "\n"
 		if(arousal_message)
 			. += arousal_message
 	else if(arousal > AROUSAL_MINIMUM_DETECTABLE)
-		. += span_purple("[p_They()] [p_are()] slightly flushed in the cheeks.") + "\n"
+		. += span_purple("кажется слегка краснеет.") + "\n"

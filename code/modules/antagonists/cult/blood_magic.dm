@@ -235,13 +235,13 @@
 		qdel(src)
 
 /datum/action/innate/cult/blood_spell/horror
-	name = "Hallucinations"
-	desc = "Gives hallucinations to a target at range. A silent and invisible spell."
+	name = "Галлюцинации"
+	desc = "Вызывает у цели галлюцинации на расстоянии. Бесшумное и невидимое заклинание."
 	button_icon_state = "horror"
 	charges = 4
 	click_action = TRUE
-	enable_text = span_cult("You prepare to horrify a target...")
-	disable_text = span_cult("You dispel the magic...")
+	enable_text = span_cult("Вы готовитесь навести ужас на цель...")
+	disable_text = span_cult("Вы снимаете заклятие...")
 
 /datum/action/innate/cult/blood_spell/horror/InterceptClickOn(mob/living/clicker, params, atom/clicked_on)
 	var/turf/caller_turf = get_turf(clicker)

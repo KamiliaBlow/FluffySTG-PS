@@ -1,9 +1,9 @@
 /datum/quirk/custom_tongue
-	name = "Custom Tongue"
-	desc = "Your tongue is not standard. It has a shape and texture that is unique to you, affecting the way you speak."
-	gain_text = span_notice("Your tongue feels normal.")
-	lose_text = span_notice("Your tongue feels... Different.")
-	medical_record_text = "Patient speaks a little funny."
+	name = "Необычный язык"
+	desc = "Ваш язык не является типовым. Он имеет форму и текстуру, которые являются уникальными для вас и влияют на то, как вы говорите."
+	gain_text = span_notice("Ваш язык выглядит нормально.")
+	lose_text = span_notice("Язык кажется... каким-то другим.")
+	medical_record_text = "Пациент говорит немного странно."
 	value = 0
 	icon = FA_ICON_FACE_GRIN_TONGUE
 

@@ -1,9 +1,9 @@
 /datum/quirk/touched_by_cosmos
-	name = "Touched by cosmos"
-	desc = "You have become one with the cosmos and now you look like a living piece of space!"
+	name = "Отмеченный космосом"
+	desc = "Вы слились с космосом воедино, и теперь выглядите как живой кусочек открытого космоса!"
 	gain_text = ""
 	lose_text = ""
-	medical_record_text = "They've seen the secrets of the cosmos."
+	medical_record_text = "Разум пациента хранит тайны космоса."
 	icon = FA_ICON_SHUTTLE_SPACE
 
 /datum/quirk/touched_by_cosmos/add(client/client_source)
@@ -41,9 +41,9 @@
 	return
 
 /datum/brain_trauma/voided_quirk
-	name = "Voided"
-	desc = "They've seen the secrets of the cosmos."
-	scan_desc = "cosmic neural pattern"
+	name = "Пустота"
+	desc = "Разум пациента хранит тайны космоса."
+	scan_desc = "космический нейронный паттерн"
 	gain_text = ""
 	lose_text = ""
 	resilience = TRAUMA_RESILIENCE_LOBOTOMY

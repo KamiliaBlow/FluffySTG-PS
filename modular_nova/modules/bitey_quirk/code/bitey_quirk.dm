@@ -156,11 +156,11 @@
  * Automatically removes itself if the holder has or gains a cat tongue organ.
  */
 /datum/quirk/bitey
-	name = "Bitey"
-	desc = "You can toggle whether you bite instead of doing unarmed attacks. This ability is independent of other feline traits."
-	gain_text = span_notice("You feel like you could bite someone if you wanted to.")
-	lose_text = span_notice("You no longer feel the urge to bite.")
-	medical_record_text = "Patient has the ability to toggle biting behavior."
+	name = "Кусучий"
+	desc = "Вы можете выбрать, будете ли вы кусать вместо того, чтобы наносить удары без оружия. Эта способность не зависит от других кошачьих черт."
+	gain_text = span_notice("Вам кажется, что вы могли бы кого-нибудь укусить, если бы захотели.")
+	lose_text = span_notice("Вы больше не испытываете желания кусаться.")
+	medical_record_text = "Пациент способен контролировать свое поведение при укусе."
 	value = 0
 	icon = FA_ICON_TOOTH
 	var/datum/action/innate/toggle_bite/bite_action
@@ -226,8 +226,8 @@
 	addtimer(CALLBACK(src, PROC_REF(remove_random_bite_trait), attacker), 0.1 SECONDS)
 	// Optional flavor message
 	if(prob(50))
-		attacker.visible_message(span_danger("[attacker] suddenly snaps at [defender]!"), \
-			span_danger("You feel an urge to bite!"))
+		attacker.visible_message(span_danger("[attacker] внезапно набрасывается на [defender]!"), \
+			span_danger("Вас так и тянет кого-нибудь укусить!"))
 
 /**
  * Helper proc to remove the temporary bite trait.

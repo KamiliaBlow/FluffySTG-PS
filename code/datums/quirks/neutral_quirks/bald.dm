@@ -1,13 +1,13 @@
 /datum/quirk/item_quirk/bald
-	name = "Smooth-Headed"
-	desc = "You have no hair and are quite insecure about it! Keep your wig on, or at least your head covered up."
+	name = "Облысение"
+	desc = "У вас совсем нет волос, и вы очень из-за этого комплексуете! Не снимайте парик или хотя бы держите голову прикрытой."
 	icon = FA_ICON_EGG
 	value = 0
 	mob_trait = TRAIT_BALD
 	quirk_flags = QUIRK_HUMAN_ONLY | QUIRK_CHANGES_APPEARANCE
-	gain_text = span_notice("Your head is as smooth as can be, it's terrible.")
-	lose_text = span_notice("Your head itches, could it be... growing hair?!")
-	medical_record_text = "Patient starkly refused to take off headwear during examination."
+	gain_text = span_notice("Ваша голова идеально гладкая, и это просто кошмар.")
+	lose_text = span_notice("Голова чешется... Неужели начинают расти волосы?!")
+	medical_record_text = "Пациент категорически отказывается снимать головной убор во время осмотра."
 	mail_goodies = list(/obj/item/clothing/head/wig/random)
 	/// The user's starting hairstyle
 	var/old_hair
@@ -30,7 +30,7 @@
 
 	give_item_to_holder(baldie_wig, list(LOCATION_HEAD, LOCATION_BACKPACK, LOCATION_HANDS), notify_player = FALSE)
 
-/datum/quirk/item_quirk/bald/give_item_to_holder(obj/item/quirk_item, list/valid_slots, flavour_text = null, default_location = "at your feet", notify_player = TRUE)
+/datum/quirk/item_quirk/bald/give_item_to_holder(obj/item/quirk_item, list/valid_slots, flavour_text = null, default_location = "у ваших ног", notify_player = TRUE)
 	var/any_head = FALSE
 	for(var/place_loc in valid_slots)
 		if(valid_slots[place_loc] & ITEM_SLOT_HEAD)

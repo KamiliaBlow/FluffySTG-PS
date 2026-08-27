@@ -1,11 +1,11 @@
 /datum/quirk/floating_items
-	name = "Psionic Holding"
-	desc = "You find holding items with your hands so inconvenient, and use your mind powers to do so instead."
+	name = "Псионический хват"
+	desc = "Вам так неудобно держать предметы руками, что вы вместо этого используете силу мысли."
 	value = 0
 	icon = FA_ICON_METEOR
-	medical_record_text = "Subject's mind is capable of extremely limited telekinesis."
-	gain_text = "Your mind feels like it can lift weights!"
-	lose_text = "Your mind feels like it took a cheat day."
+	medical_record_text = "Разум пациента способен к крайне ограниченной телекинезу."
+	gain_text = "Кажется, ваш разум способен поднимать тяжести!"
+	lose_text = "Такое ощущение, будто ваш мозг устроил себе 'день отдыха'."
 	mob_trait = TRAIT_FLOATING_HELD
 
 /datum/quirk_constant_data/floating_items
@@ -29,7 +29,7 @@
 	return "#FF99FF"
 
 /datum/action/innate/toggle_floating_items
-	name = "Toggle Psionic Holding"
+	name = "Перекл. Псионический хват"
 	button_icon = 'modular_nova/master_files/icons/effects/tele_effects.dmi'
 	button_icon_state = "telekinesishead"
 	check_flags = AB_CHECK_INCAPACITATED|AB_CHECK_CONSCIOUS
@@ -44,11 +44,11 @@
 			if(ishuman(owner))
 				var/mob/living/carbon/human/owner_human = owner
 				owner_human.update_held_items()
-			to_chat(owner, span_notice("You stop focusing on moving objects with your mind."))
+			to_chat(owner, span_notice("Вы перестаете сосредотачиваться на движущихся объектах силой мысли."))
 		else
 			ADD_TRAIT(owner, TRAIT_FLOATING_HELD, QUIRK_TRAIT)
 			if(ishuman(owner))
 				var/mob/living/carbon/human/owner_human = owner
 				owner_human.update_held_items()
-			to_chat(owner, span_notice("You feel ready to move objects with your mind."))
+			to_chat(owner, span_notice("Вы чувствуете, что готовы перемещать предметы силой мысли."))
 	return TRUE

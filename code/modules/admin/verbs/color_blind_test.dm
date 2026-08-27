@@ -12,13 +12,13 @@
 		"Protanopia" = list(0.56,0.43,0,0, 0.55,0.44,0,0, 0,0.24,0.75,0, 0,0,0,1, 0,0,0,0),
 		"Deuteranopia" = list(0.62,0.37,0,0, 0.70,0.30,0,0, 0,0.30,0.70,0, 0,0,0,1, 0,0,0,0),
 		"Tritanopia" = list(0.95,0.5,0,0, 0,0.43,0.56,0, 0,0.47,0.52,0, 0,0,0,1, 0,0,0,0),
-		"Achromatopsia" = list(0.33,0.33,0.33,0, 0.33,0.33,0.33,0, 0.33,0.33,0.33,0, 0,0,0,1, 0,0,0,0),
+		"Ахроматопсия" = list(0.33,0.33,0.33,0, 0.33,0.33,0.33,0, 0.33,0.33,0.33,0, 0,0,0,1, 0,0,0,0),
 	)
 	var/list/descriptions = list(
 		"Protanopia" = "No long wavelength cones, ends up not being able to see red light. Troubles with blue/green and red/green",
 		"Deuteranopia" = "No medium wavelength cones. Because the red and green parts of light nearly overlap in this space, trouble is mostly with red/green",
 		"Tritanopia" = "No short wavelength cones, so trouble with blue/green and yellow/violet. Aggressively rare, and equally hard to simulate",
-		"Achromatopsia" = "No cones at all, which leads to something close to monochromatic vision"
+		"Ахроматопсия" = "Отсутствие палочек, что приводит к зрению, близкому к монохроматическому"
 	)
 	var/selected_type = ""
 

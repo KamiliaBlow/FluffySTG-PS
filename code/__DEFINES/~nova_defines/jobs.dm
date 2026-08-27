@@ -6,11 +6,11 @@
 #define JOB_UNAVAILABLE_FLAVOUR (JOB_UNAVAILABLE_LANGUAGE + 1)
 #define JOB_UNAVAILABLE_AUGMENT (JOB_UNAVAILABLE_FLAVOUR + 1)
 
-#define SEC_RESTRICTED_QUIRKS "Слепота" = TRUE, "Дегенерация мозга" = TRUE, "Глухота" = TRUE, "Параплегия" = TRUE, "Гемиплегия" = TRUE, "Немота" = TRUE, "Foreigner" = TRUE, "Пацифизм" = TRUE, "Никаких пушек" = TRUE, "Неграмотность" = TRUE, "Сшивание нерва" = TRUE, "Underworld Connections" = TRUE
-#define HEAD_RESTRICTED_QUIRKS "Слепота" = TRUE, "Глухота" = TRUE, "Немота" = TRUE, "Foreigner" = TRUE, "Дегенерация мозга" = TRUE, "Неграмотность" = TRUE, "Underworld Connections" = TRUE
+#define SEC_RESTRICTED_QUIRKS "Слепота" = TRUE, "Дегенерация мозга" = TRUE, "Глухота" = TRUE, "Параплегия" = TRUE, "Гемиплегия" = TRUE, "Немота" = TRUE, "Foreigner" = TRUE, "Пацифизм" = TRUE, "Никаких пушек" = TRUE, "Неграмотность" = TRUE, "Сшивание нерва" = TRUE, "Криминальные связи" = TRUE
+#define HEAD_RESTRICTED_QUIRKS "Слепота" = TRUE, "Глухота" = TRUE, "Немота" = TRUE, "Foreigner" = TRUE, "Дегенерация мозга" = TRUE, "Неграмотность" = TRUE, "Криминальные связи" = TRUE
 #define HEAD_RESTRICTED_QUIRKS_QM "Слепота" = TRUE, "Глухота" = TRUE, "Немота" = TRUE, "Foreigner" = TRUE, "Дегенерация мозга" = TRUE, "Неграмотность" = TRUE
 #define GUARD_RESTRICTED_QUIRKS "Слепота" = TRUE, "Глухота" = TRUE, "Foreigner" = TRUE, "Пацифизм" = TRUE, "Сшивание нерва" = TRUE
-#define PRISONER_RESTRICTED_QUIRKS "Underworld Connections" = TRUE
+#define PRISONER_RESTRICTED_QUIRKS "Криминальные связи" = TRUE
 
 #define SEC_RESTRICTED_SPECIES SPECIES_ABDUCTORWEAK = TRUE, SPECIES_GOLEMWEAK = TRUE, SPECIES_DULLAHAN = TRUE
 #define HEAD_RESTRICTED_SPECIES SPECIES_ABDUCTORWEAK = TRUE, SPECIES_GOLEMWEAK = TRUE, SPECIES_DULLAHAN = TRUE

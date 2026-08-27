@@ -1,11 +1,11 @@
 /datum/quirk/item_quirk/breather/water_breather
-	name = "Water Breather"
-	desc = "You have a pair of gills and are only capable of breathing oxygen through water, stay wet to breathe!"
-	alert_text = "Be sure to equip your vaporizer, or you may end up choking to death!"
+	name = "Водное дыхание"
+	desc = "У вас есть пара жабр, и вы можете дышать кислородом только находясь в воде. Оставайтесь мокрыми, чтобы дышать!"
+	alert_text = "Обязательно наденьте испаритель, иначе вы можете задохнуться насмерть!"
 	icon = FA_ICON_FISH
-	medical_record_text = "Patient has a pair of gills on their body."
-	gain_text = span_notice("You suddenly have a hard time breathing through thin air.")
-	lose_text = span_danger("You suddenly feel like you aren't bound to breathing through liquid anymore.")
+	medical_record_text = "У пациента на теле имеется пара жабр."
+	gain_text = span_notice("Вы внезапно начинаете с трудом дышать обычным воздухом.")
+	lose_text = span_danger("Вы внезапно чувствуете, что больше не обязаны дышать жидкостью.")
 	value = 0
 	breathing_mask = NONE
 	breathing_tank = /obj/item/clothing/accessory/vaporizer

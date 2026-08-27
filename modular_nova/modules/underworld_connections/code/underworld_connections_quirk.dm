@@ -1,11 +1,11 @@
 /datum/quirk/item_quirk/underworld_connections
-	name = "Underworld Connections"
-	desc = "You're in with the seedier elements of the galactic underworld, and can start with a customizable black market uplink, and access to information brokers with exploitable information about the crew. Security has suspicions about you, and you may struggle to obtain a weapons permit."
+	name = "Криминальные связи"
+	desc = "Вы связаны с тёмными элементами галактического преступного мира, поэтому начинаете с настраиваемым аплинком чёрного рынка и доступом к информационным брокерам, обладающим компроматом на экипаж. Служба безопасности относится к вам с подозрением, и вам будет сложно получить разрешение на оружие."
 	icon = FA_ICON_SUITCASE
 	value = 0
-	gain_text = span_notice("Your contacts to the underworld are close at hand.")
-	lose_text = span_notice("Your contacts to the underworld have gone quiet.")
-	medical_record_text = "Patient records may have been tampered with in the past."
+	gain_text = span_notice("Ваши связи в преступном мире всегда под рукой.")
+	lose_text = span_notice("Ваши связи в преступном мире оборвались.")
+	medical_record_text = "Медицинская карта пациента могла быть подделана в прошлом."
 	quirk_flags = QUIRK_HIDE_FROM_SCAN
 	mail_goodies = list(/obj/item/circuitboard/machine/ltsrbt, /obj/item/stack/ore/bluespace_crystal/artificial, /datum/stock_part/ansible)
 
@@ -51,7 +51,7 @@
 		var/datum/record/crew/our_record = find_record(human_holder.name)
 		if (our_record)
 			our_record.wanted_status = WANTED_SUSPECT
-			our_record.security_note += "DO NOT ISSUE WEAPON PERMITS. Subject has suspected links to covert criminal elements."
+			our_record.security_note += "НЕ ВЫДАВАТЬ РАЗРЕШЕНИЯ НА ОРУЖИЕ. Субъект подозревается в связях с тайными преступными элементами."
 
 /datum/quirk/item_quirk/underworld_connections/remove()
 	quirk_holder.mind.has_exploitables_override = FALSE
@@ -62,7 +62,7 @@
 		if (isnull(our_record))
 			return
 		if (our_record.security_note)
-			our_record.security_note = replacetext(our_record.security_note, "DO NOT ISSUE WEAPON PERMITS. Subject has suspected links to covert criminal elements.", "")
+			our_record.security_note = replacetext(our_record.security_note, "НЕ ВЫДАВАТЬ РАЗРЕШЕНИЯ НА ОРУЖИЕ. Субъект подозревается в связях с тайными преступными элементами.", "")
 		if (!length(our_record.security_note)) // that was the only thing in the notes
 			our_record.security_note = null
 		if (isnull(our_record.security_note) && our_record.wanted_status == WANTED_SUSPECT) // only clear this if the security notes contain nothing but the quirk-generated note, just to be certain we are not accidentally resetting the wanted status for an unrelated crime

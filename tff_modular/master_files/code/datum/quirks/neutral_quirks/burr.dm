@@ -1,11 +1,11 @@
 /datum/quirk/burr
-	name = "Th'(r)oubles"
-	desc = "It's so hard to spell \"R\"... Bh'otheh's!"
+	name = "Ка(г')тавость"
+	desc = "Так т'удно выгова'ивать эту букву «Р»... Б'атцы!"
 	icon = FA_ICON_SPELL_CHECK
 	value = 0
-	gain_text = span_danger("It's time to wohh'y about my speach...")
-	lose_text = span_notice("Well, i know how to spell Rrrrr.")
-	medical_record_text = "Patient has troubles with letter R."
+	gain_text = span_danger("По'а беспокоиться о своей 'ечи...")
+	lose_text = span_notice("Ну, зато я знаю, как выговаривать Р-р-р-р.")
+	medical_record_text = "Пациент испытывает трудности с произношением буквы «Р»."
 	hardcore_value = 0
 
 /datum/quirk/burr/add(client/client_source)

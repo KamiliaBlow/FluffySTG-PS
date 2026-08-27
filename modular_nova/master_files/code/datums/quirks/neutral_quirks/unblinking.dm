@@ -1,11 +1,11 @@
 /datum/quirk/unblinking
-	name = "Unblinking"
-	desc = "For whatever reason, you do not posess eyelids and thus cannot blink."
+	name = "Неморгание"
+	desc = "По какой-то причине у вас нет век, и поэтому вы не можете моргать."
 	icon = FA_ICON_FACE_FLUSHED
 	value = 0
-	gain_text = span_danger("You no longer feel the need to blink.")
-	lose_text = span_notice("You feel the need to blink again.")
-	medical_record_text = "Patient is incapable of blinking."
+	gain_text = span_danger("Вы больше не чувствуете необходимости моргать.")
+	lose_text = span_notice("Вы снова чувствуете необходимость моргать.")
+	medical_record_text = "Пациент не способен моргать."
 	mob_trait = TRAIT_NO_EYELIDS //Also prevents eye shutting in knockout state and death.
 
 /datum/quirk/unblinking/add(client/client_source)

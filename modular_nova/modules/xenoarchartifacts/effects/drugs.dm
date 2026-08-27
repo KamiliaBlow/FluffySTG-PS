@@ -1,5 +1,5 @@
 /datum/artifact_effect/drugs
-	log_name = "Hallucinations"
+	log_name = "Галлюцинации"
 
 /datum/artifact_effect/drugs/New()
 	. = ..()

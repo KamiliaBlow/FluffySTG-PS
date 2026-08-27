@@ -2,11 +2,11 @@
 #define ENTOMBED_TICK_DAMAGE 1.5
 
 /datum/quirk/equipping/entombed
-	name = "Entombed"
-	desc = "You are permanently fused to (or otherwise reliant on) a single MOD unit that can never be removed from your person. If it runs out of charge or is turned off, you'll start to die!"
-	gain_text = span_warning("Your exosuit is both prison and home.")
-	lose_text = span_notice("At last, you're finally free from that horrible exosuit.")
-	medical_record_text = "Patient is physiologically reliant on a MOD unit for homeostasis. Do not attempt removal."
+	name = "Погребенный"
+	desc = "Вы навсегда привязаны к одному устройству MOD (или иным образом зависимы от него), которое невозможно снять с себя. Если заряд устройства иссякнет или оно будет выключено, вы начнете умирать!"
+	gain_text = span_warning("Ваш экзокостюм - это и тюрьма, и дом.")
+	lose_text = span_notice("Наконец-то вы освободились от этого ужасного экзокостюма.")
+	medical_record_text = "Пациент физиологически зависит от устройства MOD для поддержания гомеостаза. Не пытайтесь извлечь устройство."
 	value = 0
 	icon = FA_ICON_ARROW_CIRCLE_DOWN
 	forced_items = list(/obj/item/mod/control/pre_equipped/entombed = list(ITEM_SLOT_BACK))
@@ -36,8 +36,8 @@
 				//start the timer and let the player know
 				life_support_timer = addtimer(CALLBACK(src, PROC_REF(life_support_failure), human_holder), life_support_failure_threshold, TIMER_STOPPABLE | TIMER_DELETE_ME)
 
-				to_chat(human_holder, span_danger("Your physiology begins to erratically seize and twitch, bereft of your MODsuit's vital support. <b>Turn it back on as soon as you can!</b>"))
-				human_holder.balloon_alert(human_holder, "suit life support warning!")
+				to_chat(human_holder, span_danger("Без жизненно важной поддержки вашего MOD-костюма ваше тело начинает хаотично сжиматься и дергаться. <b>Включите его снова, как только сможете!</b>"))
+				human_holder.balloon_alert(human_holder, "предупреждение о системе жизнеобеспечения!")
 				human_holder.set_jitter_if_lower(life_support_failure_threshold) //give us some foley jitter
 				return
 		else
@@ -47,8 +47,8 @@
 				life_support_timer = null
 				life_support_failed = FALSE
 
-				to_chat(human_holder, span_notice("Relief floods your frame as your suit begins sustaining your life once more."))
-				human_holder.balloon_alert(human_holder, "suit life support restored!")
+				to_chat(human_holder, span_notice("Облегчение наполняет вас, когда ваш скафандр вновь начинает поддерживать вашу жизнь."))
+				human_holder.balloon_alert(human_holder, "система жизнеобеспечения восстановлена!")
 				human_holder.adjust_jitter(-(life_support_failure_threshold / 2)) // clear half of it, wow, that was unpleasant
 
 /// Proteans already have their own built-in modsuit, so they cannot take the entombed quirk.
@@ -61,8 +61,8 @@
 	// Warn the player and begin the gradual dying process.
 	var/mob/living/carbon/human/human_holder = quirk_holder
 
-	human_holder.visible_message(span_danger("[human_holder] suddenly staggers, a dire pallor overtaking [human_holder.p_their()] features as a feeble 'breep' emanates from their suit..."), span_userdanger("Terror descends as your suit's life support system breeps feebly, and then goes horrifyingly silent."))
-	human_holder.balloon_alert(human_holder, "suit life support failing!")
+	human_holder.visible_message(span_danger("[human_holder] внезапно пошатывается, а на лице появляется мрачная бледность, а из скафандра раздаётся слабый звук 'брип'"), span_userdanger("Ужас охватывает вас, когда система жизнеобеспечения вашего скафандра издает слабый писк, а затем наступает пугающая тишина."))
+	human_holder.balloon_alert(human_holder, "предупреждение о системе жизнеобеспечения!")
 	playsound(human_holder, 'sound/effects/alert.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE) // OH GOD THE STRESS NOISE
 	life_support_failed = TRUE
 
@@ -73,7 +73,7 @@
 		modsuit = human_holder.back // link this up to the quirk for easy access
 
 	if (isnull(modsuit))
-		stack_trace("Entombed quirk couldn't create a fused MODsuit on [quirk_holder] and was force-removed.")
+		stack_trace("Свойство 'Entombed' не смогло создать слиянный костюм MOD на [quirk_holder] и была принудительно удалена.")
 		qdel(src)
 		return
 

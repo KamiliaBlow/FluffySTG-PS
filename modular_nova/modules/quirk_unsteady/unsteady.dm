@@ -1,11 +1,11 @@
 /datum/quirk/unsteady
-	name = "Unsteady"
-	desc = "You are easy to knock down or very easy to startle, and fall often when being hurt."
+	name = "Неустойчивость"
+	desc = "Вас легко сбить с ног, вы очень пугливы и часто падаете при получении травм."
 	icon = FA_ICON_PERSON_FALLING_BURST
 	value = 0 // much like death degradation, effects can be negated in configuration
-	gain_text = span_danger("You feel like you could fall over easily.")
-	lose_text = span_notice("You feel steady again.")
-	medical_record_text = "The patient finds it remarkably easy to fall over due to external influence."
+	gain_text = span_danger("Вы чувствуете, что можете легко потерять равновесие.")
+	lose_text = span_notice("Вы снова твёрдо стоите на ногах.")
+	medical_record_text = "Пациент отличается крайней неустойчивостью и легко теряет равновесие под внешним воздействием."
 
 	// the minimum amount of damage required to knockdown
 	var/unsteady_damagethreshold = UNSTEADY_DEFAULT_DAMAGETHRESHOLD
@@ -52,8 +52,8 @@
 	//don't display the message if already downed
 	if(!source.IsKnockdown())
 		source.visible_message(
-			span_warning("[source] falls over in a scramble!"),
-			span_userdanger("You fall over in a scramble!"),
+			span_warning("[source] в панике валится на пол!"),
+			span_userdanger("Вы в панике валитесь на пол!"),
 			vision_distance = COMBAT_MESSAGE_RANGE,
 	)
 

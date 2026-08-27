@@ -203,7 +203,7 @@
 		/datum/gas/plasma = "Plasma is produced at 0.8 moles per mole of BZ decomposed.",
 		"Energy" = "[PN_BZASE_ENERGY] joules of energy is released per mole of BZ decomposed.",
 		"Radiation" = "Radiation gets released during this decomposition process.",
-		"Hallucinations" = "This reaction can cause various carbon based lifeforms in the vicinity to hallucinate.",
+		"Галлюцинации" = "Эта реакция может вызывать галлюцинации у различных углеродных форм жизни, находящихся поблизости.",
 		"Nuclear Particles" = "This reaction emits extremely high energy nuclear particles, up to [2 * PN_BZASE_NUCLEAR_PARTICLE_MAXIMUM] per second per unique gas mixture.",
 		"Temperature" = "Can only occur between [PN_BZASE_MIN_TEMP] - [PN_BZASE_MAX_TEMP] kelvin.",
 	)

@@ -1,9 +1,9 @@
 /datum/quirk/robot_limb_detach
-	name = "Cybernetic Limb Mounts"
-	desc = "You are able to detach and reattach any installed robotic limbs with very little effort, as long as they're in good condition."
-	gain_text = span_notice("Internal sensors report limb disengagement protocols are ready and waiting.")
-	lose_text = span_notice("ERROR: LIMB DISENGAGEMENT PROTOCOLS OFFLINE.")
-	medical_record_text = "Patient bears quick-attach and release limb joint cybernetics."
+	name = "Крепления для кибернетических протезов"
+	desc = "Вы можете с минимальными усилиями снимать и снова устанавливать любые установленные роботизированные конечности, при условии, что они находятся в хорошем состоянии."
+	gain_text = span_notice("Внутренние датчики сообщают, что протоколы отсоединения конечностей готовы и находятся в режиме ожидания.")
+	lose_text = span_notice("ОШИБКА: ПРОТОКОЛЫ ОТСОЕДИНЕНИЯ КОНЕЧНОСТЕЙ НАХОДЯТСЯ В ОФЛАЙН-РЕЖИМЕ.")
+	medical_record_text = "Пациент оснащён кибернетическими системами быстрого крепления и отсоединения суставов конечностей."
 	value = 0
 	mob_trait = TRAIT_ROBOTIC_LIMBATTACHMENT
 	icon = FA_ICON_HANDSHAKE_SIMPLE_SLASH
@@ -21,8 +21,8 @@
 	QDEL_NULL(added_action)
 
 /datum/action/cooldown/spell/robot_self_amputation
-	name = "Detach a robotic limb"
-	desc = "Disengage one of your robotic limbs from your cybernetic mounts. Requires you to not be restrained or otherwise under duress. Will not function on wounded limbs - tend to them first."
+	name = "Отсоединить роботизированную конечность"
+	desc = "Отсоедините одну из своих роботизированных конечностей от кибернетических креплений. Для этого необходимо, чтобы вы не были связаны и не находились под каким-либо принуждением. Не сработает на раненных конечностях - сначала окажите им первую помощь."
 	button_icon_state = "autotomy"
 
 	cooldown_time = 30 SECONDS
@@ -36,7 +36,7 @@
 	. = ..()
 
 	if(HAS_TRAIT(cast_on, TRAIT_NODISMEMBER))
-		to_chat(cast_on, span_warning("ERROR: LIMB DISENGAGEMENT PROTOCOLS OFFLINE. Seek out a maintenance technician."))
+		to_chat(cast_on, span_warning("ОШИБКА: ПРОТОКОЛЫ ОТСОЕДИНЕНИЯ КОНЕЧНОСТЕЙ НЕ АКТИВНЫ. Обратитесь к специалисту по техническому обслуживанию."))
 		return
 
 	var/list/exclusions = list()
@@ -50,27 +50,27 @@
 			robot_parts += possible_part
 
 	if (!length(robot_parts))
-		to_chat(cast_on, "ERROR: Limb disengagement protocols report no compatible cybernetics currently installed. Seek out a maintenance technician.")
+		to_chat(cast_on, "ОШИБКА: Согласно протоколам отключения конечностей, в настоящее время не установлено совместимого кибернетического оборудования. Обратитесь к техническому специалисту по обслуживанию.")
 		return
 
-	var/obj/item/bodypart/limb_to_detach = tgui_input_list(cast_on, "Limb to detach", "Cybernetic Limb Detachment", sort_names(robot_parts))
+	var/obj/item/bodypart/limb_to_detach = tgui_input_list(cast_on, "Конечная часть, подлежащая отсоединению", "Отделение кибернетической конечности", sort_names(robot_parts))
 	if (QDELETED(src) || QDELETED(cast_on) || QDELETED(limb_to_detach))
 		return
 
 	if (length(limb_to_detach.wounds) >= 1)
-		cast_on.balloon_alert(cast_on, "can't detach wounded limbs!")
+		cast_on.balloon_alert(cast_on, "Нельзя отсоединять раненые конечности!")
 		playsound(cast_on, 'sound/machines/buzz/buzz-sigh.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 		return
 
 	cast_on.balloon_alert(cast_on, "detaching limb...")
 	playsound(cast_on, 'sound/items/tools/rped.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
-	cast_on.visible_message(span_notice("[cast_on] shuffles [cast_on.p_their()] [limb_to_detach.name] forward, actuators hissing and whirring as [cast_on.p_they()] disengage[cast_on.p_s()] the limb from its mount..."))
+	cast_on.visible_message(span_notice("[cast_on] перемещает [cast_on.p_their()] [limb_to_detach.name] вперёд; приводы шипят и жужжат, пока [cast_on.p_they()] отсоединяет конечность от крепления..."))
 
 	if(do_after(cast_on, 5 SECONDS))
-		cast_on.visible_message(span_notice("With a gentle twist, [cast_on] finally prises [cast_on.p_their()] [limb_to_detach.name] free from its socket."))
+		cast_on.visible_message(span_notice("Слегка покрутив, [cast_on] наконец-то вытаскивает [cast_on.p_their()] [limb_to_detach.name] из гнезда."))
 		limb_to_detach.drop_limb()
 		cast_on.put_in_hands(limb_to_detach)
-		cast_on.balloon_alert(cast_on, "limb detached!")
+		cast_on.balloon_alert(cast_on, "конечность отсоединена!")
 		if(prob(5))
 			playsound(cast_on, 'sound/items/champagne_pop.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 		else

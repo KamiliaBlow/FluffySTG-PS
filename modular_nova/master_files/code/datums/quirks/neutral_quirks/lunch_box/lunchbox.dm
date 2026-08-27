@@ -1,14 +1,14 @@
 
 /datum/quirk/item_quirk/lunchbox_owner
-	name = "Lunchbox User"
-	desc = "You brought a lunch, homemade or not, you decided to pack one for yourself!"
+	name = "Пользователь ланчбокса"
+	desc = "Вы взяли с собой обед - домашний или нет, но вы решили приготовить его себе сами!"
 	icon = FA_ICON_BOX
 	value = 0
 	quirk_flags = QUIRK_HUMAN_ONLY | QUIRK_HIDE_FROM_SCAN
 	mob_trait = TRAIT_LUNCHBOX_OWNER
-	gain_text = span_notice("You brought your lunchbox with you, yippee!.")
-	lose_text = span_danger("The feeling... the love... the passion for a home made meal leaves you... a tear sheds down your face, a weep... a sorrow... an apology as you say goodbye to your delicious homemade delectables.")
-	medical_record_text = "Patient mentions their fondness for exterior foods and drinks."
+	gain_text = span_notice("Вы принесли с собой ланчбокс, ура!")
+	lose_text = span_danger("Это чувство… эта любовь… эта страсть к домашней еде… и вдруг… по щеке скатывается слеза, вы начинаете рыдать… вас охватывает грусть… и вы как будто извиняетесь, прощаясь со своими восхитительными домашними лакомствами.")
+	medical_record_text = "Пациент отмечает, что блюда и напитки из дома куда лучше."
 	mail_goodies = list()
 
 	/// What design of lunchbox does the player want?
@@ -43,41 +43,41 @@
 /datum/quirk/item_quirk/lunchbox_owner/add_unique(client/client_source)
 
 	/// What meal is this character CRAVING for?
-	var/desired_meal = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_meal_choice) || "Random"
+	var/desired_meal = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_meal_choice) || "Случайно"
 	/// picks a random lunchox from the list
-	if(desired_meal != "Random")
+	if(desired_meal != "Случайно")
 		lunchbox_meal_choice = GLOB.possible_player_lunchbox_meal_choice[desired_meal]
 	/// If no box design is picked WE'RE PICKIN FOR EM!!!
 	if(lunchbox_meal_choice == NONE)
 		lunchbox_meal_choice = pick(assoc_to_values(GLOB.possible_player_lunchbox_meal_choice))
 
 	/// What snack does this character desire?
-	var/desired_snack = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_first_snack_choice) || "Random"
-	if(desired_snack != "Random")
+	var/desired_snack = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_first_snack_choice) || "Случайно"
+	if(desired_snack != "Случайно")
 		lunchbox_first_snack_choice = GLOB.possible_player_lunchbox_snack_choice[desired_snack]
 	/// If no snack choice, WE PICKIN FOR EM!!
 	if(lunchbox_first_snack_choice == NONE)
 		lunchbox_first_snack_choice = pick(assoc_to_values(GLOB.possible_player_lunchbox_snack_choice))
 
 	/// What snack does this character desire?
-	var/desired_snack_2 = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_second_snack_choice) || "Random"
-	if(desired_snack_2 != "Random")
+	var/desired_snack_2 = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_second_snack_choice) || "Случайно"
+	if(desired_snack_2 != "Случайно")
 		lunchbox_second_snack_choice = GLOB.possible_player_lunchbox_snack_choice[desired_snack_2]
 	/// If no snack choice, WE PICKIN FOR EM!!
 	if(lunchbox_second_snack_choice == NONE)
 		lunchbox_second_snack_choice = pick(assoc_to_values(GLOB.possible_player_lunchbox_snack_choice))
 
 	/// What are they thirsty for?
-	var/desired_drink = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_drink_choice) || "Random"
-	if(desired_drink != "Random")
+	var/desired_drink = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_drink_choice) || "Случайно"
+	if(desired_drink != "Случайно")
 		lunchbox_drink_choice = GLOB.possible_player_lunchbox_drink_choice[desired_drink]
 	/// If no snack choice, WE PICKIN FOR EM!!
 	if(lunchbox_drink_choice == NONE)
 		lunchbox_drink_choice = pick(assoc_to_values(GLOB.possible_player_lunchbox_drink_choice))
 
 	/// Got room for desert?
-	var/desired_desert = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_desert_choice) || "Random"
-	if(desired_desert != "Random")
+	var/desired_desert = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_desert_choice) || "Случайно"
+	if(desired_desert != "Случайно")
 		lunchbox_dessert_choice = GLOB.possible_player_lunchbox_desert_choice[desired_desert]
 	/// If no snack choice, WE PICKIN FOR EM!!
 	if(lunchbox_dessert_choice == NONE)
@@ -86,7 +86,7 @@
 	var/lunchbox_design = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_design) || "Regular"
 	var/obj/item/storage/lunchbox/lunchbox_base
 
-	lunchbox_design = lunchbox_design == "Random" ? pick(GLOB.possible_player_lunchbox_design_choice) : lunchbox_design
+	lunchbox_design = lunchbox_design == "Случайно" ? pick(GLOB.possible_player_lunchbox_design_choice) : lunchbox_design
 	var/lunchbox_type = GLOB.possible_player_lunchbox_design_choice[lunchbox_design]
 	lunchbox_base = new lunchbox_type(get_turf(quirk_holder))
 
@@ -138,13 +138,13 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_design_choice, list(
 ))
 
 /datum/preference/choiced/lunchbox_design/init_possible_values()
-	return list("Random") + assoc_to_keys(GLOB.possible_player_lunchbox_design_choice)
+	return list("Случайно") + assoc_to_keys(GLOB.possible_player_lunchbox_design_choice)
 
 /datum/preference/choiced/lunchbox_design/create_default_value()
-	return "Random"
+	return "Случайно"
 
 /datum/preference/choiced/lunchbox_design/icon_for(value)
-	if (value == "Random")
+	if (value == "Случайно")
 		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/storage/toolbox/selected_type = GLOB.possible_player_lunchbox_design_choice[value]
@@ -169,13 +169,13 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_design_choice, list(
 	should_generate_icons = TRUE
 
 /datum/preference/choiced/lunchbox_meal_choice/init_possible_values()
-	return list("Random") + assoc_to_keys(GLOB.possible_player_lunchbox_meal_choice)
+	return list("Случайно") + assoc_to_keys(GLOB.possible_player_lunchbox_meal_choice)
 
 /datum/preference/choiced/lunchbox_meal_choice/create_default_value()
-	return "Random"
+	return "Случайно"
 
 /datum/preference/choiced/lunchbox_meal_choice/icon_for(value)
-	if (value == "Random")
+	if (value == "Случайно")
 		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/food/selected_type = GLOB.possible_player_lunchbox_meal_choice[value]
@@ -284,7 +284,7 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_meal_choice, list(
 	should_generate_icons = TRUE
 
 /datum/preference/choiced/lunchbox_first_snack_choice/icon_for(value)
-	if (value == "Random")
+	if (value == "Случайно")
 		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/food/selected_type = GLOB.possible_player_lunchbox_snack_choice[value]
@@ -378,10 +378,10 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_snack_choice, list(
 ))
 
 /datum/preference/choiced/lunchbox_first_snack_choice/init_possible_values()
-	return list("Random") + assoc_to_keys(GLOB.possible_player_lunchbox_snack_choice)
+	return list("Случайно") + assoc_to_keys(GLOB.possible_player_lunchbox_snack_choice)
 
 /datum/preference/choiced/lunchbox_first_snack_choice/create_default_value()
-	return "Random"
+	return "Случайно"
 
 /datum/preference/choiced/lunchbox_first_snack_choice/is_accessible(datum/preferences/preferences)
 	if (!..())
@@ -402,17 +402,17 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_snack_choice, list(
 	should_generate_icons = TRUE
 
 /datum/preference/choiced/lunchbox_second_snack_choice/icon_for(value)
-	if (value == "Random")
+	if (value == "Случайно")
 		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/food/selected_type = GLOB.possible_player_lunchbox_snack_choice[value]
 		return uni_icon(selected_type::icon, selected_type::icon_state)
 
 /datum/preference/choiced/lunchbox_second_snack_choice/init_possible_values()
-	return list("Random") + assoc_to_keys(GLOB.possible_player_lunchbox_snack_choice)
+	return list("Случайно") + assoc_to_keys(GLOB.possible_player_lunchbox_snack_choice)
 
 /datum/preference/choiced/lunchbox_second_snack_choice/create_default_value()
-	return "Random"
+	return "Случайно"
 
 /datum/preference/choiced/lunchbox_second_snack_choice/is_accessible(datum/preferences/preferences)
 	if (!..())
@@ -433,7 +433,7 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_snack_choice, list(
 	should_generate_icons = TRUE
 
 /datum/preference/choiced/lunchbox_drink_choice/icon_for(value)
-	if (value == "Random")
+	if (value == "Случайно")
 		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/food/selected_type = GLOB.possible_player_lunchbox_drink_choice[value]
@@ -499,10 +499,10 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_drink_choice, list(
 ))
 
 /datum/preference/choiced/lunchbox_drink_choice/init_possible_values()
-	return list("Random") + assoc_to_keys(GLOB.possible_player_lunchbox_drink_choice)
+	return list("Случайно") + assoc_to_keys(GLOB.possible_player_lunchbox_drink_choice)
 
 /datum/preference/choiced/lunchbox_drink_choice/create_default_value()
-	return "Random"
+	return "Случайно"
 
 /datum/preference/choiced/lunchbox_drink_choice/is_accessible(datum/preferences/preferences)
 	if (!..())
@@ -523,7 +523,7 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_drink_choice, list(
 	should_generate_icons = TRUE
 
 /datum/preference/choiced/lunchbox_desert_choice/icon_for(value)
-	if (value == "Random")
+	if (value == "Случайно")
 		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/food/selected_type = GLOB.possible_player_lunchbox_desert_choice[value]
@@ -569,10 +569,10 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_desert_choice, list(
 ))
 
 /datum/preference/choiced/lunchbox_desert_choice/init_possible_values()
-	return list("Random") + assoc_to_keys(GLOB.possible_player_lunchbox_desert_choice)
+	return list("Случайно") + assoc_to_keys(GLOB.possible_player_lunchbox_desert_choice)
 
 /datum/preference/choiced/lunchbox_desert_choice/create_default_value()
-	return "Random"
+	return "Случайно"
 
 /datum/preference/choiced/lunchbox_desert_choice/is_accessible(datum/preferences/preferences)
 	if (!..())

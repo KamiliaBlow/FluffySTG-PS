@@ -68781,6 +68781,9 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 6
 	},
+/obj/machinery/jukebox/bar{
+	req_access = null
+	},
 /turf/open/floor/stone,
 /area/station/service/bar/atrium)
 "tqk" = (

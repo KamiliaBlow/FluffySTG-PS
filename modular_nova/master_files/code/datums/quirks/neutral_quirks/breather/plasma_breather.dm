@@ -1,9 +1,9 @@
 /datum/quirk/item_quirk/breather/plasma_breather
-	name = "Plasma Breather"
-	desc = "You breathe plasma, even if you might not normally breathe it. Oxygen is poisonous."
-	medical_record_text = "Patient can only breathe plasma."
-	gain_text = span_notice("You suddenly have a hard time breathing anything but plasma.")
-	lose_text = span_danger("You suddenly feel like you aren't bound to plasma anymore.")
+	name = "Плазменное дыхание"
+	desc = "Вы вдыхаете плазму, даже если в обычных условиях вы бы этого не делали. Кислород для вас ядовит."
+	medical_record_text = "Пациент может дышать только плазмой."
+	gain_text = span_notice("Внезапно вам становится трудно дышать чем-либо, кроме плазмы.")
+	lose_text = span_danger("Вдруг возникает ощущение, что вы больше не привязаны к плазме.")
 	icon = FA_ICON_FIRE_FLAME_SIMPLE
 	value = 0
 	breathing_tank = /obj/item/tank/internals/plasmaman/belt/full

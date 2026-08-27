@@ -1,12 +1,12 @@
 #define GAMING_WITHDRAWAL_TIME (15 MINUTES)
 /datum/quirk/gamer
-	name = "Gamer"
-	desc = "You are a hardcore gamer, and you have a need to game. You love winning and hate losing. You only like gamer food."
+	name = "Геймер"
+	desc = "Вы заядлый геймер, и вам просто необходимо играть. Вы любите побеждать и ненавидите проигрывать. Вам нравится только 'геймерская' еда."
 	icon = FA_ICON_GAMEPAD
 	value = 0
-	gain_text = span_notice("You feel the sudden urge to game.")
-	lose_text = span_notice("You've lost all interest in gaming.")
-	medical_record_text = "Patient has a severe video game addiction."
+	gain_text = span_notice("Вы чувствуете внезапное желание поиграть.")
+	lose_text = span_notice("Вы совсем потеряли интерес к играм.")
+	medical_record_text = "У пациента наблюдается тяжелая зависимость от видеоигр."
 	mob_trait = TRAIT_GAMER
 	mail_goodies = list(/obj/item/toy/intento, /obj/item/clothing/head/fedora)
 	/// Timer for gaming withdrawal to kick in

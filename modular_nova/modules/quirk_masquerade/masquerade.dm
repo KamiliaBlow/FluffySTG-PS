@@ -1,9 +1,9 @@
 /datum/quirk/masquerade_food
-	name = "Masquerade"
-	desc = "A hemophage that has adapted to be able to consume normal food and drink. Such an act is merely for pleasure, as they derive no nutritional benefit from such."
-	gain_text = span_notice("You feel that your body has adapted to consumption of normal food and drink without mixing in blood.")
-	lose_text = span_danger("You feel that your body is no longer able to consume normal food or drink without mixing in blood.")
-	medical_record_text = "Patient is able to consume food or drink without having to mix in blood, though they derive no nutritional benefit from it."
+	name = "Маскарад"
+	desc = "Гемофаг, адаптировавшийся к употреблению обычной еды и напитков. Это делается исключительно ради удовольствия, так как питательной пользы от такой пищи вы не получаете."
+	gain_text = span_notice("Вы чувствуете, что ваше тело адаптировалось к употреблению обычной еды и напитков без необходимости смешивать их с кровью.")
+	lose_text = span_danger("Вы чувствуете, что ваше тело больше не способно употреблять обычную еду или напитки без добавления крови.")
+	medical_record_text = "Пациент способен употреблять еду и напитки без необходимости добавлять кровь, хотя не получает от этого питательной пользы."
 	value = 2
 	mob_trait = TRAIT_MASQUERADE_FOOD
 	icon = FA_ICON_MASK

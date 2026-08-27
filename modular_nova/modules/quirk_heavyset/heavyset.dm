@@ -1,6 +1,6 @@
 /datum/quirk/heavyset
-	name = "Heavyset"
-	desc = "You weigh significantly more than most. It's harder for you to move around and for other people to move you around."
+	name = "Тяжеловес"
+	desc = "Вы весите значительно больше, чем большинство людей. Вам сложнее передвигаться, а другим людям - перемещать вас."
 	icon = FA_ICON_WEIGHT_HANGING
 	value = 0
 	gain_text = span_notice("You feel heavy.")

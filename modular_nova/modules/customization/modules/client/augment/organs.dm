@@ -135,7 +135,7 @@
 	path = /obj/item/organ/stomach/lithovore
 
 /datum/augment_item/organ/stomach/lithovore/apply(mob/living/carbon/human/H, character_setup = FALSE, datum/preferences/prefs)
-	if(prefs && ("Oversized" in prefs.all_quirks))
+	if(prefs && ("Сверхразмер" in prefs.all_quirks))
 		path = /obj/item/organ/stomach/lithovore/oversized
 	return ..()
 

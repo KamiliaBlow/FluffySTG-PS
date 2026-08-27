@@ -1,11 +1,11 @@
 /datum/quirk/chipped
-	name = "Chipped"
-	desc = "You got caught up in the skillchip craze a few years back, and had one of the commercially available chips implanted into yourself."
+	name = "Чипированный"
+	desc = "Несколько лет назад вы поддались всеобщему помешательству на скилл-чипы и имплантировали себе одну из коммерчески доступных моделей."
 	icon = FA_ICON_MICROCHIP
 	value = 2
-	gain_text = span_notice("You suddenly feels chipped.")
-	lose_text = span_danger("You don't feel so chipped anymore.")
-	medical_record_text = "Patient explained how they got caught up in 'the skillchip chase' recently, and now they have some useless chip in their head. Dumbass."
+	gain_text = span_notice("Вы внезапно ощущаете, что вам вживили чип.")
+	lose_text = span_danger("Вы больше не ощущаете чип внутри себя.")
+	medical_record_text = "Пациент рассказывает о недавнем увлечении 'модой на скилл-чипы', из-за которого в голове теперь находится какой-то бесполезный чип. Идиотизм."
 	mail_goodies = list(
 		/obj/item/skillchip/matrix_taunt,
 		/obj/item/skillchip/big_pointer,
@@ -24,8 +24,8 @@
 	if(isnull(chip_pref))
 		return ..()
 	installed_chip = GLOB.quirk_chipped_choice[chip_pref] || GLOB.quirk_chipped_choice[pick(GLOB.quirk_chipped_choice)]
-	gain_text = span_notice("The [installed_chip::name] in your head buzzes with knowledge.")
-	lose_text = span_notice("You stop feeling the chip inside your head.")
+	gain_text = span_notice("[installed_chip::name] в вашей голове тихонько жужжит, наполняя вас знаниями.")
+	lose_text = span_notice("Вы перестаёте ощущать чип внутри своей головы.")
 	return ..()
 
 /datum/quirk/chipped/add_unique(client/client_source)

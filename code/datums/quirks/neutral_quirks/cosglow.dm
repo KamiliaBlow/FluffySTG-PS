@@ -42,12 +42,12 @@
 	return COSGLOW_THICKNESS_DEFAULT
 
 /datum/quirk/cosglow
-	name = "Illuminated"
-	desc = "You emit a customizable soft glow! This isn't bright enough to replace your flashlight."
+	name = "Свечение"
+	desc = "Вы излучаете настраиваемое мягкое свечение! Оно недостаточно яркое, чтобы заменить фонарик."
 	value = 0
-	gain_text = span_notice("You feel glowy!")
-	lose_text = span_notice("You loose that glow!")
-	medical_record_text = "Patient emits a subtle emissive aura."
+	gain_text = span_notice("Вы слегка светитесь!")
+	lose_text = span_notice("Вы потеряли ваше свечение!")
+	medical_record_text = "Пациент излучает едва уловимую ауру."
 	mob_trait = TRAIT_COSGLOW
 	icon = FA_ICON_MAGIC_WAND_SPARKLES
 	mail_goodies = list(
@@ -98,7 +98,7 @@
 	QDEL_NULL(cosglow_light_obj)
 
 /datum/status_effect/cosglow/get_examine_text()
-	return span_notice("[owner.p_They()] emit[owner.p_s()] a harmless glowing aura.")
+	return span_notice("излучает безвредную светящуюся ауру.")
 
 #undef COSGLOW_THICKNESS_MIN
 #undef COSGLOW_THICKNESS_MAX

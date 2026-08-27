@@ -112,7 +112,7 @@ GLOBAL_LIST_INIT(spanname_to_formatting, list(
 	"Notice Alien" = "noticealien",
 	"OOC" = "ooc",
 	"Papyrus" = "papyrus",
-	"Phobia" = "phobia",
+	"Фобия" = "phobia",
 	"Prefix" = "prefix",
 	"Purple" = "purple",
 	"Radio" = "radio",

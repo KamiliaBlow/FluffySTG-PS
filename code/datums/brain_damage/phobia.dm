@@ -1,13 +1,13 @@
 /datum/brain_trauma/mild/phobia
-	name = "Phobia"
-	desc = "Patient is unreasonably afraid of something."
-	scan_desc = "phobia"
-	symptoms = "When exposed to a specific stimulus, experiences \
-		an immediate anxiety or fear response far greater than typically expected, \
-		leading to panic attacks or impaired social and occupational functioning. \
-		Physical contact such as hugging, or medication such as Psicodine may lessen the severity of the reaction."
-	gain_text = span_warning("You start finding default values very unnerving...")
-	lose_text = span_notice("You no longer feel afraid of default values.")
+	name = "Фобия"
+	desc = "Пациент испытывает необоснованный страх перед чем-то."
+	scan_desc = "фобия связанная с: "
+	symptoms = "При воздействии определённого раздражителя у человека возникает \
+		немедленная реакция в виде тревоги или страха, значительно превышающая обычно ожидаемую, \
+		что приводит к приступам паники или нарушению социального и профессионального функционирования. \
+		Физический контакт, например объятия, или такие лекарственные препараты, как Псикодин, могут ослабить выраженность реакции."
+	gain_text = span_warning("Вас охватывает иррациональный страх...")
+	lose_text = span_notice("Ваш иррациональный страх исчезает.")
 	/// What do we fear exactly?
 	var/phobia_type
 	/// Specific terror handler to apply, in case we want
@@ -22,9 +22,9 @@
 	if(!phobia_type)
 		phobia_type = pick(GLOB.phobia_types)
 
-	gain_text = span_warning("You start finding [phobia_type] very unnerving...")
-	lose_text = span_notice("You no longer feel afraid of [phobia_type].")
-	scan_desc += " of [phobia_type]"
+	gain_text = span_warning("Вы начинаете испытывать панический страх. Объект вашей фобии: [phobia_type]...")
+	lose_text = span_notice("Ваш панический страх прошел. Вы больше не боитесь следующего: [phobia_type].")
+	scan_desc += " [phobia_type]"
 	return ..()
 
 /datum/brain_trauma/mild/phobia/on_gain()
@@ -45,60 +45,60 @@
 // Defined phobia types for badminry, not included in the RNG trauma pool to avoid diluting.
 
 /datum/brain_trauma/mild/phobia/aliens
-	phobia_type = "aliens"
+	phobia_type = "инопланетяне"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/anime
-	phobia_type = "anime"
+	phobia_type = "аниме"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/authority
-	phobia_type = "authority"
+	phobia_type = "начальство"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/birds
-	phobia_type = "birds"
+	phobia_type = "птицы"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/blood
-	phobia_type = "blood"
+	phobia_type = "кровь"
 	random_gain = FALSE
 	terror_handler = /datum/terror_handler/phobia_source/blood
 
 /datum/brain_trauma/mild/phobia/clowns
-	phobia_type = "clowns"
+	phobia_type = "клоуны"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/conspiracies
-	phobia_type = "conspiracies"
+	phobia_type = "теории заговора"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/doctors
-	phobia_type = "doctors"
+	phobia_type = "врачи"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/falling
-	phobia_type = "falling"
+	phobia_type = "падение"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/fish
-	phobia_type = "fish"
+	phobia_type = "рыбы"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/greytide
-	phobia_type = "greytide"
+	phobia_type = "грейтайдеры"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/guns
-	phobia_type = "guns"
+	phobia_type = "огнестрельное оружие"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/insects
-	phobia_type = "insects"
+	phobia_type = "насекомые"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/lizards
-	phobia_type = "lizards"
+	phobia_type = "ящерицы"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/ocky_icky
@@ -106,34 +106,34 @@
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/robots
-	phobia_type = "robots"
+	phobia_type = "роботы"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/security
-	phobia_type = "security"
+	phobia_type = "СБ"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/skeletons
-	phobia_type = "skeletons"
+	phobia_type = "скелеты"
 	mood_event_type = /datum/mood_event/spooked
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/snakes
-	phobia_type = "snakes"
+	phobia_type = "змеи"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/space
-	phobia_type = "space"
+	phobia_type = "открытый космос"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/spiders
-	phobia_type = "spiders"
+	phobia_type = "пауки"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/strangers
-	phobia_type = "strangers"
+	phobia_type = "незнакомцы"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/supernatural
-	phobia_type = "the supernatural"
+	phobia_type = "сверхъестественное"
 	random_gain = FALSE

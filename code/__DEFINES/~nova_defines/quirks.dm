@@ -1,4 +1,4 @@
-#define DEATH_CONSEQUENCES_QUIRK_NAME "Death Degradation Disorder"
+#define DEATH_CONSEQUENCES_QUIRK_NAME "Синдром деградации, связанный со смертью"
 #define DEATH_CONSEQUENCES_QUIRK_DESC "Patient is unusually susceptable to mortality."
 #define DEATH_CONSEQUENCES_BASE_DEGRADATION_ON_DEATH 50
 

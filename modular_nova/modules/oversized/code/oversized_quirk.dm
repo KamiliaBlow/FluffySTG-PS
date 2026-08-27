@@ -4,11 +4,11 @@
 // Before making any changes to oversized, please see the module's readme.md file
 
 /datum/quirk/oversized
-	name = "Oversized"
-	desc = "You, for whatever reason, are FAR too tall, and will encounter some rough situations because of it."
-	gain_text = span_notice("That airlock looks small...")
-	lose_text = span_notice("Is it still the same size...?") //Lol
-	medical_record_text = "Patient is abnormally tall."
+	name = "Сверхразмер"
+	desc = "Вы, по какой бы то ни было причине, СЛИШКОМ высоки, и из-за этого вам придётся столкнуться с некоторыми неприятными ситуациями."
+	gain_text = span_notice("Этот шлюз выглядит небольшим...")
+	lose_text = span_notice("Размер всё ещё тот же...?") //Lol
+	medical_record_text = "Пациент необычно высокого роста."
 	value = 0
 	mob_trait = TRAIT_OVERSIZED
 	icon = FA_ICON_EXPAND_ARROWS_ALT
